@@ -9,11 +9,20 @@ const Header = () => (
   <header>
     <nav>
       <ul>
-        <li><h1><Link to="/">KNW</Link></h1></li>
-        <li><Link to="/about">About</Link></li>
+        <li><h1><Link to="/">KNW Photography</Link></h1></li>
+        <li><Link to="/about/">About</Link></li>
+        <li><Link to="/galleries/">Galleries</Link></li>
+        <li><Link to="/investment/">Investment</Link></li>
+        <li><Link to="/contact/">Contact</Link></li>
       </ul>
     </nav>
   </header>
+)
+
+const Footer = () => (
+  <footer>
+    <p>&copy; 2017 KNW Photography</p>
+  </footer>
 )
 
 const TemplateWrapper = ({ children }) => (
@@ -26,9 +35,8 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <section className="container">
-      {children()}
-    </section>
+    {children()}
+    <Footer />
   </div>
 )
 

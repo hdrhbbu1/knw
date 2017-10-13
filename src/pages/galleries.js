@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const About = () => (
+const Galleries = () => (
   <section className="container">
-    <h1>About Page</h1>
+    <h1>Galleries Page</h1>
     <p>Lorem ipsum dolor set amet.</p>
   </section>
 )
 
-export default About
+export default Galleries

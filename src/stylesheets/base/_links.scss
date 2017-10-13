@@ -3,13 +3,6 @@
  * ------- */
 
 a {
-	text-decoration: none;
-	color: $base;
-}
-
-.container a {
 	text-decoration: underline;
-	&:hover {
-		color: $highlight;
-	}
+	color: $base;
 }

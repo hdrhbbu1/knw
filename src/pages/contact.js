@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const About = () => (
+const Contact = () => (
   <section className="container">
-    <h1>About Page</h1>
+    <h1>Contact Page</h1>
     <p>Lorem ipsum dolor set amet.</p>
   </section>
 )
 
-export default About
+export default Contact
