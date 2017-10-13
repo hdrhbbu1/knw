@@ -1,0 +1,22 @@
+/* ------- *
+ *  MIXINS *
+ * ------- */
+
+@mixin bp($breakpoint) {
+  //Small is the default
+  @if $breakpoint == "medium" {
+    @media (min-width: 450px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "large" {
+    @media (min-width: 650px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "xl" {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+}
