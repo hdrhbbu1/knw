@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Galleries = () => (
-  <section className="container">
+  <div>
     <h1>Galleries Page</h1>
     <p>Lorem ipsum dolor set amet.</p>
-  </section>
+  </div>
 )
 
 export default Galleries

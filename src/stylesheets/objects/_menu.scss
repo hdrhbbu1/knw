@@ -1,0 +1,54 @@
+/* ------- *
+*  Header  *
+* ------- */
+
+header {
+
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $secondary;
+  height: 100%;
+  width: 75%;
+  transform: translate3d(100%, 0, 0);
+  @include bp(medium){
+    width: 50%;
+  }
+  ul {
+    li {
+
+    }
+  }
+}
+
+.toggle {
+  background: $secondary;
+  position: fixed;
+  display: block;
+  right: 2em;
+  top: 2em;
+  padding: 2em;
+  z-index: 999;
+  border-radius: 50%;
+  span {
+    position: absolute;
+    display: block;
+    background: $base;
+    width: 50%;
+    height: .1em;
+    left: 25%;
+    &:first-child {
+      top: 35%;
+    }
+    &:nth-child(2) {
+      top: 50%;
+    }
+    &:nth-child(3) {
+      bottom: 35%;
+    }
+  }
+}

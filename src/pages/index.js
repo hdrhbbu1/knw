@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+
 const IndexPage = () => (
-  <section className="container">
+  <div>
     <h1>Home Page</h1>
-  </section>
+  </div>
 )
 
 export default IndexPage
