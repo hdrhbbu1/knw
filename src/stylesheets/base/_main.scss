@@ -3,7 +3,12 @@
  * ------- */
 
 .container {
-  margin: 0 0 4rem 0;
+  //padding: 2em;
+	height: 100%;
+}
+
+#wrapper {
+
 }
 
 //Remove Button Styling
@@ -14,4 +19,9 @@ button {
 	cursor: pointer;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", sans-serif;
+	font-size: 100%;
 }

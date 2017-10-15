@@ -4,12 +4,13 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import closeMenu from '../components/header'
 import Footer from '../components/footer'
 
 import '../stylesheets/style.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div id="wrapper" onClick={closeMenu}>
     <Helmet
       title="KNW Photography"
       meta={[

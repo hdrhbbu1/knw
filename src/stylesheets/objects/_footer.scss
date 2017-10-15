@@ -1,3 +1,18 @@
 /* ------- *
 *  Footer  *
 * ------- */
+
+footer {
+  border-top: 1px solid $secondary;
+  background: white;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8em;
+  padding: 0 2em;
+  color: darken($secondary,15%);
+  a {
+    color: darken($secondary,15%) !important;
+  }
+}

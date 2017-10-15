@@ -8,9 +8,11 @@
 //Base
 @import "base/_main";
 @import "base/_links";
+@import "base/_headings";
 @import "base/_images";
-//@import "base/_animations";
+@import "base/_animation";
 
 //Objects
 @import "objects/_menu";
 @import "objects/_footer";
+@import "objects/_featured";

@@ -2,35 +2,93 @@
 *  Header  *
 * ------- */
 
-header {
-
-}
-
-
 nav {
   position: fixed;
   top: 0;
   right: 0;
-  background: $secondary;
+  bottom: 0;
+  background: white;
   height: 100%;
   width: 75%;
   transform: translate3d(100%, 0, 0);
+  border-left: 1px solid $secondary;
+  z-index: 99;
   @include bp(medium){
     width: 50%;
   }
-  ul {
-    li {
+}
 
-    }
+.site-nav {
+  padding: 3em;
+  li {
+    margin-bottom: 1.5em;
+  }
+  a {
+    font-size: 1.5em;
+    text-decoration: none;
   }
 }
 
+.social-icons {
+  position: absolute;
+  bottom: 2em;
+  padding: 0 3em;
+  li {
+    display: inline-block;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  height: 1.5em;
+  padding: .35em;
+}
+
+
+nav h1 {
+  font-weight: bold;
+  margin-bottom: 2em;
+  font-size: 1.5em;
+}
+
+.open nav {
+  transform: translate3d(0,0,0);
+}
+
+.open .container {
+  transform: translate3d(-75%,0,0);
+  @include bp(medium){
+    transform: translate3d(-50%,0,0);
+  }
+}
+
+.container:before {
+  content: '';
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.25);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.open .container:before {
+  //opacity: 1;
+  //visibility: visible;
+}
+
+
 .toggle {
-  background: $secondary;
+  background: rgba(238,238,238,.75);
   position: fixed;
   display: block;
-  right: 2em;
-  top: 2em;
+  right: 3em;
+  top: 3em;
   padding: 2em;
   z-index: 999;
   border-radius: 50%;
@@ -38,9 +96,9 @@ nav {
     position: absolute;
     display: block;
     background: $base;
-    width: 50%;
+    width: 45%;
     height: .1em;
-    left: 25%;
+    left: 27.5%;
     &:first-child {
       top: 35%;
     }
@@ -50,5 +108,19 @@ nav {
     &:nth-child(3) {
       bottom: 35%;
     }
+  }
+}
+
+.open .toggle {
+  span:first-child {
+    transform: rotate(45deg);
+    top: 33%;
+  }
+  span:nth-child(2){
+    opacity: 0;
+  }
+  span:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: 32%;
   }
 }

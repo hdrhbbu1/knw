@@ -3,8 +3,10 @@ import Link from 'gatsby-link'
 
 const About = () => (
   <div>
-    <h1>About Page</h1>
-    <p>Lorem ipsum dolor set amet.</p>
+    <div className="featured">
+      <h2 className="title featured__title">About Page</h2>
+      <img className="featured__img" src="http://lorempixel.com/1000/600/" />
+    </div>
   </div>
 )
 

@@ -1,0 +1,27 @@
+/* ----------- *
+ *  Animation  *
+ * ----------- */
+
+nav {
+  transition: transform .6s;
+  transition-timing-function: cubic-bezier(.84,0,.22,1);
+}
+
+.container {
+  transition: transform .6s;
+  transition-timing-function: cubic-bezier(.84,0,.22,1);
+}
+
+.container:before {
+  transition: opacity .5s, visibility .5s 0s;
+}
+
+.open .container:before {
+
+}
+
+.toggle {
+  span {
+    transition: all .3s;
+  }
+}
