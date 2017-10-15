@@ -17,6 +17,7 @@ nav a {
 }
 
 .toggle {
+  transition: all .3s;
   span {
     transition: all .3s;
   }

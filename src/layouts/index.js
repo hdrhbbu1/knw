@@ -15,18 +15,19 @@ function closeMenu () {
 
 const TemplateWrapper = ({ children }) => (
   <div id="wrapper">
-    <Helmet
-      title="KNW Photography"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-      <Header />
-      <section className="container" onClick={closeMenu}>
-        {children()}
-        <Footer />
-      </section>
+
+    <Helmet>
+      <title>KNW Photography</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet"/>
+    </Helmet>
+
+    <Header />
+
+    <section className="container" onClick={closeMenu}>
+      {children()}
+      <Footer />
+    </section>
+
   </div>
 )
 

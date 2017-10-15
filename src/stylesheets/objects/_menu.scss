@@ -49,7 +49,7 @@ nav {
 
 
 nav h1 {
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 2em;
   font-size: 1.5em;
 }
@@ -76,6 +76,9 @@ nav h1 {
   padding: 2em;
   z-index: 999;
   border-radius: 50%;
+  &:hover {
+    transform: scale(1.1);
+  }
   span {
     position: absolute;
     display: block;
