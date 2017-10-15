@@ -4,13 +4,17 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import closeMenu from '../components/header'
 import Footer from '../components/footer'
 
 import '../stylesheets/style.scss'
 
+function closeMenu () {
+  const wrapper = document.getElementById('wrapper');
+  wrapper.classList.remove('open');
+}
+
 const TemplateWrapper = ({ children }) => (
-  <div id="wrapper" onClick={closeMenu}>
+  <div id="wrapper">
     <Helmet
       title="KNW Photography"
       meta={[
@@ -18,11 +22,11 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
-    <section className="container">
-      {children()}
-      <Footer />
-    </section>
+      <Header />
+      <section className="container" onClick={closeMenu}>
+        {children()}
+        <Footer />
+      </section>
   </div>
 )
 

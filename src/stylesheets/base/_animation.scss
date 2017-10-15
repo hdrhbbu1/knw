@@ -7,17 +7,13 @@ nav {
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
 
+nav a {
+  transition: color .3s;
+}
+
 .container {
-  transition: transform .6s;
+  transition: transform .6s, opacity .6s, filter .6s;
   transition-timing-function: cubic-bezier(.84,0,.22,1);
-}
-
-.container:before {
-  transition: opacity .5s, visibility .5s 0s;
-}
-
-.open .container:before {
-
 }
 
 .toggle {

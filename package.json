@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
-    "gatsby": "^1.9.66",
+    "gatsby": "^1.9.68",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-netlify": "^1.0.6",
     "gatsby-plugin-react-helmet": "^1.0.7",
