@@ -1,16 +1,23 @@
 /* ------- *
-*  Header  *
+*  Featured  *
 * ------- */
 
+
 .featured {
-  position: relative;
+  display: flex;
+}
+
+
+.featured__img {
+  position: fixed;
   background: $secondary;
-  height: 75vh;
-  display: block;
+  height: 100vh;
+  width: 66.6%;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   &:before {
     background: rgba(0,0,0,.2);
     content: '';
@@ -25,7 +32,7 @@
   }
 }
 
-.featured__img {
+.featured__img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,9 +43,46 @@
   object-fit: cover;
 }
 
-.featured__title {
-  position: absolute;
+.featured__img h1 {
   color: white;
+  font-weight: 300;
   font-size: 3em;
   z-index: 2;
+}
+
+
+
+
+.featured__galleries {
+  box-sizing: border-box;
+  width: 33.3%;
+  margin-left: 66.66%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em;
+  h2 {
+    font-size: 2em;
+    width: 100%;
+    margin: .25em 0 1em;
+    color: darken($secondary, 10%);
+  }
+  ul {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    li {
+      margin-bottom: 5%;
+      width: 100%;
+    }
+    h3 {
+      margin-top: .5em;
+
+    }
+  }
 }
