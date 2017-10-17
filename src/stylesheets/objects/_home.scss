@@ -3,3 +3,95 @@
 * ------- */
 
 .page {height: 1000px;}
+
+
+.intro {
+  position: relative;
+  background: $secondary;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  &:before {
+    content: '';
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.intro img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  display: none;
+  color: white;
+  font-weight: 300;
+  font-size: 3em;
+  z-index: 2;
+}
+
+.quote {
+  margin: 0;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.quote blockquote {
+  line-height: 1.3;
+  font-size: 2em;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 3em 2em 2em;
+  box-sizing: border-box;
+}
+
+
+.bio {
+  margin: 4em 0;
+  background: url('http://via.placeholder.com/900x600');
+  background: $secondary;
+  background-size: cover;
+  background-position: center;
+}
+
+.bio__inner {
+  position: relative;
+  width: 50%;
+  padding: 4em 2em;
+  margin: 0 auto !important;
+  img {
+    margin-bottom: 2em;
+  }
+  h2 {
+    position: absolute;
+    top: 2em;
+    left: -1em;
+    font-size: 3em;
+    color: white;
+    text-transform: capitalize;
+  }
+  a {
+
+  }
+}

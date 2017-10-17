@@ -7,7 +7,8 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  background: $secondary;
+  background: white;
+  border-left: 1px solid $secondary;
   height: 100%;
   width: 75%;
   transform: translate3d(100%, 0, 0);
@@ -18,7 +19,7 @@ nav {
 }
 
 .site-nav {
-  padding: 3em;
+  padding:  7em 5em;
   li {
     margin-bottom: 1.5em;
   }
@@ -30,21 +31,6 @@ nav {
       color: darken($secondary,15%);
     }
   }
-}
-
-.social-icons {
-  position: absolute;
-  bottom: 2em;
-  padding: 0 3em;
-  li {
-    display: inline-block;
-  }
-}
-
-.icon {
-  display: inline-flex;
-  height: 1.5em;
-  padding: .35em;
 }
 
 .logo svg {
@@ -89,9 +75,9 @@ nav {
 }
 
 .toggle__title {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 500;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin: 0 .5em;
   opacity: 0;
   transform: translateY(.25em);
@@ -99,7 +85,7 @@ nav {
 
 .toggle__circle {
   position: relative;
-  padding: 2em 1em;
+  padding: 1.75em 1em;
   span {
     position: absolute;
     display: block;
