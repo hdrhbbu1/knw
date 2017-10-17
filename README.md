@@ -7,6 +7,14 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 ```
 gatsby new gatsby-example-site
 ```
+## Environment Variables
+For local development with Contentful, create a `.env` file in the root directory and add the following properties:
+
+```
+CONTENTFUL_SPACE_ID=[ INSERT SPACE ID HERE ]
+CONTENTFUL_DELIVERY_API_TOKEN= [ INSERT ACCESS HERE ]
+CONTENTFUL_PREVIEW_API_TOKEN= [ INSERT ACCESS HERE ]
+```
 
 ## Deploy
 
