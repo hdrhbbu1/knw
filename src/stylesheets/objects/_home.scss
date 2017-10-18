@@ -70,8 +70,9 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2em 2em 2em 0;
+  padding: 2em;
   @include bp(medium){
+    padding: 2em 2em 2em 0;
     flex-flow: row;
   }
   ul {

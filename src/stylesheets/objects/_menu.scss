@@ -8,7 +8,6 @@ nav {
   right: 0;
   bottom: 0;
   background: white;
-  border-left: 1px solid $secondary;
   height: 100%;
   width: 75%;
   transform: translate3d(100%, 0, 0);
@@ -44,12 +43,28 @@ nav {
   transform: translate3d(0,0,0);
 }
 
+.container:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: $base;
+  opacity: 0;
+  z-index: 99;
+}
+
 .open .container {
   transform: translate3d(-75%,0,0);
   @include bp(medium){
     transform: translate3d(-50%,0,0);
   }
-  opacity: .25;
+  &:after {
+    opacity: .8;
+  }
 }
 
 .toggle {
