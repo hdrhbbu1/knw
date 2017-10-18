@@ -38,7 +38,6 @@ nav {
   width: 3em;
   padding: 0;
   margin: -1em 0 0 0;
-
 }
 
 .open nav {
@@ -81,18 +80,20 @@ nav {
   margin: 0 .5em;
   opacity: 0;
   transform: translateY(.25em);
+  color: $base;
 }
 
 .toggle__circle {
+  mix-blend-mode: difference;
   position: relative;
-  padding: 1.75em 1em;
+  padding: 2em;
   span {
     position: absolute;
     display: block;
     background: $base;
-    width: 100%;
+    width: 50%;
     height: 2px;
-    left: 0;
+    left: 25%;
     &:first-child {
       top: 38%;
     }
