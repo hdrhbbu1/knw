@@ -15,11 +15,8 @@ function closeMenu () {
 const Header = () => (
   <header>
       <button className="toggle" onClick={toggleMenu}>
-        <span className="toggle__title">Menu</span>
-        <div className="toggle__circle">
-          <span></span>
-          <span></span>
-        </div>
+        <span></span>
+        <span></span>
       </button>
       <nav>
         <ul className="site-nav">
