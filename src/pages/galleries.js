@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 const Galleries = ({data}) => {
-  //console.log(data)
+  console.log(data)
   const posts = data.allContentfulGallery.edges;
   return(
     <div>
