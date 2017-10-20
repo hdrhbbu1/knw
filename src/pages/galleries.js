@@ -12,7 +12,7 @@ const Galleries = ({data}) => {
         {posts.map(({ node }) => (
           <li key={node.id}>
             <Link to={node.slug}>
-              <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={true} />
+              <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={"#f1f1f1"} />
               <h3>{node.date}</h3>
             </Link>
           </li>
@@ -32,7 +32,7 @@ export const query = graphql`
           title
           id
           slug
-          date
+          date(formatString: "M.DD.YYYY")
           cover {
             title
             sizes(maxWidth: 600) {

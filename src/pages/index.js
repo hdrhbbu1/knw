@@ -66,7 +66,7 @@ export const query = graphql`
           title
           id
           slug
-          date
+          date(formatString: "M.DD.YYYY")
           cover {
             title
             sizes(maxWidth: 2000) {
