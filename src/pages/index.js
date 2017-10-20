@@ -1,64 +1,82 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
-const IndexPage = () => (
-  <div>
-    <div className="intro">
-      <h1>KNW Photography</h1>
-      <img src="http://via.placeholder.com/900x600" />
-    </div>
+const IndexPage = ({data}) => {
 
-    <div className="quote">
-      <blockquote>
-        Some sort of inspiring snippet of text should go here.
-      </blockquote>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ipsum et purus rhoncus commodo non in diam. Nullam ullamcorper purus augue, tincidunt rhoncus velit imperdiet et. Cras imperdiet imperdiet ex, eget maximus nibh tincidunt id. Proin a dictum nisi, et venenatis est. Ut finibus turpis at arcu gravida, nec pulvinar tortor pretium.</p>
-    </div>
+  const posts = data.allContentfulGallery.edges;
 
-
-    <div className="featured">
-
-      <div className="featured__newest">
-        <h2>Recent Work</h2>
-        <img src="http://via.placeholder.com/900x600" />
+  return (
+    <div>
+      <div className="intro">
+        <h1>
+          <img className="logo" src="images/knw.svg" />
+        </h1>
+        <img src="http://knw.io/wp-content/uploads/2016/05/lime-ridge-concord-spring-family-lifestyle-session-36.jpg" />
       </div>
 
-      <ul className="featured__list">
-        <li>
-          <img src="http://via.placeholder.com/900x600" />
-          <h3>9.10.2017</h3>
-        </li>
-        <li>
-          <img src="http://via.placeholder.com/900x600" />
-          <h3>9.10.2017</h3>
-        </li>
-        <li>
-          <img src="http://via.placeholder.com/900x600" />
-          <h3>9.10.2017</h3>
-        </li>
-        <li>
-          <img src="http://via.placeholder.com/900x600" />
-          <h3>9.10.2017</h3>
-        </li>
-        <li>
-          <img src="http://via.placeholder.com/900x600" />
-          <h3>9.10.2017</h3>
-        </li>
-      </ul>
-    </div>
+    <div className="page">
+      <div className="quote">
+        <blockquote>
+          Some sort of inspiring snippet of text should go here.
+        </blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ipsum et purus rhoncus commodo non in diam. Nullam ullamcorper purus augue, tincidunt rhoncus velit imperdiet et. Cras imperdiet imperdiet ex, eget maximus nibh tincidunt id. Proin a dictum nisi, et venenatis est. Ut finibus turpis at arcu gravida, nec pulvinar tortor pretium.</p>
+      </div>
 
-    <div className="bio">
-      <div className="bio__inner">
-        <h2>Meet the photographer</h2>
-        <img className="bio__image" src="http://via.placeholder.com/900x600" />
-        <Link to="/about">Learn More About Kirsten &rarr;</Link>
+      <div className="featured">
+
+        <div className="featured__newest">
+          <h2>Recent Work</h2>
+          <Link to={posts[0].node.slug}>
+            <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />
+          </Link>
+        </div>
+
+        <ul className="featured__list">
+          {posts.slice(1).map(({ node }) => (
+            <li key={node.id}>
+              <Link to={node.slug}>
+                <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={"#f1f1f1"} />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="bio">
+        <div className="bio__inner">
+          <h2>Meet the photographer</h2>
+          <img className="bio__image" src="http://via.placeholder.com/900x600" />
+          <Link to="/about">Learn More About Kirsten &rarr;</Link>
+        </div>
       </div>
     </div>
 
-  <div className="page">
   </div>
+  )
+}
 
-</div>
-)
+//Query to get Contentful data
+export const query = graphql`
+  query HomeQuery {
+    allContentfulGallery(limit: 6, sort: { fields: [date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          title
+          id
+          slug
+          date
+          cover {
+            title
+            sizes(maxWidth: 2000) {
+              ...GatsbyContentfulSizes_noBase64
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

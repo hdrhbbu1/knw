@@ -3,7 +3,7 @@
 * ------- */
 
 .intro {
-  position: relative;
+  position: sticky;
   top: 0;
   background: $secondary;
   height: 80vh;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
   &:before {
     content: '';
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,.2);
     position: absolute;
     top: 0;
     left: 0;
@@ -38,14 +38,17 @@
   object-fit: cover;
 }
 
-.intro h1 {
-  display: none;
-  color: white;
-  font-weight: 300;
-  font-size: 3em;
-  z-index: 2;
+.intro h1 img {
+  width: 10em;
+  position: relative;
+  z-index: 99;
 }
 
+.page {
+  background: white;
+  z-index: 2;
+  position: relative;
+}
 
 .quote {
   margin: 0;
@@ -71,6 +74,40 @@
   text-align: center;
 }
 
+.featured__newest {
+  width: 100%;
+  margin-bottom: 2em;
+  position: relative;
+  @include bp(medium){
+    width: 63.66%;
+    position: sticky;
+    top: 3em;
+    height: 85vh;
+    top: 7.5vh;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 3em;
+    font-weight: 500;
+    width: 100%;
+    position: absolute;
+    text-transform: lowercase;
+    mix-blend-mode: hard-light;
+    padding: 0 .25em;
+    width: auto;
+    top: -.5em;
+    left: .25em;
+    background: white;
+    color: $base;
+    z-index: 2;
+    @include bp(medium){
+      left: .75em;
+    }
+  }
+  img {
+  }
+}
+
 
 .featured {
   box-sizing: border-box;
@@ -94,56 +131,18 @@
     }
     li {
       position: relative;
-      margin-bottom: 10%;
+      margin-bottom: 2em;
       width: 100%;
     }
-    h3 {
-      color: white;
-      display: inline-block;
-      padding: .75em;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 3;
-
-    }
-  }
-}
-
-.featured__newest {
-  width: 100%;
-  margin-bottom: 10%;
-  position: relative;
-  @include bp(medium){
-    width: 63.66%;
-    position: sticky;
-    top: 3em;
-    top: 7.5vh;
-    margin-bottom: 0;
-  }
-  h2 {
-    font-size: 3em;
-    font-weight: 500;
-    width: 100%;
-    position: absolute;
-    text-transform: uppercase;
-    top: -.5em;
-    left: .5em;
-    color: $base;
-    @include bp(medium){
-      left: 1em;
-    }
-  }
-  img {
-    @include bp(medium){
-      height: 85vh;
-      width: 100%;
-      object-fit: cover;
+    img {
+      position: relative;
     }
   }
 }
 
 .bio {
+  position: sticky;
+  top: 0;
   margin: 4em 0;
   background: url('http://via.placeholder.com/900x600');
   background: $secondary;

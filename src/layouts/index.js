@@ -18,7 +18,6 @@ const TemplateWrapper = ({ children }) => (
 
     <Helmet>
       <title>KNW Photography</title>
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet"/>
     </Helmet>
 
     <Menu />

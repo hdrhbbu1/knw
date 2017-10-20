@@ -101,7 +101,8 @@ nav {
   span {
     position: absolute;
     display: block;
-    background: $base;
+    background: white;
+    clip: rect(0, auto, auto, 0);
     width: 30%;
     height: 2px;
     left: 37%;

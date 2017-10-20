@@ -12,9 +12,8 @@ const Galleries = ({data}) => {
         {posts.map(({ node }) => (
           <li key={node.id}>
             <Link to={node.slug}>
-              <h3>{node.title}</h3>
-              <h4>{node.date}</h4>
               <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={true} />
+              <h3>{node.date}</h3>
             </Link>
           </li>
         ))}
