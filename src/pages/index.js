@@ -73,8 +73,8 @@ export const query = graphql`
               ...GatsbyContentfulSizes_noBase64
             }
           }
+          }
         }
-      }
     }
   }
 `

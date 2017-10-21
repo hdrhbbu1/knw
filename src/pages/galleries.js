@@ -9,7 +9,7 @@ const Galleries = ({data}) => {
     <div>
       <h2 className="page__title">Galleries</h2>
       <ul className="galleries__list">
-        {posts.map(({ node }) => (
+        {posts.map(({ node, index }) => (
           <li key={node.id}>
             <Link to={node.slug}>
               <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={"#f1f1f1"} />

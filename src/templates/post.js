@@ -10,10 +10,13 @@ const PostTemplate = ({data}) => {
       <h3 className="page__title">{post.date}</h3>
       <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
       <div className="post__content" dangerouslySetInnerHTML={{ __html: post.description.childMarkdownRemark.html }} />
-
-      <div className="images">
-
-      </div>
+      <ul className="images">
+        {post.images.map((images, index) => (
+          <li key={index}>
+            <Img sizes={images.sizes} alt={images.title} title={images.title} backgroundColor={"#f1f1f1"} />
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
@@ -31,6 +34,11 @@ export const query = graphql`
       }
       cover {
         title
+        sizes(maxWidth: 2000) {
+          ...GatsbyContentfulSizes_noBase64
+        }
+      }
+      images {
         sizes(maxWidth: 2000) {
           ...GatsbyContentfulSizes_noBase64
         }
