@@ -6,17 +6,30 @@ const PostTemplate = ({data}) => {
   const post = data.contentfulGallery
   return(
     <div>
-      <h2 className="page__title">{post.title}</h2>
-      <h3 className="page__title">{post.date}</h3>
-      <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-      <div className="post__content" dangerouslySetInnerHTML={{ __html: post.description.childMarkdownRemark.html }} />
-      <ul className="images">
+
+      <div className="post-cover">
+        <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
+      </div>
+
+      <div className="post-info">
+        <div className="post-info__left">
+          <h2 className="post-title">{post.title}</h2>
+          <h3 className="post-date">{post.date}</h3>
+          <h3 className="post-category">Wedding</h3>
+        </div>
+        <div className="post-info__right">
+          <div className="post-description" dangerouslySetInnerHTML={{ __html: post.description.childMarkdownRemark.html }} />
+        </div>
+      </div>
+
+      <ul className="post-images">
         {post.images.map((images, index) => (
           <li key={index}>
             <Img sizes={images.sizes} alt={images.title} title={images.title} backgroundColor={"#f1f1f1"} />
           </li>
         ))}
       </ul>
+
     </div>
   )
 }

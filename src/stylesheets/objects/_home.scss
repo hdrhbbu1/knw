@@ -104,7 +104,10 @@
       left: .75em;
     }
   }
-  img {
+  div {
+    @include bp(medium){
+      height: 85vh;
+    }
   }
 }
 

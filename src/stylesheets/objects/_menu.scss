@@ -41,18 +41,6 @@ nav {
   }
 }
 
-.logo svg {
-  height: 1em;
-  width: 1em;
-  padding: 0;
-  margin: -1em 0 0 0;
-  position: absolute;
-  left: 1em;
-  top: 1.5em;
-  fill: $base;
-  display: none;
-}
-
 .open nav {
   transform: translate3d(0,0,0);
 }
@@ -86,10 +74,11 @@ nav {
 .toggle {
   position: fixed;
   display: block;
-  right: 1em;
-  top: 1em;
+  right: 0;
+  top: 0;
   z-index: 999;
-  padding: 3em;
+  padding: 2em;
+  background: white;
   &:hover {
     span {
       background: darken($secondary,20%);
@@ -101,7 +90,7 @@ nav {
   span {
     position: absolute;
     display: block;
-    background: white;
+    background: $base;
     clip: rect(0, auto, auto, 0);
     width: 30%;
     height: 2px;
