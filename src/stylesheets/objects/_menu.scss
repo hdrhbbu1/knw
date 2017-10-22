@@ -74,14 +74,22 @@ nav {
 .toggle {
   position: fixed;
   display: block;
-  right: 0;
-  top: 0;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 50%;
   z-index: 999;
   padding: 2em;
   background: white;
+  background: rgba(255,255,255,.75);
+  @include bp(medium){
+    right: 2rem;
+    top: 2rem;
+  }
   &:hover {
+    background: $base;
+    background: rgba(0,0,0,.75);
     span {
-      background: darken($secondary,20%);
+      background: white;
       &:first-child { }
       &:nth-child(2) { }
     }
@@ -91,10 +99,9 @@ nav {
     position: absolute;
     display: block;
     background: $base;
-    clip: rect(0, auto, auto, 0);
-    width: 30%;
+    width: 40%;
     height: 2px;
-    left: 37%;
+    left: 30%;
     &:first-child {
       top: 39%;
     }

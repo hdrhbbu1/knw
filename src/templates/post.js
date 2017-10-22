@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 const PostTemplate = ({data}) => {
   const post = data.contentfulGallery
   return(
-    <div>
+    <div className="post">
 
       <div className="post-cover">
         <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
@@ -13,9 +13,10 @@ const PostTemplate = ({data}) => {
 
       <div className="post-info">
         <div className="post-info__left">
-          <h2 className="post-title">{post.title}</h2>
+          <h2 className="post-info-title">Details</h2>
+          <Link to="/galleries"><h3 className="post-category">Wedding</h3></Link>
+          <h3 className="post-title">{post.title}</h3>
           <h3 className="post-date">{post.date}</h3>
-          <h3 className="post-category">Wedding</h3>
         </div>
         <div className="post-info__right">
           <div className="post-description" dangerouslySetInnerHTML={{ __html: post.description.childMarkdownRemark.html }} />

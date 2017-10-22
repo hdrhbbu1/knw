@@ -46,7 +46,7 @@ const IndexPage = ({data}) => {
       <div className="bio">
         <div className="bio__inner">
           <h2>Meet the photographer</h2>
-          <img className="bio__image" src="http://via.placeholder.com/900x600" />
+          <img className="bio__image" src="images/bio.jpg" />
           <Link to="/about">Learn More About Kirsten &rarr;</Link>
         </div>
       </div>
