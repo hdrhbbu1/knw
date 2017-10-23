@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import _ from "lodash"
+import find from "lodash.find"
 
 const PostTemplate = ({data}) => {
 
@@ -15,15 +15,15 @@ const PostTemplate = ({data}) => {
     images
   } = data.contentfulGallery;
 
-  const postIndex = _.find(
+  const postIndex = find(
     data.allContentfulGallery.edges,
     ({ node: post }) => post.id === id
   );
 
-  return(
+  render(
     <div className="post">
 
-      <div className="post-cover">
+      <div className="post-cover" id="test">
         <Img sizes={cover.sizes} alt={cover.title} title={cover.title} backgroundColor={"#f1f1f1"} />
       </div>
 
@@ -74,12 +74,12 @@ export const query = graphql`
       }
       cover {
         title
-        sizes(maxWidth: 2000) {
+        sizes(maxWidth: 1800) {
           ...GatsbyContentfulSizes_noBase64
         }
       }
       images {
-        sizes(maxWidth: 2000) {
+        sizes(maxWidth: 1800) {
           ...GatsbyContentfulSizes_noBase64
         }
       }
@@ -92,11 +92,6 @@ export const query = graphql`
           previous {
             slug
             title
-            cover {
-              sizes(maxWidth: 1800) {
-                ...GatsbyContentfulSizes_noBase64
-              }
-            }
           }
           next {
             slug
@@ -113,12 +108,3 @@ export const query = graphql`
 `
 
 export default PostTemplate
-
-
-/*
-
-{post.map(({ images }) => (
-
-))}
-
-*/

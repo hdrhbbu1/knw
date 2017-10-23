@@ -60,7 +60,6 @@ const IndexPage = ({data}) => {
 export const query = graphql`
   query HomeQuery {
     allContentfulGallery(limit: 6, sort: { fields: [date], order: DESC }) {
-      totalCount
       edges {
         node {
           title
@@ -69,7 +68,7 @@ export const query = graphql`
           date(formatString: "M.DD.YYYY")
           cover {
             title
-            sizes(maxWidth: 2000) {
+            sizes(maxWidth: 1800) {
               ...GatsbyContentfulSizes_noBase64
             }
           }

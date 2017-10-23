@@ -3,30 +3,30 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 const Galleries = ({data}) => {
-  console.log(data)
+
   const posts = data.allContentfulGallery.edges;
+
   return(
     <div>
       <h2 className="page__title">Galleries</h2>
       <ul className="galleries__list">
-        {posts.map(({ node, index }) => (
-          <li key={node.id}>
-            <Link to={node.slug}>
-              <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={"#f1f1f1"} />
-              <h3>{node.date}</h3>
+        {posts.map(({ node: post, index }) => (
+          <li key={post.id}>
+            <Link to={post.slug}>
+              <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
+              <h3>{post.date}</h3>
             </Link>
           </li>
         ))}
       </ul>
     </div>
   )
+
 }
 
-//Query to get Contentful data
 export const query = graphql`
   query GalleryQuery {
     allContentfulGallery(limit: 1000, sort: { fields: [date], order: DESC }) {
-      totalCount
       edges {
         node {
           title
@@ -35,7 +35,7 @@ export const query = graphql`
           date(formatString: "M.DD.YYYY")
           cover {
             title
-            sizes(maxWidth: 600) {
+            sizes(maxWidth: 1800) {
               ...GatsbyContentfulSizes_noBase64
             }
           }
