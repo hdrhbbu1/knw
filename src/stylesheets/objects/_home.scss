@@ -76,7 +76,7 @@
 
 .featured__newest {
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   position: relative;
   @include bp(medium){
     width: 63.66%;
@@ -118,7 +118,7 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2em;
+  padding: 1em;
   @include bp(medium){
     padding: 2em 2em 2em 0;
     flex-flow: row;
@@ -134,8 +134,11 @@
     }
     li {
       position: relative;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       width: 100%;
+      @include bp(medium){
+        margin-bottom: 2em;
+      }
     }
     img {
       position: relative;
