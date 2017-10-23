@@ -30,9 +30,11 @@ const PostTemplate = ({data}) => {
       <div className="post-info">
         <div className="post-info__left">
           <h2 className="post-info-title">Details</h2>
-          <Link to="/galleries"><h3 className="post-category">Wedding</h3></Link>
+          <h3 className="post-category"><Link to="/galleries">Wedding</Link></h3>
           <h3 className="post-title">{title}</h3>
           <h3 className="post-date">{date}</h3>
+          {postIndex.previous && (<Link className="post-previous"to={postIndex.previous.slug}>Previous</Link>)}
+          {postIndex.next && (<Link className="post-next"to={postIndex.next.slug}>Next</Link>)}
         </div>
         <div className="post-info__right">
           <div className="post-description" dangerouslySetInnerHTML={{ __html: description.childMarkdownRemark.html }} />
@@ -40,15 +42,20 @@ const PostTemplate = ({data}) => {
       </div>
 
       <ul className="post-images">
-        {images.map((images, index) => (
-          <li key={index}>
-            <Img sizes={images.sizes} alt={images.title} title={images.title} backgroundColor={"#f1f1f1"} />
-          </li>
-        ))}
+        {images && (
+          images.map((images, index) => (
+            <li key={index}>
+              <Img sizes={images.sizes} alt={images.title} title={images.title} backgroundColor={"#f1f1f1"} />
+            </li>
+          ))
+        )}
       </ul>
 
-      {postIndex.previous && (<Link to={postIndex.previous.slug}>Nex Post</Link>)}
-      {postIndex.next && (<Link to={postIndex.next.slug}>Previous Post</Link>)}
+      {postIndex.next && (
+      <Link className="post-preview" to={postIndex.next.slug}>
+        <h4 className="post-preview__title">Next</h4>
+          <Img sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#f1f1f1"} />
+      </Link>)}
 
     </div>
   )
@@ -77,7 +84,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulGallery {
+    allContentfulGallery(limit: 1000, sort: { fields: [date], order: DESC })  {
         edges {
           node {
             id
@@ -85,10 +92,20 @@ export const query = graphql`
           previous {
             slug
             title
+            cover {
+              sizes(maxWidth: 1800) {
+                ...GatsbyContentfulSizes_noBase64
+              }
+            }
           }
           next {
             slug
             title
+            cover {
+              sizes(maxWidth: 1800) {
+                ...GatsbyContentfulSizes_noBase64
+              }
+            }
           }
         }
       }

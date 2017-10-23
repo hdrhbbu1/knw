@@ -26,6 +26,10 @@ nav a {
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
 
+.post-preview div:after {
+  transition: background-color .5s;
+}
+
 .toggle {
   transition: all .3s;
   span {
