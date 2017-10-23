@@ -3,6 +3,7 @@
 * ------- */
 
 .intro {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: $secondary;
@@ -13,6 +14,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  z-index: -1;
   &:before {
     content: '';
     background: rgba(0,0,0,.2);
@@ -45,9 +47,9 @@
 }
 
 .page {
-  background: white;
-  z-index: 2;
   position: relative;
+  background: white;
+  z-index: 3;
 }
 
 .quote {
@@ -80,6 +82,7 @@
   position: relative;
   @include bp(medium){
     width: 63.66%;
+    position: -webkit-sticky;
     position: sticky;
     top: 3em;
     height: 85vh;
@@ -147,7 +150,7 @@
 }
 
 .bio {
-  position: sticky;
+  //position: sticky;
   top: 0;
   margin: 4em 0;
   background: url('http://via.placeholder.com/900x600');

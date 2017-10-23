@@ -8,7 +8,7 @@ import Footer from '../components/footer'
 
 import '../stylesheets/style.scss'
 
-function closeMenu () {
+const closeMenu = () => {
   const wrapper = document.getElementById('wrapper');
   wrapper.classList.remove('open');
 }
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
       <title>KNW Photography</title>
     </Helmet>
 
-    <Menu />
+    <Menu/>
 
     <section className="container" onClick={closeMenu}>
       {children()}

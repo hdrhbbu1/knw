@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 const Galleries = ({data}) => {
 
-  const posts = data.allContentfulGallery.edges;
+const posts = data.allContentfulGallery.edges;
 
   return(
     <div>

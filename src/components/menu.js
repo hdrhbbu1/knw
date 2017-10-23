@@ -1,18 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-function toggleMenu () {
-  const wrapper = document.getElementById('wrapper');
-  wrapper.classList.toggle('open');
-}
-
-function closeMenu () {
+const closeMenu = () => {
   const wrapper = document.getElementById('wrapper');
   wrapper.classList.remove('open');
 }
 
-const Menu = () => {
+const toggleMenu = () => {
+  const wrapper = document.getElementById('wrapper');
+  wrapper.classList.toggle('open');
+}
 
+const Menu = () => {
   return (
     <header>
         <button className="toggle" onClick={toggleMenu}>
@@ -31,4 +30,5 @@ const Menu = () => {
     </header>
   )
 }
+
 export default Menu

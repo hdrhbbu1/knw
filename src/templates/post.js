@@ -20,7 +20,7 @@ const PostTemplate = ({data}) => {
     ({ node: post }) => post.id === id
   );
 
-  render(
+  return(
     <div className="post">
 
       <div className="post-cover" id="test">

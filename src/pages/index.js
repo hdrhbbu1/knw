@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import logo from '../images/logo.svg'
 
 const IndexPage = ({data}) => {
 
@@ -10,7 +11,7 @@ const IndexPage = ({data}) => {
     <div>
       <div className="intro">
         <h1>
-          <img className="logo" src="images/knw.svg" />
+          <img className="logo" src={logo} />
         </h1>
         <img src="http://knw.io/wp-content/uploads/2016/05/lime-ridge-concord-spring-family-lifestyle-session-36.jpg" />
       </div>
@@ -33,10 +34,10 @@ const IndexPage = ({data}) => {
         </div>
 
         <ul className="featured__list">
-          {posts.slice(1).map(({ node }) => (
-            <li key={node.id}>
-              <Link to={node.slug}>
-                <Img sizes={node.cover.sizes} alt={node.cover.title} title={node.cover.title} backgroundColor={"#f1f1f1"} />
+          {posts.slice(1).map(({ node: post }) => (
+            <li key={post.id}>
+              <Link to={post.slug}>
+                <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
               </Link>
             </li>
           ))}
@@ -46,7 +47,6 @@ const IndexPage = ({data}) => {
       <div className="bio">
         <div className="bio__inner">
           <h2>Meet the photographer</h2>
-          <img className="bio__image" src="images/bio.jpg" />
           <Link to="/about">Learn More About Kirsten &rarr;</Link>
         </div>
       </div>
@@ -56,7 +56,6 @@ const IndexPage = ({data}) => {
   )
 }
 
-//Query to get Contentful data
 export const query = graphql`
   query HomeQuery {
     allContentfulGallery(limit: 6, sort: { fields: [date], order: DESC }) {
