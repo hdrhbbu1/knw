@@ -9,4 +9,13 @@ a {
 .container a {
 	text-decoration: underline;
 	color: $base;
+	&:hover {
+		color: lighten($base,25%);
+	}
+}
+
+@media (hover: none) {
+  .container a:hover {
+		color: $base;
+	}
 }

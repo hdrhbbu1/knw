@@ -7,7 +7,7 @@ nav {
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
 
-nav a {
+nav a, .container a {
   transition: color .3s;
 }
 

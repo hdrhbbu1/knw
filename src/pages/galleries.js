@@ -8,8 +8,10 @@ const posts = data.allContentfulGallery.edges;
 
   return(
     <div>
-      <h2 className="page__title">Galleries</h2>
-      <ul className="galleries__list">
+      <div className="intro--galleries">
+        <h2 className="page-title">Galleries</h2>
+      </div>
+      <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
           <li key={post.id}>
             <Link to={post.slug}>
@@ -32,7 +34,6 @@ export const query = graphql`
           title
           id
           slug
-          date(formatString: "M.DD.YYYY")
           cover {
             title
             sizes(maxWidth: 1800) {

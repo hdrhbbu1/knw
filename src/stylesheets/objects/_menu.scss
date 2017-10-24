@@ -41,6 +41,13 @@ nav {
   }
 }
 
+@media (hover: none) {
+  .site-nav a:hover {
+    color: $base;
+  }
+}
+
+
 .open nav {
   transform: translate3d(0,0,0);
 }
@@ -80,20 +87,15 @@ nav {
   z-index: 999;
   padding: 2em;
   background: white;
-  background: rgba(255,255,255,.75);
   @include bp(medium){
     right: 2rem;
     top: 2rem;
   }
   &:hover {
     background: $base;
-    background: rgba(0,0,0,.75);
     span {
       background: white;
-      &:first-child { }
-      &:nth-child(2) { }
     }
-
   }
   span {
     position: absolute;
@@ -107,6 +109,15 @@ nav {
     }
     &:nth-child(2) {
       bottom: 39%;
+    }
+  }
+}
+
+@media (hover: none) {
+  .toggle:hover {
+    background: $base;
+    span {
+      background: white;
     }
   }
 }

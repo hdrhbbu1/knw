@@ -92,17 +92,15 @@
   h2 {
     font-size: 3em;
     font-weight: 500;
-    width: 100%;
-    position: absolute;
     text-transform: lowercase;
     mix-blend-mode: hard-light;
     padding: 0 .25em;
     width: auto;
-    top: 0;
-    left: .25em;
     background: white;
     color: $base;
     z-index: 2;
+    position: absolute;
+    top: -1px;
     @include bp(medium){
       left: .75em;
     }

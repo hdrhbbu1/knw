@@ -2,17 +2,83 @@
 *  Galleries  *
 * ----------- */
 
-.galleries__list {
+
+.intro--galleries {
+  //position: -webkit-sticky;
+  //position: sticky;
+  top: 0;
+  background: $secondary;
+  min-height: 200px;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: -1;
+  &:before {
+    display: none;
+    content: '';
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+
+.page-title {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: $base;
+  //background: url('http://knw.io/wp-content/uploads/2016/05/lime-ridge-concord-spring-family-lifestyle-session-36.jpg');
+  //background-size: 400%;
+  //background-position: center;
+  padding: 2em;
+}
+
+.galleries-list {
+  background: white;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 2em 1em;
+  @include bp(medium){
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 33% ) ;
+  }
   li {
-    width: 25%;
+    margin-bottom: 1em;
+    @include bp(medium){
+      margin: 0;
+      &:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      &:nth-child(2) {
+        grid-column: span 1;
+      }
+      &:nth-child(3) {
+        grid-column: span 1;
+      }
+      &:nth-child(4) {
+        grid-column: span 1;
+      }
+      &:nth-child(5) {
+        grid-column: span 1;
+      }
+      &:nth-child(6) {
+        grid-column: span 1;
+      }
+
+    }
   }
-
-  img {
-
-  }
-
-  h2 {
-
-  }
-
 }
