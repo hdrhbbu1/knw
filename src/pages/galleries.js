@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 
 const Galleries = ({data}) => {
 
@@ -8,6 +9,12 @@ const posts = data.allContentfulGallery.edges;
 
   return(
     <div>
+
+      <Helmet>
+        <title>Galleries</title>
+        <meta name="description" content="" />
+      </Helmet>
+
       <div className="intro--galleries">
         <h2 className="page-title">Galleries</h2>
       </div>
@@ -21,6 +28,7 @@ const posts = data.allContentfulGallery.edges;
           </li>
         ))}
       </ul>
+
     </div>
   )
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import find from "lodash.find"
+import Helmet from 'react-helmet'
 
 const PostTemplate = ({data}) => {
 
@@ -21,12 +22,20 @@ const PostTemplate = ({data}) => {
   );
 
   return(
-    <div className="post">
+    <div>
 
+    <Helmet>
+      <title>{title}</title>
+      <meta property="og:title" content={title}/>
+      <meta property="og:image" content={cover.sizes.src} />
+      <meta property="og:image:width" content="1800" />
+      <meta property="og:image:height" content="1200" />
+    </Helmet>
+
+    <div className="post">
       <div className="post-cover" id="test">
         <Img sizes={cover.sizes} alt={cover.title} title={cover.title} backgroundColor={"#f1f1f1"} />
       </div>
-
       <div className="post-info">
         <div className="post-info__left">
           <h2 className="post-info-title">Details</h2>
@@ -40,7 +49,6 @@ const PostTemplate = ({data}) => {
           <div className="post-description" dangerouslySetInnerHTML={{ __html: description.childMarkdownRemark.html }} />
         </div>
       </div>
-
       <ul className="post-images">
         {images && (
           images.map((images, index) => (
@@ -50,14 +58,15 @@ const PostTemplate = ({data}) => {
           ))
         )}
       </ul>
-
       {postIndex.next && (
       <Link className="post-preview" to={postIndex.next.slug}>
         <h4 className="post-preview__title">Next</h4>
           <Img sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#f1f1f1"} />
       </Link>)}
-
     </div>
+
+  </div>
+
   )
 }
 

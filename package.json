@@ -5,6 +5,7 @@
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
+    "fs": "0.0.1-security",
     "gatsby": "^1.9.77",
     "gatsby-cli": "^1.1.11",
     "gatsby-image": "^1.0.14",
