@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import favicon from '../images/favicon.ico'
 
 //import siteMetadata from '../../gatsby-config'
 
@@ -20,6 +21,7 @@ const TemplateWrapper = ({ children }) => (
 
     <Helmet>
       <title>KNW Photography | SF Bay Area Wedding Photographer</title>
+      <link rel="icon" href={favicon} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area." />
