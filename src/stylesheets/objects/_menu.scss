@@ -85,7 +85,8 @@ nav {
   top: 1rem;
   border-radius: 50%;
   z-index: 999;
-  padding: 2em;
+  height: 44px;
+  width: 44px;
   background: white;
   @include bp(medium){
     right: 2rem;
