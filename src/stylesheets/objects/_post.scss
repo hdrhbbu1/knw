@@ -14,7 +14,8 @@
   width: 100%;
   div {
     height: 800px;
-    height: 90vh;
+    height: 75vh;
+    max-height: 1000px;
   }
   margin-bottom: -200px;
   margin-bottom: -10vh;
@@ -98,12 +99,12 @@
   position: relative;
   width: 100%;
   min-height: 200px;
-  height: 50vh;
+  height: 40vh;
   text-align: center;
   text-decoration: none!important;
   div {
     min-height: 200px;
-    height: 50vh !important;
+    height: 40vh !important;
     &:after {
       content: '';
       position: absolute;

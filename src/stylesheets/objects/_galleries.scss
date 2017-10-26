@@ -2,41 +2,43 @@
 *  Galleries  *
 * ----------- */
 
-
 .intro--galleries {
-  //position: -webkit-sticky;
-  //position: sticky;
-  top: 0;
   background: $secondary;
   min-height: 200px;
-  height: 40vh;
-  width: 100%;
+  height: 20vh;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  z-index: -1;
-  &:before {
-    display: none;
-    content: '';
-    background: rgba(0,0,0,.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
+
+  h2 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0 1em;
+    span {
+      position: relative;
+      color: $base;
+      border-bottom: dashed 2px lighten($base,25%);
+      &:after {
+        content: '';
+        position: relative;
+        margin-left: .5rem;
+        top: 2rem;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 12px;
+        border-right-width: 12px;
+        border-top: 12px solid $base;
+
+      }
+    }
   }
 }
 
-.page-title {
-  font-size: 2.5em;
-  font-weight: 500;
-  color: $base;
-  padding: 2em;
+h2 span:hover {
+  cursor: pointer;
 }
 
 .galleries-list {
@@ -56,7 +58,7 @@
     }
     @supports (display: grid) {
       display: grid;
-      grid-gap: .25em;
+      grid-gap: 1em;
       grid-template-columns: 1fr 1fr 1fr;
       &:after {
       display: none;
@@ -66,6 +68,7 @@
 }
 
 .galleries-list li {
+  position: relative;
   margin-bottom: 1em;
   div { height: 100%; }
   @include bp(medium){
@@ -83,5 +86,37 @@
         grid-row: span 2;
       }
     }
+  }
+}
+
+.galleries-list h3 {
+  display: flex;
+  flex-fow: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 300;
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $base;
+  background: rgba(0,0,0,.7);
+  opacity: 0;
+}
+
+.galleries-list li:hover {
+  h3 {
+    opacity: 1;
+  }
+}
+
+
+@media (hover: none) {
+  .galleries-list li:hover {
+
   }
 }

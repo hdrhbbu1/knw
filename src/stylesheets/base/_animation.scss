@@ -30,6 +30,10 @@ nav a, .container a {
   transition: background-color .5s;
 }
 
+.galleries-list li h3, .galleries-list li img {
+  transition: all 0.3s;
+}
+
 .toggle {
   transition: all .3s;
   span {

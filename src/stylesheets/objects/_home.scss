@@ -81,7 +81,7 @@
   margin-bottom: 1em;
   position: relative;
   @include bp(medium){
-    width: 63.66%;
+    width: 65%;
     position: -webkit-sticky;
     position: sticky;
     top: 3em;
@@ -121,7 +121,7 @@
   align-items: flex-start;
   padding: 1em;
   @include bp(medium){
-    padding: 2em 2em 2em 0;
+    padding: 1em 2em 1em 0;
     flex-flow: row;
   }
   ul {
@@ -138,7 +138,7 @@
       margin-bottom: 1em;
       width: 100%;
       @include bp(medium){
-        margin-bottom: 2em;
+        //margin-bottom: 2em;
       }
     }
     img {
