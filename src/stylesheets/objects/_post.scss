@@ -78,14 +78,11 @@
 
 .post-category {
   display: inline-block;
+  text-transform: capitalize;
 }
 
-.post-title, .post-date, .post-category, .post-next {
+.post-location, .post-date, .post-category, .post-next {
   margin: 0 0 1em 0;
-}
-
-.post-title {
-  display: none;
 }
 
 .post-previous {

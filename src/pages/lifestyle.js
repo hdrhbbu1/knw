@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 
-const Galleries = ({data}) => {
+const Lifestyle = ({data}) => {
 
 const posts = data.allContentfulGallery.edges;
 
@@ -11,12 +11,12 @@ const posts = data.allContentfulGallery.edges;
     <div>
 
       <Helmet>
-        <title>All Galleries</title>
+        <title>Lifestyle Galleries</title>
         <meta name="description" content="" />
       </Helmet>
 
       <div className="intro--galleries">
-        <h2>See <span>All Galleries</span></h2>
+        <h2>See <span>Lifestyle Galleries</span></h2>
       </div>
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
@@ -35,7 +35,7 @@ const posts = data.allContentfulGallery.edges;
 }
 
 export const query = graphql`
-  query GalleryQuery {
+  query LifestyleQuery {
     allContentfulGallery(limit: 1000, sort: { fields: [date], order: DESC }) {
       edges {
         node {
@@ -55,4 +55,4 @@ export const query = graphql`
   }
 `
 
-export default Galleries
+export default Lifestyle

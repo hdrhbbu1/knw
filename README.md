@@ -15,3 +15,4 @@ CONTENTFUL_PREVIEW_API_TOKEN=
 * [Netlify](https://www.netlify.com/)
 * [Contentful](https://www.contentful.com/)
 * [Gatsby](https://www.gatsbyjs.org/)
+* [React](https://reactjs.org/)
