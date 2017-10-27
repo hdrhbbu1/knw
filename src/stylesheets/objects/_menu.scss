@@ -48,7 +48,7 @@ nav {
 }
 
 
-.open nav {
+.open--menu nav {
   transform: translate3d(0,0,0);
 }
 
@@ -67,7 +67,7 @@ nav {
   z-index: 99;
 }
 
-.open .container {
+.open--menu .container {
   transform: translate3d(-100%,0,0);
   @include bp(medium){
     transform: translate3d(-50%,0,0);
@@ -123,7 +123,7 @@ nav {
   }
 }
 
-.open .toggle {
+.open--menu .toggle {
   span:first-child {
     transform: rotate(45deg);
     top: 50%;

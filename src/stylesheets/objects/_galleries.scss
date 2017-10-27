@@ -2,45 +2,6 @@
 *  Galleries  *
 * ----------- */
 
-.intro--galleries {
-  background: $secondary;
-  min-height: 200px;
-  height: 20vh;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-
-  h2 {
-    text-transform: capitalize;
-    font-size: 3em;
-    font-weight: 700;
-    padding: 0 1em;
-    span {
-      position: relative;
-      color: $base;
-      border-bottom: dashed 2px lighten($base,25%);
-      &:after {
-        content: '';
-        position: relative;
-        margin-left: .5rem;
-        top: 2rem;
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-left-width: 12px;
-        border-right-width: 12px;
-        border-top: 12px solid $base;
-
-      }
-    }
-  }
-}
-
-h2 span:hover {
-  cursor: pointer;
-}
-
 .galleries-list {
   background: white;
   max-width: 1200px;
@@ -113,7 +74,6 @@ h2 span:hover {
     opacity: 1;
   }
 }
-
 
 @media (hover: none) {
   .galleries-list li:hover {

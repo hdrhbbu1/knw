@@ -4,8 +4,6 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
 
-//import siteMetadata from '../../gatsby-config'
-
 import Menu from '../components/menu'
 import Footer from '../components/footer'
 
@@ -13,7 +11,7 @@ import '../stylesheets/style.scss'
 
 const closeMenu = () => {
   const wrapper = document.getElementById('wrapper');
-  wrapper.classList.remove('open');
+  wrapper.classList.remove('open--menu');
 }
 
 const TemplateWrapper = ({ children }) => (

@@ -3,6 +3,7 @@
 * ------- */
 
 .intro {
+  position: relative;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -95,6 +96,8 @@
     text-transform: lowercase;
     mix-blend-mode: hard-light;
     padding: 0 .25em;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
     width: auto;
     background: white;
     color: $base;

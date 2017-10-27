@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
+import Categories from '../components/categories'
 
 const Lifestyle = ({data}) => {
 
@@ -15,9 +16,8 @@ const posts = data.allContentfulGallery.edges;
         <meta name="description" content="" />
       </Helmet>
 
-      <div className="intro--galleries">
-        <h2>See <span>Lifestyle Galleries</span></h2>
-      </div>
+      <Categories title="Lifestyle"/>
+
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
           <li key={post.id}>

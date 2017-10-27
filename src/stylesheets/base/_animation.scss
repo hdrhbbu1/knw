@@ -16,7 +16,7 @@ nav a, .container a {
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
 
-.open .container:after {
+.open--menu .container:after {
   transition: opacity .5s, visibility 0s linear 0s;
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
@@ -30,8 +30,17 @@ nav a, .container a {
   transition: background-color .5s;
 }
 
-.galleries-list li h3, .galleries-list li img {
+.galleries-list li h3 {
   transition: all 0.3s;
+}
+
+.category-navigation__links {
+  transition: all 0.3s;
+}
+
+
+.category-navigation__header button:after {
+  //transition: transform .3s;
 }
 
 .toggle {
