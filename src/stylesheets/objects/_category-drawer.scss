@@ -4,6 +4,12 @@
 
 .category-navigation {
   background: $secondary;
+  span {
+    display: none;
+    @include bp(medium){
+      display: inline;
+    }
+  }
 }
 
 .category-navigation__header {

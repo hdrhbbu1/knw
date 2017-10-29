@@ -1,0 +1,29 @@
+/* ---------- *
+*  Investment  *
+* ----------- */
+
+.investment {
+}
+
+.intro--investment {
+  box-sizing: border-box;
+  background: gray;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  h2 {
+    font-weight: 500;
+    font-size: 7.5vw;
+  }
+  img {
+    
+  }
+}
+
+
+
+
+
+.page--investment {
+  padding: 2em;
+}
