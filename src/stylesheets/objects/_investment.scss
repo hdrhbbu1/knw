@@ -2,25 +2,89 @@
 *  Investment  *
 * ----------- */
 
-.investment {
+.intro--investment {
+  @include bp(medium){
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 2em auto;
+    max-width: 1500px;
+  }
 }
 
-.intro--investment {
-  box-sizing: border-box;
-  background: gray;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
+.intro--investment__image {
+  width: 100%;
+  div {
+    height: 100%;
+  }
+  @include bp(medium){
+    padding: 1em;
+    width: 50%;
+  }
+}
+
+.intro--investment__description {
+  @include bp(medium){
+    width: 50%;
+  }
+  padding: 1em;
   h2 {
     font-weight: 500;
-    font-size: 7.5vw;
+    font-size: 3em;
+    margin: 0 0 1rem 0;
   }
-  img {
-    
+  p {
+    margin-bottom: 1em;
   }
 }
 
 
+
+
+// Tabs
+.tabs {
+  margin: 4em 0 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.tab {
+  font-weight: 500;
+  font-size: 1.25em;
+  padding: 1em 2em;
+  cursor: pointer;
+  border: 2px solid $secondary;
+}
+
+.tab--selected {
+  background: $secondary;
+}
+
+//Tab Content
+.tab-panel {
+  height: 400px;
+  padding: 4em;
+  position: absolute;
+  top: 4em;
+  left: 0;
+  right: 0;
+}
+
+.tab-panel--selected {
+  background: $secondary;
+}
+
+.tab-panel blockquote {
+  font-size: 2em;
+  text-align: center;
+}
 
 
 
