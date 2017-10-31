@@ -7,6 +7,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 const Investment = ({data}) => {
 
 const tabs = data.allContentfulInvestment.edges;
+console.log(tabs)
 
   return(
     <div>
@@ -37,6 +38,9 @@ const tabs = data.allContentfulInvestment.edges;
         {tabs.map(({ node: tab, index }) => (
           <TabPanel key={tab.id} className="tab-panel">
             <blockquote dangerouslySetInnerHTML={{ __html: tab.quote.childMarkdownRemark.html }} />
+            <ul>
+              <li><Img sizes={tabs[1].node.photoGrid[0].sizes}/></li>
+            </ul>
           </TabPanel>
         ))}
       </Tabs>

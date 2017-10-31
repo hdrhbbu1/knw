@@ -21,8 +21,12 @@ button {
 	-moz-appearance: none;
 }
 
+$sans: "Untitled Sans Test", sans-serif;
+$serif: "Untitled Serif", Georgia, serif;
+
+
 body {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: $sans, sans-serif;
 	font-size: 100%;
 	font-weight: 300;
 	color: $base;

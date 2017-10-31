@@ -16,7 +16,7 @@ const Categories = props => {
     return (
       <div className="category-navigation">
         <div className="category-navigation__header">
-          <h2><span>View</span><button onClick={toggleDrawer}>{props.title}</button></h2>
+          <h2><span>Filter Galleries by / </span><button onClick={toggleDrawer}>{props.title}</button></h2>
         </div>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/" onClick={closeDrawer}>All</Link></li>

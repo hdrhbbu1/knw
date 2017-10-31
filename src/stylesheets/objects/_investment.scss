@@ -30,11 +30,12 @@
   }
   padding: 1em;
   h2 {
-    font-weight: 700;
-    font-size: 3em;
+    font-weight: 500;
+    font-size: 2.5em;
     margin: 0 0 2rem 0;
   }
   p {
+    font-family: $serif;
     margin-bottom: 1em;
   }
 }
@@ -47,22 +48,25 @@
   margin: 4em 0 0 0;
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 .tab-list {
-  display: flex;
+  margin: 0 auto;
+  display: inline-flex;
   flex-flow: row;
   justify-content: center;
-}
-
-.tab {
-  font-weight: 500;
-  font-size: 1.25em;
-  padding: 1em 2em;
-  cursor: pointer;
   border-top: 2px solid $secondary;
   border-left: 2px solid $secondary;
   border-right: 2px solid $secondary;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.tab {
+  font-size: 1.25em;
+  padding: 1em 2em;
+  cursor: pointer;
 }
 
 .tab--selected {
@@ -77,6 +81,9 @@
   top: 3.8em;
   left: 0;
   right: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .tab-panel--selected {
@@ -84,10 +91,29 @@
 }
 
 .tab-panel blockquote {
-  font-size: 2em;
-  text-align: center;
+  margin: 0 0 2em 0;
+  p {
+    font-size: 2em;
+    font-family: $serif;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.4;
+    &:before {
+      content: "“";
+      padding-right: .1em;
+    }
+    &:after {
+      content: "”";
+      padding-left: .1em;
+    }
+  }
 }
 
+.tab-panel ul li  div{
+  flex: 0 0 100%;
+  height: 400px;
+  width: 600px;
+}
 
 
 .page--investment {

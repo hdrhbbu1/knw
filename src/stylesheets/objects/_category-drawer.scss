@@ -3,7 +3,8 @@
 * ----------- */
 
 .category-navigation {
-  background: white;
+  max-width: 1500px;
+  margin: 0 auto;
   span {
     display: none;
     @include bp(medium){
@@ -13,36 +14,36 @@
 }
 
 .category-navigation__header {
-  min-height: 150px;
-  height: 20vh;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em 2em 2em 2em;
   h2 {
+    //font-weight: 500;
     text-transform: capitalize;
-    font-size: 3em;
-    font-weight: 700;
-    padding: 0 1em;
+    font-size: 2.5em;
+    padding: 0;
   }
   button {
+    //font-weight: 500;
+    color: darken($secondary,25%);
     font-size: 1em;
-    font-weight: 700;
     position: relative;
-    color: $base;
-    margin-right: .5em;
-    border-bottom: dashed 2px lighten($base,25%);
+    padding: .25em 1em 0 .25em;
+    border-radius: 2px;
+    border-bottom: 2px solid darken($secondary,25%);
     &:after {
       content: '';
       position: absolute;
-      margin-left: .5rem;
-      top: 2rem;
+      margin-left: 1rem;
+      top: 2.25rem;
       width: 0;
       height: 0;
       border: 0 solid transparent;
-      border-left-width: 12px;
-      border-right-width: 12px;
-      border-top: 12px solid $base;
+      border-left-width: 8px;
+      border-right-width: 8px;
+      border-top: 8px solid $base;
     }
   }
 }
@@ -50,6 +51,7 @@
 .category-navigation__header button:hover {
   cursor: pointer;
   border-color: $base;
+  color: $base;
   &:after {
     border-top-color: $base;
   }
@@ -62,36 +64,35 @@
 }
 
 .category-navigation__links {
-  background: lighten($base,10%);
   width: 100%;
-  margin: 0;
+  margin: 0 1.5em 0;
   opacity: 0;
   visibility: hidden;
   height: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   li a {
-    color: white;
+    display: block;
+    color: $base;
     font-size: 1.25em;
+    font-weight: 500;
+    background: $secondary;
     margin: 0 .5em;
     text-decoration: none;
-    background: $base;
     padding: .5em 1em;
     border-radius: 2px;
   }
 }
 
 .category-navigation__links a:hover {
-  background: darken($base,5%);
+  background: $base;
   color: white;
+
 }
 
 .open--drawer .category-navigation__links {
-  padding: 2em 0;
-  height: 10vh;
-  max-height: 100px;
+  height: 100%;
+  max-height: 40px;
   opacity: 1;
   visibility: visible;
 }
