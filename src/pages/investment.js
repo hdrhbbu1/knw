@@ -19,29 +19,34 @@ console.log(tabs)
 
       <div className="intro--investment">
         <div className="intro--investment__image">
-          <Img sizes={tabs[0].node.cover.sizes} alt={tabs[0].node.cover.title} title={tabs[0].node.cover.title} backgroundColor={"#f1f1f1"} />
+          <Img sizes={tabs[1].node.cover.sizes} backgroundColor={"#f1f1f1"} />
         </div>
-        <div className="intro--investment__description">
-          <h2>Investment</h2>
-          <p> Morbi hendrerit vulputate justo, eget blandit libero congue accumsan. Aliquam ac libero gravida, vestibulum diam vitae, pretium felis. Sed scelerisque quam a nunc feugiat tristique. Curabitur vel mi suscipit, sollicitudin lectus quis, molestie purus. Quisque imperdiet lorem est, vel posuere ex tempus vel. Sed eu magna non ex dictum tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <p>ullam at sapien in metus sagittis pellentesque. Etiam et tellus consequat, ultrices turpis eu, mattis orci. Aliquam elementum bibendum urna id cursus. Nunc sodales semper augue, vitae mattis elit. Donec suscipit fermentum tristique. Mauris a interdum eros.</p>
-        </div>
+        <h2>Investment</h2>
       </div>
 
       <Tabs className="tabs" selectedTabClassName="tab--selected" selectedTabPanelClassName="tab-panel--selected">
         <TabList className="tab-list">
+
+          <Tab className="tab">General Info</Tab>
           {tabs.map(({ node: tab, index }) => (
             <Tab key={tab.id} className="tab">{tab.title}</Tab>
           ))}
+
         </TabList>
+
+
+        <TabPanel className="tab-panel">
+          <blockquote><p>General Info goes here</p></blockquote>
+        </TabPanel>
 
         {tabs.map(({ node: tab, index }) => (
           <TabPanel key={tab.id} className="tab-panel">
             <blockquote dangerouslySetInnerHTML={{ __html: tab.quote.childMarkdownRemark.html }} />
             <ul>
-              <li><Img sizes={tabs[1].node.photoGrid[0].sizes}/></li>
+              <li><Img sizes={tab.cover.sizes}/></li>
             </ul>
           </TabPanel>
+
         ))}
       </Tabs>
 
@@ -52,7 +57,7 @@ console.log(tabs)
 
 export const query = graphql`
   query InvestmentQuery {
-    allContentfulInvestment (sort: { fields: [title], order: DESC}) {
+    allContentfulInvestment (sort: { fields: [title], order: ASC}) {
       edges {
         node {
           title

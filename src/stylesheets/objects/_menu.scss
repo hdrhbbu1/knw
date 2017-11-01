@@ -86,7 +86,7 @@ nav {
   z-index: 999;
   height: 44px;
   width: 44px;
-  background: white;
+  background: $secondary;
   @include bp(medium){
     right: 2rem;
     top: 2rem;

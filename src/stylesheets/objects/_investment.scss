@@ -3,49 +3,43 @@
 * ----------- */
 
 .intro--investment {
+  margin: 0 auto 2em;
   @include bp(medium){
+    margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: center;
-    margin: 2em auto;
-    max-width: 1500px;
+    padding: 2em 1em;
+    //max-width: 1500px;
+    position: relative;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3em;
+    margin: 0 auto;
+    position: relative;
+    top: -.5em;
+    @include bp(medium){
+      font-size: 4.5em;
+    }
   }
 }
 
 .intro--investment__image {
   width: 100%;
-  div {
-    height: 100%;
-  }
   @include bp(medium){
-    padding: 1em;
-    width: 50%;
+    width: 66.666%;
+    margin: 0 auto;
   }
 }
-
-.intro--investment__description {
-  @include bp(medium){
-    width: 50%;
-  }
-  padding: 1em;
-  h2 {
-    font-weight: 500;
-    font-size: 2.5em;
-    margin: 0 0 2rem 0;
-  }
-  p {
-    font-family: $serif;
-    margin-bottom: 1em;
-  }
-}
-
 
 
 
 // Tabs
 .tabs {
-  margin: 4em 0 0 0;
+  margin: 0;
   position: relative;
   width: 100%;
   text-align: center;
@@ -56,16 +50,16 @@
   display: inline-flex;
   flex-flow: row;
   justify-content: center;
-  border-top: 2px solid $secondary;
-  border-left: 2px solid $secondary;
-  border-right: 2px solid $secondary;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-left: 1px solid $secondary;
+  border-right: 1px solid $secondary;
 }
 
 .tab {
-  font-size: 1.25em;
+  font-size: 1em;
   padding: 1em 2em;
+  border-top: 2px solid $secondary;
+  border-left: 1px solid $secondary;
+  border-right: 1px solid $secondary;
   cursor: pointer;
 }
 
@@ -78,7 +72,7 @@
   height: 400px;
   padding: 4em;
   position: absolute;
-  top: 3.8em;
+  top: 3.1em;
   left: 0;
   right: 0;
   display: flex;
