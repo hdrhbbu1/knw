@@ -5,9 +5,7 @@ import Helmet from 'react-helmet'
 import Categories from '../components/categories'
 
 const Lifestyle = ({data}) => {
-
-const galleries = data.contentfulCategory.gallery;
-console.log(galleries);
+const posts = data.contentfulCategory.gallery;
 
   return(
     <div>
@@ -20,14 +18,15 @@ console.log(galleries);
       <Categories title="Lifestyle"/>
 
       <ul className="galleries-list">
-        {galleries.map(({ gallery, index }) => (
-          <li key={index}>
-            <h3>{title}</h3>
-          </li>
-        ))}
+        {posts.map((post: gallery, index) => (
+            <li key={index}>
+              <Link to={post.slug}>
+                <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
+                <h3>view gallery</h3>
+              </Link>
+            </li>
+          ))}
       </ul>
-
-
 
     </div>
   )
