@@ -2,26 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 
-const toggleDrawer = () => {
-  const wrapper = document.getElementById('wrapper');
-  wrapper.classList.toggle('open--drawer');
-}
-
-const closeDrawer = () => {
-  const wrapper = document.getElementById('wrapper');
-  wrapper.classList.remove('open--drawer');
-}
-
 const Categories = props => {
     return (
       <div className="category-navigation">
-        <div className="category-navigation__header">
-          <h2><span>Filter by / </span><button onClick={toggleDrawer}>{props.title}</button></h2>
-        </div>
+        <h2>Galleries</h2>
         <ul className="category-navigation__links">
-          <li><Link to="/galleries/" onClick={closeDrawer}>All</Link></li>
-          <li><Link to="/lifestyle/" onClick={closeDrawer}>Lifestyle</Link></li>
-          <li><Link to="/wedding/" onClick={closeDrawer}>Wedding</Link></li>
+          <li><Link to="/galleries/">All</Link></li>
+          <li><Link to="/lifestyle/">Lifestyle</Link></li>
+          <li><Link to="/wedding/">Wedding</Link></li>
         </ul>
       </div>
     )

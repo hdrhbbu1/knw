@@ -6,6 +6,7 @@ import Categories from '../components/categories'
 
 const Wedding = ({data}) => {
 const posts = data.allContentfulGallery.edges;
+const count = data.allContentfulGallery.totalCount;
 
   return(
     <div>
@@ -15,7 +16,14 @@ const posts = data.allContentfulGallery.edges;
         <meta name="description" content="" />
       </Helmet>
 
-      <Categories title="Wedding"/>
+      <div className="category-navigation">
+        <h2>Galleries</h2>
+        <ul className="category-navigation__links">
+          <li><Link to="/galleries/">All</Link></li>
+          <li><Link to="/lifestyle/">Lifestyle</Link></li>
+          <li><Link to="/wedding/">Wedding <span>{count}</span></Link></li>
+        </ul>
+      </div>
 
       <ul className="galleries-list">
         {posts.map(({ node: post, index }) => (
@@ -36,6 +44,7 @@ const posts = data.allContentfulGallery.edges;
 export const query = graphql`
 query WeddingQuery {
   allContentfulGallery(limit: 1000, filter:{category:{eq:"wedding"}}, sort: { fields: [date], order: DESC }) {
+    totalCount
     edges {
       node {
         title
