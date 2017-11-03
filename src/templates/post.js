@@ -41,7 +41,7 @@ const PostTemplate = ({data}) => {
       <div className="post-info">
         <div className="post-info__left">
           <h2 className="post-info-title">Details</h2>
-          <h3 className="post-category"><Link to={category[0].slug + "/"}>{category[0].title}</Link></h3>
+          <h3 className="post-category"><Link to={category + "/"}>{category}</Link></h3>
           <h3 className="post-location">{location}</h3>
           {postIndex.previous && (<Link className="post-previous"to={postIndex.previous.slug}>Previous</Link>)}
           {postIndex.next && (<Link className="post-next"to={postIndex.next.slug}>Next</Link>)}
@@ -76,10 +76,7 @@ export const query = graphql`
     contentfulGallery(slug: {eq: $slug}) {
       title
       id
-      category {
-        title
-        slug
-      }
+      category
       location
       date(formatString: "M.DD.YYYY")
       description {

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Categories from '../components/categories'
 
 const Wedding = ({data}) => {
-const posts = data.contentfulCategory.gallery;
+const posts = data.allContentfulGallery.edges;
 
   return(
     <div>
@@ -18,14 +18,14 @@ const posts = data.contentfulCategory.gallery;
       <Categories title="Wedding"/>
 
       <ul className="galleries-list">
-        {posts.map((post: gallery, index) => (
-            <li key={index}>
-              <Link to={post.slug}>
-                <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
-                <h3>view gallery</h3>
-              </Link>
-            </li>
-          ))}
+        {posts.map(({ node: post, index }) => (
+          <li key={post.id}>
+            <Link to={post.slug}>
+              <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
+              <h3>view gallery</h3>
+            </Link>
+          </li>
+        ))}
       </ul>
 
     </div>
@@ -34,17 +34,20 @@ const posts = data.contentfulCategory.gallery;
 }
 
 export const query = graphql`
-  query WeddingQuery {
-    contentfulCategory(title: {eq: "Wedding"}) {
-    title
-    gallery {
-      title
-      slug
-      date
-      cover {
+query WeddingQuery {
+  allContentfulGallery(limit: 1000, filter:{category:{eq:"wedding"}}, sort: { fields: [date], order: DESC }) {
+    edges {
+      node {
         title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
+        id
+        slug
+        date
+        category
+        cover {
+          title
+          sizes(maxWidth: 1800) {
+            ...GatsbyContentfulSizes_noBase64
+          }
         }
       }
     }
