@@ -14,6 +14,7 @@ const closeMenu = () => {
   wrapper.classList.remove('open--menu');
 }
 
+
 const TemplateWrapper = ({ children }) => (
   <div id="wrapper">
 

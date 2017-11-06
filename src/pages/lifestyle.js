@@ -20,7 +20,7 @@ const count = data.allContentfulGallery.totalCount;
         <h2>Galleries</h2>
         <ul className="category-navigation__links">
           <li><Link to="/galleries/">All</Link></li>
-          <li><Link to="/lifestyle/">Lifestyle <span>{count}</span></Link></li>
+          <li><Link to="/lifestyle/" className="active">Lifestyle</Link></li>
           <li><Link to="/wedding/">Wedding</Link></li>
         </ul>
       </div>

@@ -3,6 +3,7 @@
 * ----------- */
 
 .category-navigation {
+
 }
 
 .category-navigation {
@@ -13,27 +14,7 @@
   h2 {
     text-transform: capitalize;
     font-size: 2.5em;
-    padding: 0;
-  }
-  button {
-    color: darken($secondary,25%);
-    font-size: 1em;
-    position: relative;
-    padding: .25em 1em 0 .25em;
-    border-radius: 2px;
-    border-bottom: 2px solid darken($secondary,25%);
-    &:after {
-      content: '';
-      position: absolute;
-      margin-left: 1rem;
-      top: 2.25rem;
-      width: 0;
-      height: 0;
-      border: 0 solid transparent;
-      border-left-width: 8px;
-      border-right-width: 8px;
-      border-top: 8px solid $base;
-    }
+    margin: 0 0 .5rem 0;
   }
 }
 
@@ -62,14 +43,19 @@
     font-size: 1.25em;
     font-weight: 500;
     background: $secondary;
-    margin: 0 1em 0 0;
+    margin: 0 .5em .5em 0;
     text-decoration: none;
     padding: .5em 1em;
     border-radius: 2px;
   }
 }
 
-.category-navigation__links a:hover {
+.category-navigation__links .active {
   background: $base;
+  color: white;
+}
+
+.category-navigation__links a:hover {
+  background: lighten($base,25%);
   color: white;
 }

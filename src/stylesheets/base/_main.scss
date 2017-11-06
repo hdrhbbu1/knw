@@ -19,6 +19,9 @@ button {
 	cursor: pointer;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	&:focus {
+		outline: 0;
+	}
 }
 
 $sans: "Untitled Sans Test", sans-serif;
