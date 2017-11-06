@@ -20,12 +20,12 @@ button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	&:focus {
-		outline: 0;
+		outline: none;
 	}
 }
 
 $sans: "Untitled Sans Test", sans-serif;
-$serif: "Tiempos Text Test", sans-serif;
+//$serif: "Tiempos Text Test", sans-serif;
 
 
 body {

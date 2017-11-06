@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
-import Categories from '../components/categories'
 
 const Wedding = ({data}) => {
 const posts = data.allContentfulGallery.edges;

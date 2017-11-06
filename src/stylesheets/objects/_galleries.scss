@@ -75,8 +75,43 @@
   }
 }
 
-@media (hover: none) {
-  .galleries-list li:hover {
 
+//Category Navigation Buttons
+.category-navigation {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  padding: 2em 2em 0 2em;
+  h2 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0 0 .5rem 0;
+  }
+}
+
+.category-navigation__links {
+  margin: 2em 0 1em;
+  display: flex;
+  flex-flow: row wrap;
+  li a {
+    margin: 0 1em .5em 0;
+    text-decoration: none;
+    font-size: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+    border: solid 1px $base;
+    border-radius: 2px;
+    &:hover {
+      color: $base;
+    }
+  }
+}
+
+.category-navigation__links .active {
+  background: $base;
+  color: white;
+  &:hover {
+    color: white;
   }
 }

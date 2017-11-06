@@ -68,7 +68,9 @@
 .tab--selected {
   background: $base;
   color: white;
-
+  &:focus {
+    outline: none;
+  }
 }
 
 //Tab Panel
