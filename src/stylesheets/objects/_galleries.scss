@@ -3,12 +3,12 @@
 * ----------- */
 
 .galleries-list {
+  max-width: $max;
   background: white;
-  max-width: 1500px;
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 2em;
+  padding: 2em 2em 4em;
   @include bp(medium){
     display: flex;
     flex-flow: row wrap;
@@ -56,7 +56,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 300;
   text-transform: lowercase;
   position: absolute;
@@ -78,10 +78,13 @@
 
 //Category Navigation Buttons
 .category-navigation {
+  max-width: $max;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   padding: 2em 2em 0 2em;
+  margin: 0 auto;
+  box-sizing: border-box;
   h2 {
     text-transform: capitalize;
     font-size: 3em;

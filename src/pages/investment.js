@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Slider from '../components/slick';
 
 const Investment = ({data}) => {
 
 const tabs = data.allContentfulInvestment.edges;
-console.log(tabs)
 
   return(
     <div>
@@ -25,12 +25,11 @@ console.log(tabs)
       </div>
 
       <Tabs className="tabs" selectedTabClassName="tab--selected" selectedTabPanelClassName="tab-panel--selected">
-        <TabList className="tab-list">
 
+        <TabList className="tab-list">
           <Tab className="tab">General</Tab>
           <Tab className="tab">Lifestyle</Tab>
           <Tab className="tab">Wedding</Tab>
-
         </TabList>
 
 
@@ -78,9 +77,9 @@ console.log(tabs)
             <p>I enjoy weddings of all sizes, from elopements to the 300+ person wedding that lasts for multiple days. As long as you trust me to capture the beauty of your day than I’m happy to do my best, roll with the punches and keep the day going no matter what. My goal is not only to capture key moments, but to have you end up with beautiful images of these moments and details. Don’t mind me if I tear up for a moment or two behind the lens, because it happens at most weddings.</p>
           </div>
         </TabPanel>
-
-
       </Tabs>
+
+      <Slider/>
 
       </div>
   )
