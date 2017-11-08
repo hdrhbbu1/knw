@@ -37,12 +37,10 @@
   }
 }
 
-
-
 //TABS
 .tabs {
   padding: 10em 0 4em;
-  background: $secondary;
+  //background: $secondary;
   //max-width: $max;
   box-sizing: border-box;
   position: relative;
@@ -82,8 +80,12 @@
 }
 
 //Tab Panels
-.tab-panel {
+
+.tab-panel__content {
   background: $secondary;
+}
+
+.tab-panel__container {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -93,15 +95,12 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 2em;
-  img {
-    margin: 0 0 2em 0;
-  }
   p {
     margin: 0 0 2em 0;
   }
   blockquote {
     padding: 2em;
-    margin: 0 0 2em 0;
+    margin: 2em 0;
     background: darken($secondary,5%);
     ul li {
       text-align: left;
@@ -114,14 +113,14 @@
 
 .tab-panel--selected {}
 
-.tab-panel__sidebar {
+.tab-panel .sidebar {
   width: 100%;
   @include bp(medium){
     flex: 0 0 47.5%;
   }
 }
 
-.tab-panel__main {
+.tab-panel .main {
   width: 100%;
   text-align: left;
   @include bp(medium){
@@ -130,8 +129,7 @@
 }
 
 //Slick Photo Gallery
-
-.slick-container {
+.tab-panel__slider {
   box-sizing: border-box;
   margin: 6em auto 4em;
   position: relative;
