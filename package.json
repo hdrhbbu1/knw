@@ -18,7 +18,8 @@
     "gatsby-transformer-remark": "^1.7.20",
     "lodash.find": "^4.6.0",
     "react-slick": "^0.15.4",
-    "react-tabs": "^2.1.0"
+    "react-tabs": "^2.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "keywords": [
     "knw"
