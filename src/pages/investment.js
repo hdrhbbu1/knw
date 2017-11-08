@@ -4,15 +4,17 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"
 
 const sliderSettings = {
-  //dots: true,
   infinite: true,
   speed: 500,
+  slidesToShow: 2,
+  swipeToSlide: true,
+  draggable: true,
+  swipe: true,
   centerMode: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
+  arrows: false
 }
 
 const Investment = ({data}) => {
@@ -89,11 +91,14 @@ const tabs = data.allContentfulInvestment.edges;
         </TabPanel>
       </Tabs>
 
-      <Slider className="slider"{...sliderSettings}>
-        <div><img src="http://via.placeholder.com/300x200"/></div>
-        <div><img src="http://via.placeholder.com/300x200"/></div>
-        <div><img src="http://via.placeholder.com/300x200"/></div>
-      </Slider>
+      <div className="slick-container">
+        <h3>Examples</h3>
+        <Slider {...sliderSettings}>
+          <div><img src="http://knw.io/wp-content/uploads/2017/09/fort-funston-foggy-fun-beach-water-engagement-session-27.jpg"/></div>
+          <div><img src="http://knw.io/wp-content/uploads/2017/07/key-largo-ocean-reach-indian-fusion-wedding-170.jpg"/></div>
+          <div><img src="http://knw.io/wp-content/uploads/2016/03/four-kids-lifestyle-session-ocean-beach.jpg"/></div>
+        </Slider>
+      </div>
 
       </div>
   )

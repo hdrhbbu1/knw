@@ -130,35 +130,51 @@
 }
 
 //Slick Photo Gallery
-.slider {
-  margin: 4em auto;
-  max-width: 600px;
+
+.slick-container {
+  box-sizing: border-box;
+  margin: 6em auto 4em;
+  position: relative;
+  h3 {
+    text-align: center;
+    font-size: 7em;
+    font-weight: 500;
+    color: $secondary;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -.75em;
+  }
 }
-
-
 
 .slick-slider {
+  box-sizing: border-box;
 
+  //margin: 2em;
 }
-
 
 .slick-list {
-
+  //box-sizing: border-box;
 }
 
-.slick-slide {
 
+.slick-slide {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .slick-active {}
 
+.slick-center {
+
+}
 
 
 
 
 
 //Investment Example Galleries
-
 .photo-grid {
   display: none;
   //width: 66.666%;
