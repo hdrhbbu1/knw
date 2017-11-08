@@ -39,11 +39,10 @@ const tabs = data.allContentfulInvestment.edges;
       <Tabs className="tabs" selectedTabClassName="tab--selected" selectedTabPanelClassName="tab-panel--selected">
 
         <TabList className="tab-list">
-          <Tab className="tab">General</Tab>
-          <Tab className="tab">Lifestyle</Tab>
-          <Tab className="tab">Wedding</Tab>
+          {tabs.map(({ node: tab, index }) => (
+            <Tab key={tab.id} className="tab">{tab.title}</Tab>
+          ))}
         </TabList>
-
 
         <TabPanel className="tab-panel">
           <div className="tab-panel__sidebar">
@@ -106,7 +105,7 @@ const tabs = data.allContentfulInvestment.edges;
 
 export const query = graphql`
   query InvestmentQuery {
-    allContentfulInvestment (sort: { fields: [title], order: ASC}) {
+    allContentfulInvestment(sort: {fields: [title], order: ASC}) {
       edges {
         node {
           title
@@ -117,14 +116,20 @@ export const query = graphql`
               ...GatsbyContentfulSizes_noBase64
             }
           }
-          quote {
+          pricing {
             childMarkdownRemark {
               html
             }
           }
-          photoGrid {
-            sizes {
-              src
+          description {
+            childMarkdownRemark {
+              html
+            }
+          }
+          slider {
+            title
+            sizes(maxWidth: 1800) {
+              ...GatsbyContentfulSizes_noBase64
             }
           }
         }
