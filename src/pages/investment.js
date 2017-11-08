@@ -3,7 +3,17 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Slider from '../components/slick';
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+
+const sliderSettings = {
+  //dots: true,
+  infinite: true,
+  speed: 500,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+}
 
 const Investment = ({data}) => {
 
@@ -79,12 +89,15 @@ const tabs = data.allContentfulInvestment.edges;
         </TabPanel>
       </Tabs>
 
-      <Slider/>
+      <Slider className="slider"{...sliderSettings}>
+        <div><img src="http://via.placeholder.com/300x200"/></div>
+        <div><img src="http://via.placeholder.com/300x200"/></div>
+        <div><img src="http://via.placeholder.com/300x200"/></div>
+      </Slider>
 
       </div>
   )
 }
-
 
 export const query = graphql`
   query InvestmentQuery {
