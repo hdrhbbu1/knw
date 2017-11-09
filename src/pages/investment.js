@@ -8,14 +8,15 @@ import "slick-carousel/slick/slick.css"
 
 const sliderSettings = {
   infinite: true,
-  speed: 500,
+  speed: 300,
   slidesToShow: 2,
   swipeToSlide: true,
   draggable: true,
-  swipe: true,
   centerMode: true,
-  arrows: false
+  arrows: false,
+  responsive: [{ breakpoint: 640, settings: { slidesToShow: 1 } }]
 }
+
 
 const Investment = ({data}) => {
 const tabs = data.allContentfulInvestment.edges;
@@ -51,7 +52,7 @@ const tabs = data.allContentfulInvestment.edges;
             <div className="tab-panel__content">
               <div className="tab-panel__container">
                 <div className="sidebar">
-                  {tab.cover && (<Img sizes={tab.cover.sizes} backgroundColor={"#e4e4e4"}/>)}
+                  {tab.cover && (<div className="cover"><Img sizes={tab.cover.sizes} backgroundColor={"#e4e4e4"}/></div>)}
                   {tab.pricing && (<blockquote dangerouslySetInnerHTML={{ __html: tab.pricing.childMarkdownRemark.html }} />)}
                 </div>
                 {tab.description && (<div className="main" dangerouslySetInnerHTML={{ __html: tab.description.childMarkdownRemark.html }} />)}
@@ -60,7 +61,7 @@ const tabs = data.allContentfulInvestment.edges;
 
             {tab.slider && (
               <div className="tab-panel__slider">
-                <h3>Examples</h3>
+                <h3>Selected {tab.title} Photos</h3>
                 <Slider {...sliderSettings}>
                   {tab.slider.map((slider, index) => (
                     <div key={index}><Img sizes={slider.sizes} backgroundColor={"#e4e4e4"}/></div>

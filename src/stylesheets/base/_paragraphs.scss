@@ -5,3 +5,7 @@
 .container p {
 	line-height: 1.75;
 }
+
+.container strong, .container em {
+	font-weight: 500;
+}
