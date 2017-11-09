@@ -11,7 +11,7 @@ const sliderSettings = {
   speed: 300,
   slidesToShow: 2,
   swipeToSlide: true,
-  draggable: true,
+  draggable: false,
   centerMode: true,
   arrows: true,
   touchMove: true,

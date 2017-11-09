@@ -184,10 +184,10 @@
   z-index: 2;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
-  background: $secondary;
-  //border: 1px solid $base;
-  //mix-blend-mode: screen;
+  //border-radius: 50%;
+  //background: $secondary;
+  width: 50%;
+  height: 100%;
   &:before {
     font-size: 25px;
     color: $base;
@@ -196,15 +196,11 @@
 }
 
 .slick-prev {
-  left: 3px;
-  &:before {
-    content: '←';
-  }
+  left: 0;
+  cursor: w-resize;
 }
 
 .slick-next {
-  right: 3px;
-  &:before {
-    content: '→';
-  }
+  right: 0;
+  cursor: e-resize;
 }
