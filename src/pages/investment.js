@@ -14,6 +14,7 @@ const sliderSettings = {
   draggable: true,
   centerMode: true,
   arrows: false,
+  focusOnSelect: true,
   responsive: [{ breakpoint: 640, settings: { slidesToShow: 1 } }]
 }
 
