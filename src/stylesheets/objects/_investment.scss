@@ -49,17 +49,18 @@
   text-align: center;
 }
 
-//Tab Headers
+//Tabs Header
+
+.tabs-header {
+  background: $secondary;
+}
+
 .tab-list {
-  margin: 2.5em auto 0;
   display: inline-flex;
   flex-flow: row;
   justify-content: center;
   z-index: 99;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin: 2.5em auto;
 }
 
 .tab {
@@ -79,8 +80,7 @@
   }
 }
 
-//Tab Panels
-
+//Tab Panel Content
 .tab-panel__content {
   background: $secondary;
 }
@@ -94,7 +94,7 @@
   max-width: $max;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 2em;
   p {
     margin: 0 0 2em 0;
   }
@@ -128,7 +128,7 @@
   }
 }
 
-//Slick Photo Gallery
+//Tab Panel Slider
 .tab-panel__slider {
   box-sizing: border-box;
   margin: 6em auto 4em;
@@ -141,7 +141,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -.75em;
+    top: -.5em;
   }
 }
 

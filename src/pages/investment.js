@@ -37,11 +37,13 @@ const tabs = data.allContentfulInvestment.edges;
 
       <Tabs className="tabs" selectedTabClassName="tab--selected" selectedTabPanelClassName="tab-panel--selected">
 
-        <TabList className="tab-list">
-          {tabs.map(({ node: tab, index }) => (
-            <Tab key={tab.id} className="tab">{tab.title}</Tab>
-          ))}
-        </TabList>
+        <div className="tabs-header">
+          <TabList className="tab-list">
+            {tabs.map(({ node: tab, index }) => (
+              <Tab key={tab.id} className="tab">{tab.title}</Tab>
+            ))}
+          </TabList>
+        </div>
 
         {tabs.map(({ node: tab, index }) => (
           <TabPanel key={tab.id} className="tab-panel">
