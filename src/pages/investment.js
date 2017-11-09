@@ -15,7 +15,7 @@ const sliderSettings = {
   centerMode: true,
   arrows: true,
   touchMove: true,
-  responsive: [{ breakpoint: 640, settings: { slidesToShow: 1 } }]
+  responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, draggable: true, arrows: false} }]
 }
 
 
