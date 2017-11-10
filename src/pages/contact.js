@@ -26,7 +26,7 @@ const Contact = () => (
           </select>
           <input className="form__date" name="date" type="text" placeholder="Date"/>
           <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
-          <input className="form__bot" name="bot" type="text" hidden/>
+          <input type="hidden" name="bot"/>
           <input className="form__submit" name="submit" type="submit" value="Send" />
         </div>
       </form>
