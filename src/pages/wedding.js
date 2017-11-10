@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 
 const Wedding = ({data}) => {
 const posts = data.allContentfulGallery.edges;
-const count = data.allContentfulGallery.totalCount;
 
   return(
     <div>
@@ -43,7 +42,6 @@ const count = data.allContentfulGallery.totalCount;
 export const query = graphql`
 query WeddingQuery {
   allContentfulGallery(limit: 1000, filter:{category:{eq:"wedding"}}, sort: { fields: [date], order: DESC }) {
-    totalCount
     edges {
       node {
         title

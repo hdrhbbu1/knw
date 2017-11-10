@@ -2,17 +2,141 @@
 * Contact  *
 * ------- */
 
+.contact-cover {
+  position: relative;
+  @include bp(medium){
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    object-fit: cover;
+    @include bp(medium){
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      min-height: 100vh;
+      z-index: -1;
+      width: 100%;
+    }
+  }
+  h2 {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -.6em;
+    color: $base;
+    font-size: 3em;
+    font-weight: 500;
+    @include bp(medium){
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 .form {
-  margin: 2em auto;
+  box-sizing: border-box;
+  margin: 2em 0;
+  z-index: 2;
+  @include bp(medium){
+    max-width: 800px;
+    width: 90%;
+    width: calc(100% - 4em);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.form fieldset {
+.form div {
+  box-sizing: border-box;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
   padding: 2em;
-  margin: 4em;
-  background: $secondary;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  @include bp(medium){
+    padding: 2em;
+  }
 }
 
+.form input, .form textarea, .form select {
+  background: $secondary;
+  padding: 1em;
+  font-size: 1em;
+  margin: 0 0 1em 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 100%;
+  @include bp(medium){
+    flex: 0 0 49%;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: gray;
+}
+
+.form__name {
+
+}
+.form__email {
+
+}
+.form__reason {
+  background: $secondary url('../images/arrows.svg') no-repeat 97% 0 !important;
+  cursor: pointer;
+}
+
+select,select option {
+  color: $base;
+}
+
+select:invalid,select option[value=""] {
+  color: gray;
+}
+
+.form__date {
+  background: $secondary url('../images/calendar.svg') no-repeat 97% 0 !important;
+}
+
+.form__message {
+  resize: none;
+  overflow: auto;
+  height: 300px;
+  flex: 0 0 100% !important;
+}
+
+.form .form__submit {
+  background: $base;
+  color: white;
+  @include bp(medium){
+    width: auto !important;
+    padding: 1em 2em;
+    flex: none;
+  }
+}
 
 .form__bot {
   display: none;
+
 }

@@ -37,7 +37,7 @@ const TemplateWrapper = ({ children }) => (
 
     <section className="container" onClick={closeMenu}>
       {children()}
-      <Footer />
+      <Footer/>
     </section>
 
   </div>

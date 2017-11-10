@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 const Galleries = ({data}) => {
 
 const posts = data.allContentfulGallery.edges;
-const count = data.allContentfulGallery.totalCount;
 
   return(
     <div>
@@ -44,7 +43,6 @@ const count = data.allContentfulGallery.totalCount;
 export const query = graphql`
   query GalleryQuery {
     allContentfulGallery(limit: 1000, sort: { fields: [date], order: DESC }) {
-      totalCount
       edges {
         node {
           title
