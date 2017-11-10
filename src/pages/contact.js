@@ -15,6 +15,7 @@ const Contact = () => (
       <h2>Contact</h2>
       <form className="form" method="post" name="contact" action="/thanks" data-netlify="true"  data-netlify-honeypot="bot">
         <div>
+          <input type="hidden" name="form-name" value="contact" />
           <input className="form__name" name="name" type="text" placeholder="Full Name" required/>
           <input className="form__email" name="email" type="email" placeholder="Email" required/>
           <select className="form__reason" name="reason" required>
