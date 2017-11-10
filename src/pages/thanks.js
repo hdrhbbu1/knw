@@ -6,11 +6,11 @@ const NotFoundPage = () => (
   <div>
 
     <Helmet>
-      <title>404</title>
+      <title>Thanks</title>
       <meta name="description" content="" />
     </Helmet>
 
-    <h2>404. NOT FOUND</h2>
+    <h2>Thanks for submitting your form.</h2>
 
   </div>
 )
