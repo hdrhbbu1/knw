@@ -8,7 +8,6 @@
   margin: 0 auto;
   @include bp(medium){
     margin: 0 auto;
-    box-sizing: border-box;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -39,7 +38,6 @@
 
 //TABS
 .tabs {
-  box-sizing: border-box;
   position: relative;
   width: 100%;
   margin: 1em auto 0;
@@ -87,7 +85,6 @@
   align-items: flex-start;
   justify-content: space-between;
   max-width: $max;
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 2em;
   p {
@@ -133,7 +130,6 @@
 
 //Tab Panel Slider
 .tab-panel__slider {
-  box-sizing: border-box;
   margin: 0 auto 4em;
   position: relative;
   h3 {
@@ -148,11 +144,10 @@
 }
 
 .slick-slider {
-  box-sizing: border-box;
+
 }
 
 .slick-slide {
-  box-sizing: border-box;
   padding: .25em;
   cursor: move;
   cursor: grab;

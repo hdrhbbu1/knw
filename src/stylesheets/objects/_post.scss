@@ -5,7 +5,6 @@
 .post {
   display: flex;
   flex-flow: column;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
 }
@@ -22,7 +21,6 @@
 }
 
 .post-images {
-  box-sizing: border-box;
   width: 100%;
   max-width: 1000px;
   padding: 0 1em;
@@ -44,7 +42,6 @@
   margin: 0 1em;
   background: white;
   position: relative;
-  box-sizing: border-box;
   @include bp(medium){
     padding: 3em 2em;
     margin: 0 2em;

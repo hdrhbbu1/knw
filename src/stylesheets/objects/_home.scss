@@ -14,7 +14,6 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   z-index: -1;
   &:before {
     content: '';
@@ -67,7 +66,6 @@
   width: 100%;
   margin-bottom: 1em;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .quote p {
@@ -117,7 +115,6 @@
 
 
 .featured {
-  box-sizing: border-box;
   display: flex;
   flex-flow: column;
   justify-content: space-between;

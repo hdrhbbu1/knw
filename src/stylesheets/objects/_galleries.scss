@@ -6,7 +6,6 @@
   max-width: $max;
   background: white;
   width: 100%;
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 2em 2em 4em;
   @include bp(medium){
@@ -84,7 +83,6 @@
   justify-content: flex-start;
   padding: 2em 2em 0 2em;
   margin: 0 auto;
-  box-sizing: border-box;
   h2 {
     text-transform: capitalize;
     font-size: 3em;
