@@ -86,8 +86,8 @@ class Contact extends React.Component {
                 <option value="Other">Other</option>
               </select>
 
-              {this.state.optionalQuestions &&
-                <div className="form__optional">
+
+                <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
                   <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
                   <input className="form__location" name="location" type="text" placeholder="Location / Venue"/>
                   <div className="form__guests">
@@ -99,7 +99,7 @@ class Contact extends React.Component {
                     <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="250" />
                   </div>
                 </div>
-              }
+
 
               <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
               <input className="form__submit" name="submit" type="submit" value="Send" />

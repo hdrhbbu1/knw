@@ -68,10 +68,18 @@
   }
 }
 
-.form__optional {
+div[class*='form__optional']{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.form .form__optional {
+  display: none;
+}
+
+.form .form__optional--visible {
+  display: flex;
 }
 
 .form__name, .form__email, .form__reason, .form__message, .form__location, .form__source  {
