@@ -114,9 +114,9 @@ nav {
 
 @media (hover: none) {
   .toggle:hover {
-    background: $base;
+    background: $secondary;
     span {
-      background: white;
+      background: $base;
     }
   }
 }
