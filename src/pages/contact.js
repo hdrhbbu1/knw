@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-import Slider from 'react-rangeslider'
 
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 

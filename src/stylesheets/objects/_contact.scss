@@ -154,21 +154,10 @@
   }
 }
 
-
-
-
-
-
-
-.form__guests {
-
-}
-
-
 ::-webkit-input-placeholder {color: gray;} /* Chrome/Opera/Safari */
 ::-moz-placeholder {color: gray;} /* Firefox 19+ */
 :-ms-input-placeholder {color: gray;} /* IE 10+ */
-:-moz-placeholder {color: gray;} /* Firefox 18- */
+:-moz-placeholder {color: gray; opacity: 1;} /* Firefox 18- */
 
 // Form Reason
 .form__reason {
@@ -224,6 +213,8 @@ select:invalid,select option[value=""] {
   background: $base;
   color: white;
   border-radius: 2px;
+  padding: 1em;
+  width: 100%;
   @include bp(medium){
     width: auto !important;
     padding: 1em 2em;
