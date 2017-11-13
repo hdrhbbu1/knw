@@ -12,11 +12,14 @@ class Contact extends React.Component {
       super(props)
       this.state = {
         guests: 0,
-        budget: 1000
+        budget: 1000,
+        reason: '',
+        optionalQuestions: false
       };
       this.handleDateChange = this.handleDateChange.bind(this);
       this.handleGuestsChange = this.handleGuestsChange.bind(this);
       this.handleBudgetChange = this.handleBudgetChange.bind(this);
+      this.handleResasonChange = this.handleResasonChange.bind(this);
     }
 
     handleDateChange(date) {
@@ -37,6 +40,21 @@ class Contact extends React.Component {
       });
     }
 
+    handleResasonChange(e) {
+      if (e.target.value === "Book A Wedding Package") {
+        this.setState({
+          reason: e.target.value,
+          optionalQuestions: true
+        });
+      }
+      else {
+        this.setState({
+          reason: e.target.value,
+          optionalQuestions: false
+        });
+      }
+    }
+
   render() {
     return (
       <div>
@@ -54,13 +72,13 @@ class Contact extends React.Component {
               <input type="hidden" name="form-name" value="contact" />
               <input className="form__name" name="name" type="text" placeholder="Full Name" required/>
               <input className="form__email" name="email" type="email" placeholder="Email" required/>
-              <select className="form__reason" name="reason" required>
+              <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
                 <option value="">Reason For Contacting</option>
-                <option value="Book A Family / Lifestyle Package">Book A Family / Lifestlye Package</option>
+                <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
                 <option value="Book A Wedding Package">Book A Wedding Package</option>
                 <option value="General Inquiry / Question">General Inquiry / Question</option>
               </select>
-              <select className="form__reason" name="reason" required>
+              <select className="form__source" name="source" required>
                 <option value="">How Did You Hear About Me?</option>
                 <option value="Referral">Referral</option>
                 <option value="Social Media">Social Media</option>
@@ -68,26 +86,23 @@ class Contact extends React.Component {
                 <option value="Other">Other</option>
               </select>
 
-
-              <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
-              <input className="form__location" name="location" type="text" placeholder="Location / Venue"/>
-
-              <div className="form__guests">
-                <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
-                <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="400" step="5" />
-              </div>
-
-              <div className="form__budget">
-                <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="250" />
-              </div>
-
-
-
+              {this.state.optionalQuestions &&
+                <div className="form__optional">
+                  <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
+                  <input className="form__location" name="location" type="text" placeholder="Location / Venue"/>
+                  <div className="form__guests">
+                    <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
+                    <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="400" step="5" />
+                  </div>
+                  <div className="form__budget">
+                    <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
+                    <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="250" />
+                  </div>
+                </div>
+              }
 
               <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
               <input className="form__submit" name="submit" type="submit" value="Send" />
-
               <input type="hidden" name="bot"/>
             </div>
           </form>

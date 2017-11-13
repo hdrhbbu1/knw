@@ -68,7 +68,13 @@
   }
 }
 
-.form__name, .form__email, .form__reason, .form__message, .form__location  {
+.form__optional {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.form__name, .form__email, .form__reason, .form__message, .form__location, .form__source  {
   background: $secondary;
   padding: 1em;
   font-size: 1em;
@@ -160,7 +166,7 @@
 :-moz-placeholder {color: gray; opacity: 1;} /* Firefox 18- */
 
 // Form Reason
-.form__reason {
+.form__reason, .form__source {
   background: $secondary url('../images/arrows.svg') no-repeat 97% 0 !important;
   cursor: pointer;
 }
