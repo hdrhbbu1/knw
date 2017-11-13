@@ -1,5 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
@@ -56,6 +58,9 @@ class Contact extends React.Component {
     }
 
   render() {
+
+    const page = this.props.data.contentfulPage;
+
     return (
       <div>
 
@@ -65,7 +70,7 @@ class Contact extends React.Component {
         </Helmet>
 
         <section className="contact-cover">
-          <img src="http://knw.io/wp-content/uploads/2017/09/fort-funston-foggy-fun-beach-water-engagement-session-55.jpg"/>
+          <img src={page.cover.responsiveResolution.src}/>
           <h2>Contact</h2>
           <form className="form" method="post" name="contact" action="/thanks" data-netlify="true"  data-netlify-honeypot="bot">
             <div className="form__container">
@@ -108,5 +113,25 @@ class Contact extends React.Component {
     )
   }
 }
+
+Contact.propTypes = {
+  data: PropTypes.object,
+}
+
+export const query = graphql`
+  query ContactQuery {
+    contentfulPage(slug: {eq: "contact"}) {
+      title
+      slug
+      id
+      cover {
+        title
+        responsiveResolution(width: 1800) {
+          src
+        }
+      }
+    }
+  }
+`
 
 export default Contact

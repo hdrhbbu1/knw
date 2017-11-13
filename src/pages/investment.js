@@ -21,6 +21,7 @@ const sliderSettings = {
 
 const Investment = ({data}) => {
 const tabs = data.allContentfulInvestment.edges;
+const page = data.contentfulPage;
 
   return(
     <div>
@@ -32,7 +33,7 @@ const tabs = data.allContentfulInvestment.edges;
 
       <div className="intro--investment">
         <div className="intro--investment__image">
-          <Img sizes={tabs[1].node.cover.sizes} backgroundColor={"#f1f1f1"} />
+          <Img sizes={page.cover.sizes} backgroundColor={"#f1f1f1"} />
         </div>
         <h2>Investment</h2>
       </div>
@@ -109,6 +110,17 @@ export const query = graphql`
               ...GatsbyContentfulSizes_noBase64
             }
           }
+        }
+      }
+    }
+    contentfulPage(slug: {eq: "investment"}) {
+      title
+      slug
+      id
+      cover {
+        title
+        sizes(maxWidth: 1800) {
+          ...GatsbyContentfulSizes_noBase64
         }
       }
     }
