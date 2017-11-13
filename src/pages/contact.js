@@ -7,6 +7,7 @@ import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 class Contact extends React.Component {
+
     constructor (props) {
       super(props)
       this.state = {};
@@ -42,7 +43,7 @@ class Contact extends React.Component {
                 <option value="Book A Wedding Package">Book A Wedding Package</option>
                 <option value="General Inquiry / Question">General Inquiry / Question</option>
               </select>
-              <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleChange} minDate={moment()} placeholderText="Event Date"/></div>
+              <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
               <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
               <input type="hidden" name="bot"/>
               <input className="form__submit" name="submit" type="submit" value="Send" />

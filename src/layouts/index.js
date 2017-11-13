@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
-
 import Menu from '../components/menu'
 import Footer from '../components/footer'
 
@@ -13,7 +12,6 @@ const closeMenu = () => {
   const wrapper = document.getElementById('wrapper');
   wrapper.classList.remove('open--menu');
 }
-
 
 const TemplateWrapper = ({ children }) => (
   <div id="wrapper">
