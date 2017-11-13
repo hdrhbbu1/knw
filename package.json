@@ -17,6 +17,8 @@
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-remark": "^1.7.20",
     "lodash.find": "^4.6.0",
+    "moment": "^2.19.2",
+    "react-datepicker": "^0.60.2",
     "react-slick": "^0.15.4",
     "react-tabs": "^2.1.0",
     "slick-carousel": "^1.8.1"
