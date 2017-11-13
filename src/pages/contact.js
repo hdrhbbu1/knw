@@ -74,12 +74,12 @@ class Contact extends React.Component {
 
               <div className="form__guests">
                 <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
-                <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="1000" step="50" />
+                <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="400" step="5" />
               </div>
 
               <div className="form__budget">
                 <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="500" />
+                <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="250" />
               </div>
 
 
