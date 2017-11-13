@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import Slider from 'react-rangeslider'
 
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
@@ -10,13 +11,30 @@ class Contact extends React.Component {
 
     constructor (props) {
       super(props)
-      this.state = {};
-      this.handleChange = this.handleChange.bind(this);
+      this.state = {
+        guests: 0,
+        budget: 1000
+      };
+      this.handleDateChange = this.handleDateChange.bind(this);
+      this.handleGuestsChange = this.handleGuestsChange.bind(this);
+      this.handleBudgetChange = this.handleBudgetChange.bind(this);
     }
 
-    handleChange(date) {
+    handleDateChange(date) {
       this.setState({
         eventDate: date
+      });
+    }
+
+    handleGuestsChange(e) {
+      this.setState({
+        guests: e.target.value
+      });
+    }
+
+    handleBudgetChange(e) {
+      this.setState({
+        budget: e.target.value
       });
     }
 
@@ -38,15 +56,40 @@ class Contact extends React.Component {
               <input className="form__name" name="name" type="text" placeholder="Full Name" required/>
               <input className="form__email" name="email" type="email" placeholder="Email" required/>
               <select className="form__reason" name="reason" required>
-                <option value="">Select</option>
+                <option value="">Reason For Contacting</option>
                 <option value="Book A Family / Lifestyle Package">Book A Family / Lifestlye Package</option>
                 <option value="Book A Wedding Package">Book A Wedding Package</option>
                 <option value="General Inquiry / Question">General Inquiry / Question</option>
               </select>
-              <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
+              <select className="form__reason" name="reason" required>
+                <option value="">How Did You Hear About Me?</option>
+                <option value="Referral">Referral</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Other">Other</option>
+              </select>
+
+
+              <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date (Optional)"/></div>
+              <input className="form__location" name="location" type="text" placeholder="Location / Venue"/>
+
+              <div className="form__guests">
+                <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
+                <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="1000" step="50" />
+              </div>
+
+              <div className="form__budget">
+                <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
+                <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="500" />
+              </div>
+
+
+
+
               <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
-              <input type="hidden" name="bot"/>
               <input className="form__submit" name="submit" type="submit" value="Send" />
+
+              <input type="hidden" name="bot"/>
             </div>
           </form>
         </section>
