@@ -6,7 +6,7 @@ const About = () => (
   <div>
     <Helmet>
       <title>About</title>
-      <meta name="description" content="" />
+      <meta name="description" content="All about Kirsten Wiemer" />
     </Helmet>
     <h2 className="page__title">About Page</h2>
   </div>
