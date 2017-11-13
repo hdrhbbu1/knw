@@ -72,18 +72,18 @@ class Contact extends React.Component {
               <input type="hidden" name="form-name" value="contact" />
               <input className="form__name" name="name" type="text" placeholder="Full Name" required/>
               <input className="form__email" name="email" type="email" placeholder="Email" required/>
+              <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
+                <option value="">Reason For Contacting</option>
+                <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
+                <option value="Book A Wedding Package">Book A Wedding Package</option>
+                <option value="General Inquiry / Question">General Inquiry / Question</option>
+              </select>
               <select className="form__source" name="source" required>
                 <option value="">How Did You Hear About Me?</option>
                 <option value="Referral">Referral</option>
                 <option value="Social Media">Social Media</option>
                 <option value="Google Search">Google Search</option>
                 <option value="Other">Other</option>
-              </select>
-              <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
-                <option value="">Reason For Contacting</option>
-                <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
-                <option value="Book A Wedding Package">Book A Wedding Package</option>
-                <option value="General Inquiry / Question">General Inquiry / Question</option>
               </select>
               <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
                 <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date"/></div>
