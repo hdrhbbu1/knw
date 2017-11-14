@@ -5,8 +5,9 @@
 //Intro Image and Title
 .intro--investment {
   margin: 0 auto;
+  text-align: center;
   @include bp(medium){
-    margin: 0 auto;
+    margin: 0 auto 0;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -14,14 +15,17 @@
     position: relative;
   }
   h2 {
+    display: inline-block;
+    background: white;
+    padding: 1rem 2rem 0 2rem;
     text-align: center;
     font-weight: 500;
     font-size: 3em;
     margin: 0 auto;
     position: relative;
-    top: -.5em;
+    top: -.75em;
     @include bp(medium){
-      font-size: 4.5em;
+      font-size: 3.75em;
     }
   }
 }
@@ -39,7 +43,7 @@
 .tabs {
   position: relative;
   width: 100%;
-  margin: 1em auto 0;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -53,7 +57,10 @@
   flex-flow: row;
   justify-content: center;
   z-index: 99;
-  margin: 2.5em auto;
+  margin: 2em auto;
+  @include bp(medium){
+    margin: 3em auto;
+  }
 }
 
 .tab {
@@ -85,9 +92,15 @@
   justify-content: space-between;
   max-width: $max;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0 1em 2em;
+  @include bp(medium){
+    padding: 0 2em 3em;
+  }
   p {
     margin: 0 0 2em 0;
+    &:last-child {
+      margin: 0;
+    }
   }
   .cover {
     margin: 0 0 2em 0;

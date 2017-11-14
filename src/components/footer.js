@@ -7,7 +7,7 @@ const Footer = () => (
       <section className="footer__inner">
         <div className="footer__info">
           <h3><Link to="/">KNW Photography</Link></h3>
-          <p>All images &copy; 2017 KNW Photography. <br/>Website powered by <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a>.</p>
+          <p>All images &copy; {new Date().getFullYear()} KNW Photography. <br/>Website powered by <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a>.</p>
         </div>
         <div className="footer__sitemap">
           <ul>

@@ -85,13 +85,15 @@ nav {
   z-index: 999;
   height: 44px;
   width: 44px;
-  background: $secondary;
+  background: white;
+  border: 1px solid $secondary;
   @include bp(medium){
     right: 2rem;
     top: 2rem;
   }
   &:hover {
     background: $base;
+    border-color: $base;
     span {
       background: white;
     }
@@ -114,7 +116,8 @@ nav {
 
 @media (hover: none) {
   .toggle:hover {
-    background: $secondary;
+    background: white;
+    border-color: $base;
     span {
       background: $base;
     }

@@ -8,7 +8,6 @@ const IndexPage = ({data}) => {
 
 const posts = data.allContentfulGallery.edges;
 const page = data.contentfulPage;
-console.log(page);
 
   return (
     <div>

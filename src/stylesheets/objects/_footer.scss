@@ -10,8 +10,11 @@
 
 .footer__outer {
   max-width: $max;
-  padding: 4em 2em;
+  padding: 4em 1em;
   margin: 0 auto;
+  @include bp(medium) {
+    padding: 4em 2em;
+  }
 }
 
 .footer__inner {

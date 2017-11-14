@@ -7,8 +7,9 @@
   background: white;
   width: 100%;
   margin: 0 auto;
-  padding: 2em 2em 4em;
+  padding: 2em 1em 4em;
   @include bp(medium){
+    padding: 2em 2em 4em;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -81,8 +82,11 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  padding: 2em 2em 0 2em;
+  padding: 2em 1em 0 1em;
   margin: 0 auto;
+  @include bp(medium){
+    padding: 2em 2em 0 2em;
+  }
   h2 {
     text-transform: capitalize;
     font-size: 3em;
@@ -99,7 +103,7 @@
     margin: 0 1em .5em 0;
     text-decoration: none;
     font-size: 1em;
-    padding: .5em 1em;
+    padding: .85em 1em;
     cursor: pointer;
     border: solid 1px $base;
     border-radius: 2px;
