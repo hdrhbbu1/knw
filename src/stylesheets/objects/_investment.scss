@@ -2,7 +2,6 @@
 *  Investment  *
 * ----------- */
 
-
 //Intro Image and Title
 .intro--investment {
   margin: 0 auto;
@@ -36,7 +35,7 @@
   }
 }
 
-//TABS
+//Tabs
 .tabs {
   position: relative;
   width: 100%;
@@ -111,8 +110,6 @@
   }
 }
 
-//.tab-panel--selected {}
-
 .tab-panel .sidebar {
   width: 100%;
   @include bp(medium){
@@ -140,10 +137,6 @@
     font-weight: 500;
     color: $base;
   }
-
-}
-
-.slick-slider {
 
 }
 
@@ -177,10 +170,6 @@
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   z-index: 2;
-  height: 40px;
-  width: 40px;
-  //border-radius: 50%;
-  //background: $secondary;
   width: 50%;
   height: 100%;
   &:before {

@@ -70,7 +70,9 @@ class Contact extends React.Component {
         </Helmet>
 
         <section className="contact-cover">
-          <img src={page.cover.responsiveResolution.src}/>
+          <div className="contact-cover__image">
+            <Img sizes={page.cover.sizes} backgroundColor={"#f1f1f1"}/>
+          </div>
           <h2>Contact</h2>
           <form className="form" method="post" name="contact" action="/thanks" data-netlify="true"  data-netlify-honeypot="bot">
             <div className="form__container">
@@ -126,8 +128,8 @@ export const query = graphql`
       id
       cover {
         title
-        responsiveResolution(width: 1800) {
-          src
+        sizes(maxWidth: 1800) {
+          ...GatsbyContentfulSizes_noBase64
         }
       }
     }

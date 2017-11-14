@@ -6,7 +6,9 @@ import Helmet from 'react-helmet'
 
 const IndexPage = ({data}) => {
 
-  const posts = data.allContentfulGallery.edges;
+const posts = data.allContentfulGallery.edges;
+const page = data.contentfulPage;
+console.log(page);
 
   return (
     <div>
@@ -14,7 +16,9 @@ const IndexPage = ({data}) => {
         <h1>
           <img className="logo" src={logo} />
         </h1>
-        <img src="http://knw.io/wp-content/uploads/2016/05/lime-ridge-concord-spring-family-lifestyle-session-36.jpg" />
+        <div className="intro__image">
+          <Img sizes={page.cover.sizes} />
+        </div>
       </div>
 
     <div className="page">
@@ -44,15 +48,7 @@ const IndexPage = ({data}) => {
           ))}
         </ul>
       </div>
-
-      <div className="bio">
-        <div className="bio__inner">
-          <h2>Meet the photographer</h2>
-          <Link to="/about">Learn More About Kirsten &rarr;</Link>
-        </div>
-      </div>
     </div>
-
   </div>
   )
 }
@@ -72,8 +68,19 @@ export const query = graphql`
               ...GatsbyContentfulSizes_noBase64
             }
           }
-          }
         }
+      }
+    }
+    contentfulPage(slug: {eq: "home"}) {
+      title
+      slug
+      id
+      cover {
+        title
+        sizes(maxWidth: 1800) {
+          ...GatsbyContentfulSizes_noBase64
+        }
+      }
     }
   }
 `
