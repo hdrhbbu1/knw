@@ -1,9 +1,0 @@
-# Custom 404 Page
-/*                    /404.js   404
-
-# Redirects
-/category/lifestyle   /lifestyle
-/category/wedding     /wedding
-/pricing              /investment
-/pricing/lifestyle     /investment
-/pricing/wedding       /investment
