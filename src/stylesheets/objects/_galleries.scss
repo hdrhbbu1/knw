@@ -57,7 +57,7 @@
   align-items: center;
   color: white;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: normal;
   text-transform: lowercase;
   position: absolute;
   top: 0;
@@ -90,7 +90,7 @@
   h2 {
     text-transform: capitalize;
     font-size: 3em;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0 0 .5rem 0;
   }
 }

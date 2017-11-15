@@ -20,7 +20,7 @@
     margin: -1em auto 0;
     color: $base;
     font-size: 3em;
-    font-weight: 500;
+    font-weight: bold;
     @include bp(medium){
       position: absolute;
       top: 50%;
@@ -103,6 +103,7 @@ div[class*='form__optional']{
 }
 
 .form__guests, .form__budget {
+  text-align: left;
   padding: .5em 0;
   width: 100%;
   @include bp(medium){
@@ -113,7 +114,7 @@ div[class*='form__optional']{
     color: gray;
   }
   span {
-    font-weight: 500;
+    font-weight: bold;
     float: right;
   }
 }
@@ -218,7 +219,7 @@ select:invalid,select option[value=""] {
   background: $base !important;
 }
 .react-datepicker {
-  font-family: $sans;
+  //font-family: $sans;
 }
 
 // Form Message

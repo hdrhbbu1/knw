@@ -24,7 +24,8 @@
     "react-slick": "^0.15.4",
     "react-tabs": "^2.1.0",
     "react-transition-group": "^2.2.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "typeface-roboto": "0.0.45"
   },
   "keywords": [
     "knw"
