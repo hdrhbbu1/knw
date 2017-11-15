@@ -4,6 +4,7 @@
 
 .contact-cover {
   position: relative;
+  text-align: center;
   @include bp(medium){
     display: flex;
     flex-flow: column;
@@ -11,11 +12,12 @@
     justify-content: center;
   }
   h2 {
+    display: inline-block;
+    //background: white;
+    padding: 1rem 2rem;
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: -.6em;
+    position: relative;
+    margin: -1em auto 0;
     color: $base;
     font-size: 3em;
     font-weight: 500;

@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
 import Menu from '../components/menu'
 import Footer from '../components/footer'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import '../stylesheets/style.scss'
 

@@ -16,14 +16,14 @@
   }
   h2 {
     display: inline-block;
-    background: white;
+    //background: white;
     padding: 1rem 2rem 0 2rem;
     text-align: center;
     font-weight: 500;
     font-size: 3em;
     margin: 0 auto;
     position: relative;
-    top: -.75em;
+    top: -.8em;
     @include bp(medium){
       font-size: 3.75em;
     }
