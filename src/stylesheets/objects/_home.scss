@@ -115,7 +115,6 @@
   }
 }
 
-
 .featured {
   display: flex;
   flex-flow: column;
@@ -146,48 +145,5 @@
     img {
       position: relative;
     }
-  }
-}
-
-.bio {
-  //position: sticky;
-  top: 0;
-  margin: 4em 0;
-  background: url('http://via.placeholder.com/900x600');
-  background: $secondary;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 75vh;
-}
-
-.bio__inner {
-  display: none;
-  position: relative;
-  width: 66.666%;
-  padding: 4em 2em;
-  @include bp(medium){
-    width: 50%;
-  }
-  h2 {
-    position: absolute;
-    top: 2em;
-    left: -.25em;
-    font-size: 3em;
-    color: $base;
-    text-transform: capitalize;
-    @include bp(medium){
-      left: -1em;
-    }
-  }
-  a {
-    text-align: right;
-    background: white;
-    padding: 1em;
-    position: absolute;
-    right: 0;
-    bottom: 3em;
-    text-decoration: none;
-    z-index: 3;
   }
 }

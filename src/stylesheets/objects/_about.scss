@@ -2,34 +2,53 @@
 *  About   *
 * ------- */
 
-.intro--about {
-  height: 100vh;
-  position: relative;
-  @include bp(medium){
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    position: relative;
+
+.masonry {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: 80vw;
+	//font-size: 0;
+
+  h2 {
+    font-size: 3em;
+    font-weight: bold;
   }
 }
 
-.intro--about__image {
-  height: 100%;
-  @include bp(medium){
-    flex: 0 0 50%;
-  }
-  img {
-    object-fit: cover;
-    height: 100%;
-  }
+.masonry__item {
+  width: 33%;
+  margin: 1em;
 }
 
-.intro--about h2 {
-  padding: 1em;
+
+.grid--about {
+  margin: 2em auto;
+  padding: 0 2em;
+  max-width: $max;
+
+}
+
+.grid--about h2 {
   font-size: 3em;
   font-weight: bold;
-  @include bp(medium){
-    flex: 0 0 50%;
+  text-align: center;
+}
+
+.bio {
+  max-width: 600px;
+  padding: 0 1em;
+  margin: 4em auto;
+  p {
+    margin: 0 0 2em 0;
+  }
+}
+
+.full-bleed {
+  margin: 4rem 0;
+  width: 100%;
+  img {
+    max-height: 75vh;
+    object-fit: cover;
   }
 }

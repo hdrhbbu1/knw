@@ -1,7 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import cover from '../images/about-cover.jpg'
+import grid1 from '../images/grid1.jpg'
+import grid2 from '../images/grid2.jpg'
+import grid3 from '../images/grid3.jpg'
+import grid4 from '../images/grid4.jpg'
+import grid5 from '../images/grid5.jpg'
+import bleed1 from '../images/bleed1.jpg'
 
 const About = () => (
   <div>
@@ -10,11 +15,39 @@ const About = () => (
       <meta name="description" content="All about Kirsten Wiemer" />
     </Helmet>
 
-    <div className="intro--about">
-      <div className="intro--about__image">
-        <img src={cover} />
+    <ul className="masonry">
+      <li className="masonry__item"><h2>About</h2></li>
+      <li className="masonry__item"><img src={grid3} /></li>
+      <li className="masonry__item"><img src={grid1} /></li>
+      <li className="masonry__item"><img src={grid2} /></li>
+      <li className="masonry__item"><img src={grid4} /></li>
+      <li className="masonry__item"><img src={grid5} /></li>
+    </ul>
+
+    <div className="bio">
+      <p>Hi there! I’m Kirsten and I’m currently living in Oakland with my husband and fluffy pup Birch. I’ve always been an excessive photo taker and decided to turn my love for taking photos into a career. I love chasing my clients around to capture those little moments and growing with you as I document your day. I’m always chasing the light looking for shadows, and I’m also obsessed with the fog that we have here in the Bay. Whether it’s in your home, in hills, on the busy city streets, or wherever it may be I’m up for any adventure with my clients.</p>
+      <p>Outside of photography I love eating food that’s covered in cheese. I’m beyond obsessed with my pup, he’s easily the best looking in our family. I love working on the potter’s wheel, back in college all of my favorite courses were in the ceramics lab and I’m always itching to get back in there. I spend most of my extra time hiking and exploring the Bay Area with my dudes. I’m always looking to make new friends as we are still pretty new to the Bay Area so if you’d like to get together and play with my fluffy pup email me any time!</p>
+    </div>
+
+    <div className="full-bleed">
+      <img src={bleed1} />
+    </div>
+
+    <div className="grid">
+      <div className="cell cell--half bucket-list">
+        <h3>Bucket List</h3>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
       </div>
-      <h2>All About Kirsten</h2>
+      <div className="cell cell--half">
+        <img src={grid3} />
+
+      </div>
     </div>
 
   </div>
