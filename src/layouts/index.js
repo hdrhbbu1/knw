@@ -5,50 +5,13 @@ import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
 import Menu from '../components/menu'
 import Footer from '../components/footer'
-//import withRouter from 'react-router-dom/withRouter'
-//import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import '../stylesheets/style.scss'
-require('typeface-roboto')
 
 const closeMenu = () => {
   const wrapper = document.getElementById('wrapper');
   wrapper.classList.remove('open--menu');
 }
-
-
-/* class TransitionHandler extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.location.pathname === window.location.pathname;
-  }
-
-  render() {
-    const {children} = this.props;
-    return (
-      <div className="transition-container">
-        {children}
-      </div>
-    );
-  }
-}
-
-<TransitionGroup>
-  <CSSTransition
-    key={location.pathname}
-    classNames="example"
-    timeout={{ enter: 500, exit: 300 }}
-  >
-    <TransitionHandler
-      location={location}
-    >
-    </TransitionHandler>
-     </CSSTransition>
-   </TransitionGroup>
-
-
-
-
-*/
 
 const TemplateWrapper = ({ children, location }) => (
   <div id="wrapper">

@@ -1,12 +1,27 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+
 import grid1 from '../images/grid1.jpg'
 import grid2 from '../images/grid2.jpg'
 import grid3 from '../images/grid3.jpg'
-import grid4 from '../images/grid4.jpg'
-import grid5 from '../images/grid5.jpg'
 import bleed1 from '../images/bleed1.jpg'
+
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+
+const sliderSettings = {
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  swipeToSlide: true,
+  draggable: false,
+  centerMode: true,
+  arrows: true,
+  touchMove: true,
+  dots: true,
+  responsive: [{ breakpoint: 640, settings: { draggable: true, arrows: false} }]
+}
 
 const About = () => (
   <div>
@@ -15,13 +30,22 @@ const About = () => (
       <meta name="description" content="All about Kirsten Wiemer" />
     </Helmet>
 
-    <ul className="masonry">
-      <li className="masonry__item"><h2>About</h2></li>
-      <li className="masonry__item"><img src={grid3} /></li>
-      <li className="masonry__item"><img src={grid1} /></li>
-      <li className="masonry__item"><img src={grid2} /></li>
-      <li className="masonry__item"><img src={grid4} /></li>
-      <li className="masonry__item"><img src={grid5} /></li>
+    <ul className="grid grid--about">
+      <li className="cell cell--half">
+        <h2>About</h2>
+        <div className="about-image--3">
+          <img src={grid1} />
+        </div>
+        <p>Lorem ipsum dolor set amet.</p>
+      </li>
+      <li className="cell cell--half">
+        <div className="about-image--1">
+          <img src={grid2} />
+        </div>
+        <div className="about-image--2">
+          <img src={grid3} />
+        </div>
+      </li>
     </ul>
 
     <div className="bio">
@@ -33,7 +57,7 @@ const About = () => (
       <img src={bleed1} />
     </div>
 
-    <div className="grid">
+    <div className="grid grid--container">
       <div className="cell cell--half bucket-list">
         <h3>Bucket List</h3>
         <ul>
@@ -44,8 +68,14 @@ const About = () => (
           <li>Item 5</li>
         </ul>
       </div>
-      <div className="cell cell--half">
-        <img src={grid3} />
+      <div className="cell cell--half slider--about">
+        <Slider {...sliderSettings}>
+          <div><img src="http://via.placeholder.com/100x100" /></div>
+          <div><img src="http://via.placeholder.com/200x200" /></div>
+          <div><img src="http://via.placeholder.com/300x300" /></div>
+          <div><img src="http://via.placeholder.com/400x400" /></div>
+          <div><img src="http://via.placeholder.com/500x500" /></div>
+        </Slider>
 
       </div>
     </div>

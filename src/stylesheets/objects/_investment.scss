@@ -137,7 +137,7 @@
   }
 }
 
-//Tab Panel Slider
+//Investment Slider
 .tab-panel__slider {
   margin: 0 auto 4em;
   position: relative;
@@ -149,10 +149,9 @@
     font-weight: bold;
     color: $base;
   }
-
 }
 
-.slick-slide {
+.slider--investment .slick-slide {
   padding: .25em;
   cursor: move;
   cursor: grab;
@@ -171,7 +170,7 @@
   }
 }
 
-.slick-prev, .slick-next {
+.slider--investment  .slick-prev, .slick-next {
   position: absolute;
   top: 50%;
   display: block;
@@ -191,12 +190,12 @@
   }
 }
 
-.slick-prev {
+.slider--investment  .slick-prev {
   left: 0;
   cursor: w-resize;
 }
 
-.slick-next {
+.slider--investment .slick-next {
   right: 0;
   cursor: e-resize;
 }

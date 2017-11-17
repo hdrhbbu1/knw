@@ -2,48 +2,53 @@
 *  About   *
 * ------- */
 
-
-.masonry {
-  display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-height: 80vw;
-	//font-size: 0;
-
-  h2 {
-    font-size: 3em;
-    font-weight: bold;
+//About Grid
+.grid--about {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 900px;
+  @include bp(medium){
+    padding: 2em;
   }
 }
 
-.masonry__item {
-  width: 33%;
-  margin: 1em;
-}
-
-
-.grid--about {
-  margin: 2em auto;
-  padding: 0 2em;
-  max-width: $max;
-
-}
-
 .grid--about h2 {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
-  text-align: center;
+  margin: 0 0 2rem 0;
 }
 
+.grid--about p {
+  font-size: 1.5em;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.about-image--1 {
+  margin: 0 0 1rem 0;
+  @include bp(medium){
+    margin: 0 0 2rem 0;
+  }
+}
+.about-image--2 {}
+.about-image--3 {
+  margin: 0 0 1rem 0;
+  @include bp(medium){
+    margin: 0 0 2rem 0;
+  }
+}
+
+//Bio Text
 .bio {
   max-width: 600px;
   padding: 0 1em;
-  margin: 4em auto;
+  margin: 2em auto;
   p {
     margin: 0 0 2em 0;
   }
 }
 
+//Full Bleed Image Divider
 .full-bleed {
   margin: 4rem 0;
   width: 100%;
@@ -51,4 +56,87 @@
     max-height: 75vh;
     object-fit: cover;
   }
+}
+
+//Bucket list
+.bucket-list {
+  background: $secondary;
+  padding: 1em;
+}
+
+
+
+
+//About Slider
+.slider--about {
+  position: relative;
+}
+
+.slider--about .slick-slide {
+  padding: 0;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  img {
+    -webkit-user-drag: none;
+  }
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+}
+
+.slider--about .slick-dots {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: center;
+  li {
+    display: inline-block;
+    border: 1px solid white;
+    margin: 0 .5rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    button {
+      color: transparent;
+    }
+  }
+  .slick-active {
+    background: white;
+  }
+}
+
+.slider--about .slick-prev, .slider--about .slick-next {
+  position: absolute;
+  top: 50%;
+  display: block;
+  font-size: 0;
+  color: transparent;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  &:before {
+    font-size: 25px;
+    color: $base;
+    padding: 0;
+  }
+}
+
+.slider--about .slick-prev {
+  left: 0;
+  cursor: w-resize;
+}
+
+.slider--about .slick-next {
+  right: 0;
+  cursor: e-resize;
 }

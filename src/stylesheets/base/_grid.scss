@@ -6,7 +6,7 @@
    display: flex;
    flex-flow: row wrap;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-start;
  }
 
  .grid--wrap {
@@ -14,6 +14,11 @@
      content: "";
      flex: auto;
    }
+ }
+
+ .grid--container{
+   max-width: $max;
+   margin: 0 auto;
  }
 
  .grid--stretch {
@@ -60,7 +65,7 @@
  .cell--half {
   width: 100%;
   @include bp(medium) {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
   }
  }
 
