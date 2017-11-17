@@ -7,6 +7,7 @@
   margin: 0 auto;
   padding: 1em;
   max-width: 900px;
+  flex-direction: row-reverse;
   @include bp(medium){
     padding: 2em;
   }
@@ -63,8 +64,6 @@
   background: $secondary;
   padding: 1em;
 }
-
-
 
 
 //About Slider
