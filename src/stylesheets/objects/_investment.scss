@@ -153,49 +153,4 @@
 
 .slider--investment .slick-slide {
   padding: .25em;
-  cursor: move;
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-  @include bp(medium){
-    padding: 0 .5em;
-  }
-  img {
-    -webkit-user-drag: none;
-  }
-  &:active {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
-  }
-}
-
-.slider--investment  .slick-prev, .slick-next {
-  position: absolute;
-  top: 50%;
-  display: block;
-  font-size: 0;
-  color: transparent;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  z-index: 2;
-  width: 50%;
-  height: 100%;
-  &:before {
-    font-size: 25px;
-    color: $base;
-    padding: 0;
-  }
-}
-
-.slider--investment  .slick-prev {
-  left: 0;
-  cursor: w-resize;
-}
-
-.slider--investment .slick-next {
-  right: 0;
-  cursor: e-resize;
 }

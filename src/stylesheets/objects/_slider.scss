@@ -1,0 +1,73 @@
+/* ------- *
+*  Slider   *
+* ------- */
+
+//Genral Styling
+.slick-slide {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  @include bp(medium){
+    padding: 0 .5em;
+  }
+  img {
+    -webkit-user-drag: none;
+  }
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+}
+
+//Left & Right Arrows
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  display: block;
+  font-size: 0;
+  color: transparent;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+}
+
+.slick-prev {
+  left: 0;
+  cursor: w-resize;
+}
+
+.slick-next {
+  right: 0;
+  cursor: e-resize;
+}
+
+//Dots
+.slick-dots {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: center;
+  li {
+    display: inline-block;
+    border: 1px solid white;
+    margin: 0 .5rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    button {
+      color: transparent;
+      font-size: 0;
+    }
+  }
+  .slick-active {
+    background: white;
+  }
+}
