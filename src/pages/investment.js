@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"
 
 const sliderSettings = {
   infinite: true,
@@ -17,7 +16,6 @@ const sliderSettings = {
   touchMove: true,
   responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, draggable: true, arrows: false} }]
 }
-
 
 const Investment = ({data}) => {
 const tabs = data.allContentfulInvestment.edges;

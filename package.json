@@ -1,13 +1,13 @@
 {
-  "name": "knw-static",
+  "name": "knw",
   "description": "Static version of knw.io built with Gatsby",
   "version": "1.0.0",
   "repository": "https://github.com/ryanwiemer/knw-static",
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "gatsby": "^1.9.114",
-    "gatsby-cli": "^1.1.20",
+    "gatsby": "^1.9.115",
+    "gatsby-cli": "^1.1.21",
     "gatsby-image": "^1.0.24",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-netlify": "^1.0.8",
@@ -18,14 +18,10 @@
     "gatsby-transformer-remark": "^1.7.21",
     "lodash.find": "^4.6.0",
     "moment": "^2.19.2",
-    "rc-slider": "^8.4.0",
     "react-addons-shallow-compare": "^15.6.2",
     "react-datepicker": "^0.60.2",
     "react-slick": "^0.15.4",
-    "react-tabs": "^2.1.0",
-    "react-transition-group": "^2.2.1",
-    "slick-carousel": "^1.8.1",
-    "typeface-roboto": "0.0.45"
+    "react-tabs": "^2.1.1"
   },
   "keywords": [
     "knw"

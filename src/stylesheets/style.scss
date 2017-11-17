@@ -5,6 +5,9 @@
 @import "generic/_reset";
 @import "generic/_mixins";
 
+//Vendor
+@import "vendor/_slick";
+
 //Base
 @import "base/_main";
 @import "base/_links";

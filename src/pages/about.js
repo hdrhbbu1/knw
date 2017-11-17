@@ -1,14 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
+import Slider from 'react-slick'
 
 import grid1 from '../images/grid1.jpg'
 import grid2 from '../images/grid2.jpg'
 import grid3 from '../images/grid3.jpg'
 import bleed1 from '../images/bleed1.jpg'
-
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"
 
 const sliderSettings = {
   infinite: true,
