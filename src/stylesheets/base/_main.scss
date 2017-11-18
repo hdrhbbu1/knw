@@ -15,22 +15,6 @@
 
 #wrapper {}
 
-button, input, textarea, select {
-	background: none;
-	border: none;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	border-radius: 0;
-	&:focus {
-		outline: none;
-	}
-}
-
-button, input[type=submit] {
-	cursor: pointer;
-}
-
 body {
   font-family: $sans, sans-serif;
 	font-size: 100%;

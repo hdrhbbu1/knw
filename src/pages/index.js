@@ -11,11 +11,11 @@ const page = data.contentfulPage;
 
   return (
     <div>
-      <div className="intro">
+      <div className="intro intro--home">
         <h1>
           <img className="logo" src={logo} />
         </h1>
-        <div className="intro__image">
+        <div className="intro--home__image">
           <Img sizes={page.cover.sizes} />
         </div>
       </div>

@@ -2,7 +2,7 @@
 * Contact  *
 * ------- */
 
-.contact-cover {
+.contact-background {
   position: relative;
   text-align: center;
   @include bp(medium){
@@ -13,7 +13,6 @@
   }
   h2 {
     display: inline-block;
-    //background: white;
     padding: 1rem 2rem;
     text-align: center;
     position: relative;
@@ -29,7 +28,7 @@
   }
 }
 
-.contact-cover__image {
+.contact-background__image {
   object-fit: cover;
   @include bp(medium){
     position: absolute;
@@ -46,7 +45,7 @@
   }
 }
 
-// General Form Styling
+//General Form Styling
 .form {
   margin: 2em 0;
   z-index: 2;
@@ -119,8 +118,7 @@ div[class*='form__optional']{
   }
 }
 
-
-// Range Input Styling
+//Range Input Styling
 .form input[type=range] {
   -webkit-appearance: none;
   border-radius: 2px;
@@ -128,10 +126,9 @@ div[class*='form__optional']{
   height: 10px;
   background: darken($secondary,5%);
   margin: 1em 0 2em 0;
-
 }
 
-/* Special styling for WebKit/Blink */
+/* WebKit/Blink */
 .form input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 20px;
@@ -147,7 +144,7 @@ div[class*='form__optional']{
   }
 }
 
-/* All the same stuff for Firefox */
+/* Firefox */
 .form input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   height: 20px;
@@ -163,7 +160,7 @@ div[class*='form__optional']{
   }
 }
 
-/* All the same stuff for IE */
+/* IE */
 .form input[type=range]::-ms-thumb {
   -webkit-appearance: none;
   height: 20px;
@@ -182,7 +179,7 @@ div[class*='form__optional']{
 :-ms-input-placeholder {color: gray;} /* IE 10+ */
 :-moz-placeholder {color: gray; opacity: 1;} /* Firefox 18- */
 
-// Form Reason
+//Form Reason
 .form__reason, .form__source {
   background: $secondary url('../images/arrows.svg') no-repeat 97% 0 !important;
   cursor: pointer;
@@ -196,7 +193,7 @@ select:invalid,select option[value=""] {
   color: gray;
 }
 
-// Form Date
+//Form Date
 .form__date {
   width: 100%;
   @include bp(medium){
@@ -222,7 +219,7 @@ select:invalid,select option[value=""] {
   font-family: $sans;
 }
 
-// Form Message
+//Form Message
 .form__message {
   resize: none;
   overflow: auto;

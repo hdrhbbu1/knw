@@ -138,7 +138,7 @@
 }
 
 //Investment Slider
-.tab-panel__slider {
+.slider--investment {
   margin: 0 auto 4em;
   position: relative;
   h3 {
@@ -149,8 +149,7 @@
     font-weight: bold;
     color: $base;
   }
-}
-
-.slider--investment .slick-slide {
-  padding: .25em;
+  .slick-slide {
+    padding: .25em;
+  }
 }

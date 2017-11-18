@@ -2,7 +2,7 @@
 *   Home   *
 * ------- */
 
-.intro {
+.intro--home {
   position: relative;
   position: -webkit-sticky;
   position: sticky;
@@ -28,7 +28,7 @@
   }
 }
 
-.intro .intro__image {
+.intro--home .intro__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@
   }
 }
 
-.intro h1 img {
+.intro--home h1 img {
   width: 10em;
   position: relative;
   z-index: 99;

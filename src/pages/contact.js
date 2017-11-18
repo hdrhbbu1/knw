@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 class Contact extends React.Component {
@@ -13,15 +12,29 @@ class Contact extends React.Component {
     constructor (props) {
       super(props)
       this.state = {
+        name: '',
+        email: '',
+        reason: '',
+        source: '',
+        eventDate: null,
+        location: '',
         guests: '0',
         budget: '0',
-        reason: '',
+        message:'',
         optionalQuestions: false
       };
+      this.handleInputChange = this.handleInputChange.bind(this);
       this.handleDateChange = this.handleDateChange.bind(this);
-      this.handleGuestsChange = this.handleGuestsChange.bind(this);
-      this.handleBudgetChange = this.handleBudgetChange.bind(this);
       this.handleResasonChange = this.handleResasonChange.bind(this);
+    }
+
+    handleInputChange(event) {
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+      this.setState({
+        [name]: value
+      });
     }
 
     handleDateChange(date) {
@@ -30,28 +43,22 @@ class Contact extends React.Component {
       });
     }
 
-    handleGuestsChange(e) {
-      this.setState({
-        guests: e.target.value
-      });
-    }
-
-    handleBudgetChange(e) {
-      this.setState({
-        budget: e.target.value
-      });
-    }
-
-    handleResasonChange(e) {
-      if (e.target.value === "Book A Wedding Package") {
+    handleResasonChange(event) {
+      const target = event.target;
+      const value = target.value;
+      if (value === "Book A Wedding Package") {
         this.setState({
-          reason: e.target.value,
+          reason: value,
           optionalQuestions: true
         });
       }
       else {
         this.setState({
-          reason: e.target.value,
+          reason: value,
+          eventDate: null,
+          location: '',
+          guests: '0',
+          budget: '0',
           optionalQuestions: false
         });
       }
@@ -69,16 +76,16 @@ class Contact extends React.Component {
           <meta name="description" content="" />
         </Helmet>
 
-        <section className="contact-cover">
-          <div className="contact-cover__image">
+        <section className="contact-background">
+          <div className="contact-background__image">
             <Img sizes={page.cover.sizes} backgroundColor={"#f1f1f1"}/>
           </div>
           <h2>Contact</h2>
           <form className="form" method="post" name="contact" action="/thanks" data-netlify="true"  data-netlify-honeypot="bot">
             <div className="form__container">
               <input type="hidden" name="form-name" value="contact" />
-              <input className="form__name" name="name" type="text" placeholder="Full Name" required/>
-              <input className="form__email" name="email" type="email" placeholder="Email" required/>
+              <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
+              <input className="form__email" name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required/>
               <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
                 <option value="">Reason For Contacting</option>
                 <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
@@ -94,17 +101,17 @@ class Contact extends React.Component {
               </select>
               <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
                 <div className="form__date"><DatePicker name="date" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date"/></div>
-                <input className="form__location" name="location" type="text" placeholder="Location / Venue"/>
+                <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue"/>
                 <div className="form__guests">
                   <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
-                  <input name="guests" type="range" value={this.state.guests} onChange={this.handleGuestsChange}  min="0" max="400" step="5" />
+                  <input name="guests" type="range" value={this.state.guests} onChange={this.handleInputChange}  min="0" max="400" step="5" />
                 </div>
                 <div className="form__budget">
                   <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                  <input name="budget" type="range" value={this.state.budget} onChange={this.handleBudgetChange}  min="1000" max="10000" step="250" />
+                  <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="1000" max="10000" step="250" />
                 </div>
               </div>
-              <textarea className="form__message" name="message" type="text" placeholder="Message" required></textarea>
+              <textarea className="form__message" name="message" type="text" placeholder="Message" value={this.state.message} onChange={this.handleInputChange} required></textarea>
               <input className="form__submit" name="submit" type="submit" value="Send" />
               <input type="hidden" name="bot"/>
             </div>

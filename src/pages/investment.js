@@ -60,7 +60,7 @@ const page = data.contentfulPage;
             </div>
 
             {tab.slider && (
-              <div className="tab-panel__slider slider--investment">
+              <div className="slider--investment">
                 <h3>Selected {tab.title} Photos</h3>
                 <Slider {...sliderSettings}>
                   {tab.slider.map((slider, index) => (
