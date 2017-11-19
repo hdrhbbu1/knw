@@ -16,6 +16,7 @@ const sliderSettings = {
   swipeToSlide: true,
   draggable: false,
   centerMode: true,
+  centerPadding: 0,
   arrows: true,
   touchMove: true,
   dots: true,
@@ -35,7 +36,6 @@ const About = () => (
         <div className="about-image--3">
           <img src={grid1} />
         </div>
-        <p>Lorem ipsum dolor set amet.</p>
       </li>
       <li className="cell cell--half">
         <div className="about-image--1">
@@ -69,11 +69,11 @@ const About = () => (
       </div>
       <div className="cell cell--half slider--about">
         <Slider {...sliderSettings}>
-          <div><img src="http://via.placeholder.com/100x100" /></div>
+          <div><img src={grid1} /></div>
           <div><img src="http://via.placeholder.com/200x200" /></div>
           <div><img src="http://via.placeholder.com/300x300" /></div>
           <div><img src="http://via.placeholder.com/400x400" /></div>
-          <div><img src="http://via.placeholder.com/500x500" /></div>
+          <div><img src={grid3} /></div>
         </Slider>
 
       </div>

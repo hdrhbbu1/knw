@@ -6,8 +6,8 @@
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "gatsby": "^1.9.115",
-    "gatsby-cli": "^1.1.21",
+    "gatsby": "^1.9.118",
+    "gatsby-cli": "^1.1.22",
     "gatsby-image": "^1.0.24",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-netlify": "^1.0.8",
