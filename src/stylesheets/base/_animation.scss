@@ -30,7 +30,7 @@ nav a, .container a {
   transition: background-color .5s;
 }
 
-.galleries-list li h3 {
+.galleries-list li h3, .featured__newest h3, .featured__list h3 {
   transition: all 0.3s;
 }
 
@@ -38,9 +38,6 @@ nav a, .container a {
   transition: all 0.3s;
 }
 
-.category-navigation__header button:after {
-  //transition: transform .3s;
-}
 
 .toggle {
   transition: all .3s;

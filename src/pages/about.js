@@ -58,22 +58,21 @@ const About = () => (
 
     <div className="grid grid--container">
       <div className="cell cell--half bucket-list">
-        <h3>Bucket List</h3>
+        <h3>Photography Bucket List</h3>
         <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
+          <li className="strike">Lake Tahoe</li>
+          <li>Banff National Park in Alberta, Canada</li>
+          <li>Wedding on a Ferry in Seattle, Washington</li>
+          <li>Wayfarers Chapel in Los Angeles, California</li>
+          <li>Arkansass Church</li>
           <li>Item 5</li>
         </ul>
       </div>
       <div className="cell cell--half slider--about">
         <Slider {...sliderSettings}>
-          <div><img src={grid1} /></div>
-          <div><img src="http://via.placeholder.com/200x200" /></div>
-          <div><img src="http://via.placeholder.com/300x300" /></div>
-          <div><img src="http://via.placeholder.com/400x400" /></div>
-          <div><img src={grid3} /></div>
+          <div><img src="http://via.placeholder.com/1000x1000" /></div>
+          <div><img src="http://via.placeholder.com/2000x2000" /></div>
+          <div><img src="http://via.placeholder.com/3000x3000" /></div>
         </Slider>
 
       </div>

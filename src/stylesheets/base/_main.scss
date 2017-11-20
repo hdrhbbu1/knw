@@ -16,8 +16,16 @@
 #wrapper {}
 
 body {
-  font-family: $sans, sans-serif;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+	vertical-align: baseline;
+	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 	font-size: 100%;
+	font-weight: 400;
+  font-family: $sans, sans-serif;
 	font-weight: normal;
 	color: $base;
 }

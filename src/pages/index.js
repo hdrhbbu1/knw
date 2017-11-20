@@ -34,6 +34,7 @@ const page = data.contentfulPage;
           <h2>Recent Work</h2>
           <Link to={posts[0].node.slug}>
             <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />
+            <h3>View Gallery</h3>
           </Link>
         </div>
 
@@ -42,6 +43,7 @@ const page = data.contentfulPage;
             <li key={post.id}>
               <Link to={post.slug}>
                 <Img sizes={post.cover.sizes} alt={post.cover.title} title={post.cover.title} backgroundColor={"#f1f1f1"} />
+                <h3>View Gallery</h3>
               </Link>
             </li>
           ))}

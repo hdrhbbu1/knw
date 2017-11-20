@@ -22,7 +22,7 @@
       grid-gap: 1em;
       grid-template-columns: 1fr 1fr 1fr;
       &:after {
-      display: none;
+        display: none;
       }
     }
   }
@@ -50,7 +50,7 @@
   }
 }
 
-.galleries-list h3 {
+.galleries-list h3, .featured__list h3, .featured__newest h3 {
   display: flex;
   flex-fow: column;
   justify-content: center;
@@ -58,7 +58,7 @@
   color: white;
   font-size: 1em;
   font-weight: normal;
-  text-transform: lowercase;
+  text-transform: capitalize;
   position: absolute;
   top: 0;
   left: 0;
@@ -67,9 +67,10 @@
   background: $base;
   background: rgba(0,0,0,.7);
   opacity: 0;
+  z-index: 1;
 }
 
-.galleries-list li:hover {
+.galleries-list li:hover, .featured__list li:hover, .featured__newest:hover {
   h3 {
     opacity: 1;
   }
@@ -91,6 +92,9 @@
     font-size: 3em;
     font-weight: bold;
     margin: 0 0 .5rem 0;
+    @include bp(medium){
+      font-size: 3.75em;
+    }
   }
 }
 

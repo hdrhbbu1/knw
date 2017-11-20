@@ -21,9 +21,11 @@
     font-size: 3em;
     font-weight: bold;
     @include bp(medium){
+      font-size: 3.75em;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: .5rem;
+      left: 0;
+      right: 0;
     }
   }
 }
@@ -63,6 +65,7 @@
 }
 
 .form .form__container {
+  position: relative;
   width: 100%;
   background: white;
   border-radius: 2px;
@@ -71,7 +74,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   @include bp(medium){
-    padding: 2em;
+    padding: 3em 2em 2em;
   }
 }
 
@@ -174,11 +177,6 @@ div[class*='form__optional']{
   }
 }
 
-::-webkit-input-placeholder {color: gray;} /* Chrome/Opera/Safari */
-::-moz-placeholder {color: gray;} /* Firefox 19+ */
-:-ms-input-placeholder {color: gray;} /* IE 10+ */
-:-moz-placeholder {color: gray; opacity: 1;} /* Firefox 18- */
-
 //Form Reason
 .form__reason, .form__source {
   background: $secondary url('../images/arrows.svg') no-repeat 97% 0 !important;
@@ -221,6 +219,7 @@ select:invalid,select option[value=""] {
 
 //Form Message
 .form__message {
+  font-size: 1em;
   resize: none;
   overflow: auto;
   height: 300px;

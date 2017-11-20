@@ -1,0 +1,13 @@
+/* ------- *
+ *  Hacks  *
+ * ------- */
+
+ .galleries-list li {
+   @include bp(medium){
+     @supports (display: grid) {
+			 @-moz-document url-prefix() {
+				 	min-height: 200px;
+			 }
+     }
+   }
+ }
