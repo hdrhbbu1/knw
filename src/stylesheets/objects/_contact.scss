@@ -13,19 +13,20 @@
   }
   h2 {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0 0 1em 0;
     text-align: center;
     position: relative;
-    margin: -1em auto 0;
+    margin: -1rem auto 0;
     color: $base;
     font-size: 3em;
     font-weight: bold;
     @include bp(medium){
       font-size: 3.75em;
       position: absolute;
-      top: .5rem;
+      top: 50%;
       left: 0;
       right: 0;
+      z-index: -1;
     }
   }
 }
