@@ -7,13 +7,13 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 80vh;
   width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
   z-index: -1;
+  padding-bottom: 66.6%;
+  @supports (object-fit: cover) {
+    height: 80vh;
+    padding: 0;
+  }
   &:before {
     content: '';
     background: rgba(0,0,0,.2);
@@ -36,15 +36,17 @@
   bottom: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
   div {
     height: 100%;
   }
 }
 
 .intro--home h1 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10em;
-  position: relative;
   z-index: 99;
 }
 
@@ -82,12 +84,14 @@
   margin-bottom: 1em;
   position: relative;
   @include bp(medium){
-    width: 65%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 3em;
-    height: 85vh;
-    top: 7.5vh;
+    width: 66%;
+    @supports (object-fit: cover) {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 3em;
+      height: 85vh;
+      top: 7.5vh;
+    }
     margin-bottom: 0;
   }
   h2 {
@@ -112,7 +116,9 @@
   }
   div {
     @include bp(medium){
-      height: 85vh;
+      @supports (object-fit: cover) {
+        height: 85vh;
+      }
     }
   }
 }
@@ -134,7 +140,7 @@
     flex-flow: row wrap;
     align-items: flex-start;
     @include bp(medium){
-      width: 33.333%;
+      width: 32%;
     }
     li {
       position: relative;
@@ -142,6 +148,12 @@
       width: 100%;
       &:last-child {
         margin-bottom: 0;
+      }
+      &:nth-child(3),&:nth-child(4),&:nth-child(5) {
+        display: none;
+        @supports (position: sticky) {
+          display: block;
+        }
       }
     }
   }

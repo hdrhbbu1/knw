@@ -9,6 +9,11 @@ import grid2 from '../images/grid2.jpg'
 import grid3 from '../images/grid3.jpg'
 import bleed1 from '../images/bleed1.jpg'
 
+import slider1 from '../images/slider1.jpg'
+import slider2 from '../images/slider2.jpg'
+import slider3 from '../images/slider3.jpg'
+import slider4 from '../images/slider4.jpg'
+
 const sliderSettings = {
   infinite: true,
   speed: 300,
@@ -70,9 +75,10 @@ const About = () => (
       </div>
       <div className="cell cell--half slider--about">
         <Slider {...sliderSettings}>
-          <div><img src="http://via.placeholder.com/1000x1000" /></div>
-          <div><img src="http://via.placeholder.com/2000x2000" /></div>
-          <div><img src="http://via.placeholder.com/3000x3000" /></div>
+          <div><img src={slider1} /></div>
+          <div><img src={slider2} /></div>
+          <div><img src={slider3} /></div>
+          <div><img src={slider4} /></div>
         </Slider>
 
       </div>

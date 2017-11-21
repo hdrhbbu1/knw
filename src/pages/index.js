@@ -11,7 +11,7 @@ const page = data.contentfulPage;
 
   return (
     <div>
-      <div className="intro intro--home">
+      <div className="intro intro--home sticky">
         <h1>
           <img className="logo" src={logo} />
         </h1>
@@ -30,7 +30,7 @@ const page = data.contentfulPage;
 
       <div className="featured">
 
-        <div className="featured__newest">
+        <div className="featured__newest sticky">
           <h2>Recent Work</h2>
           <Link to={posts[0].node.slug}>
             <Img sizes={posts[0].node.cover.sizes} alt={posts[0].node.cover.title} title={posts[0].node.cover.title} backgroundColor={"#f1f1f1"} />

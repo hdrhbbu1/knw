@@ -12,9 +12,11 @@
 .post-cover {
   width: 100%;
   div {
-    height: 800px;
-    height: 75vh;
-    max-height: 1000px;
+    @supports (object-fit: cover) {
+      height: 800px;
+      height: 75vh;
+      max-height: 1000px;
+    }
   }
   margin-bottom: -200px;
   margin-bottom: -10vh;
@@ -89,7 +91,10 @@
 }
 
 .post-preview {
-  display: block;
+  display: none;
+  @supports (object-fit: cover) {
+    display: block;
+  }
   position: relative;
   width: 100%;
   min-height: 200px;
@@ -97,8 +102,8 @@
   text-align: center;
   text-decoration: none!important;
   div {
-    min-height: 200px;
-    height: 40vh !important;
+      min-height: 200px;
+      height: 40vh !important;
     &:after {
       content: '';
       position: absolute;
