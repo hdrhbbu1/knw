@@ -5,21 +5,22 @@ import Helmet from 'react-helmet'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Slider from 'react-slick'
 
-const sliderSettings = {
-  infinite: true,
-  speed: 300,
-  slidesToShow: 2,
-  swipeToSlide: true,
-  draggable: false,
-  centerMode: true,
-  arrows: true,
-  touchMove: true,
-  responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, draggable: true, arrows: false} }]
-}
-
 const Investment = ({data}) => {
-const tabs = data.allContentfulInvestment.edges;
-const page = data.contentfulPage;
+
+  const tabs = data.allContentfulInvestment.edges;
+  const page = data.contentfulPage;
+
+  const sliderSettings = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    swipeToSlide: true,
+    draggable: false,
+    centerMode: true,
+    arrows: true,
+    touchMove: true,
+    responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, draggable: true, arrows: false} }]
+  }
 
   return(
     <div>

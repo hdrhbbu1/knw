@@ -31,8 +31,6 @@ const About = ({data}) => {
     responsive: [{ breakpoint: 640, settings: { draggable: true, arrows: false} }]
   }
 
-  console.log(data);
-
   return(
     <div>
       <Helmet>

@@ -88,9 +88,9 @@
     @supports (position: sticky) {
       position: -webkit-sticky;
       position: sticky;
-      top: 3em;
-      height: 85vh;
-      top: 7.5vh;
+      top: 2.25em;
+      height: 90vh;
+      top: 5vh;
     }
     margin-bottom: 0;
   }
@@ -117,7 +117,7 @@
   div {
     @include bp(medium){
       @supports (position: sticky) {
-        height: 85vh;
+        height: 90vh;
       }
     }
   }

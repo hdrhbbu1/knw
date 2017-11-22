@@ -88,11 +88,11 @@ class Contact extends React.Component {
               <input className="form__email" name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required/>
               <select className="form__reason" name="reason" value={this.state.reason} onChange={this.handleResasonChange} required>
                 <option value="">Reason For Contacting</option>
-                <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
                 <option value="Book A Wedding Package">Book A Wedding Package</option>
+                <option value="Book A Lifestyle Package">Book A Lifestyle Package</option>
                 <option value="General Inquiry / Question">General Inquiry / Question</option>
               </select>
-              <select className="form__source" name="source" required>
+              <select className="form__source" name="source" value={this.state.source} onChange={this.handleInputChange} required>
                 <option value="">How Did You Hear About Me?</option>
                 <option value="Referral">Referral</option>
                 <option value="Social Media">Social Media</option>

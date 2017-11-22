@@ -7,6 +7,7 @@ module.exports = {
     url: 'http://www.knw.netlify.com'
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
