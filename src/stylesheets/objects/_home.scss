@@ -85,7 +85,7 @@
   position: relative;
   @include bp(medium){
     width: 66%;
-    @supports (object-fit: cover) {
+    @supports (position: sticky) {
       position: -webkit-sticky;
       position: sticky;
       top: 3em;
@@ -116,7 +116,7 @@
   }
   div {
     @include bp(medium){
-      @supports (object-fit: cover) {
+      @supports (position: sticky) {
         height: 85vh;
       }
     }
