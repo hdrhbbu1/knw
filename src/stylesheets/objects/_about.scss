@@ -28,7 +28,7 @@
     margin: 0 0 1rem 0;
   }
 }
-.about-image--2 {}
+//.about-image--2 {}
 .about-image--3 {
   margin: 0 0 1rem 0;
   @include bp(medium){
@@ -46,11 +46,11 @@
   }
 }
 
-//Full Bleed Image Divider
-.full-bleed {
+//Full Bleed Image Page Divider
+.page-divider {
   margin: 4rem 0 2rem;
   width: 100%;
-  img {
+  div {
     max-height: 75vh;
     object-fit: cover;
   }
@@ -78,7 +78,6 @@
   }
 }
 
-
 //About Slider
 .slider--about {
     margin: 0 0 2em 0;
@@ -88,7 +87,7 @@
     max-height: 500px;
     padding: 0;
     width: 101%;
-    img {
+    div {
       object-fit: cover;
       height: 100%;
     }
