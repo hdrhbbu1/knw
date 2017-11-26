@@ -108,7 +108,7 @@ class Contact extends React.Component {
                 </div>
                 <div className="form__budget">
                   <label htmlFor="budget">Photography Budget?</label> <span>${this.state.budget}</span>
-                  <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="1000" max="10000" step="250" />
+                  <input name="budget" type="range" value={this.state.budget} onChange={this.handleInputChange}  min="0" max="10000" step="250" />
                 </div>
               </div>
               <textarea className="form__message" name="message" type="text" placeholder="Message" value={this.state.message} onChange={this.handleInputChange} required></textarea>

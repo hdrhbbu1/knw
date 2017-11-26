@@ -6,6 +6,8 @@
   position: relative;
   text-align: center;
   @include bp(medium){
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -40,7 +42,6 @@
     right: 0;
     bottom: 0;
     height: 100%;
-    min-height: 100vh;
     width: 100%;
     z-index: -1;
   }
