@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import find from "lodash.find"
 import Helmet from 'react-helmet'
+import ScrollToTop from 'react-scroll-up'
+import Progress from '../components/progress'
 
 const PostTemplate = ({data}) => {
 
@@ -65,6 +67,14 @@ const PostTemplate = ({data}) => {
           <Img sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#f1f1f1"} />
       </Link>)}
     </div>
+
+
+
+    <ScrollToTop showUnder={160}>
+        <span>up</span>
+    </ScrollToTop>
+
+    <Progress/>
 
   </div>
 
