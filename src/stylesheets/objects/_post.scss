@@ -32,6 +32,19 @@
   }
   li {
     margin: 0 0 1em 0;
+    clear: right;
+  }
+  .left {
+    float: left;
+    width: 50%;
+    border-right: .5em solid white;
+    border-bottom: 1em solid white;
+  }
+  .right {
+    width: 50%;
+    border-left: .5em solid white;
+    border-bottom: 1em solid white;
+    float: right;
   }
 }
 
