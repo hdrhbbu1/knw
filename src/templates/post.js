@@ -71,10 +71,8 @@ const PostTemplate = ({data}) => {
 
 
     <ScrollToTop showUnder={160}>
-        <span>up</span>
+      <Progress/>
     </ScrollToTop>
-
-    <Progress/>
 
   </div>
 
