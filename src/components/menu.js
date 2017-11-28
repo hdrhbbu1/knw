@@ -22,10 +22,10 @@ const Menu = () => {
           <nav>
             <ul className="site-nav">
               <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-              <li><Link to="/about/" onClick={closeMenu}>About</Link></li>
-              <li><Link to="/galleries/" onClick={closeMenu}>Galleries</Link></li>
-              <li><Link to="/investment/" onClick={closeMenu}>Investment</Link></li>
-              <li><Link to="/contact/" onClick={closeMenu}>Contact</Link></li>
+              <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+              <li><Link to="/galleries" onClick={closeMenu}>Galleries</Link></li>
+              <li><Link to="/investment" onClick={closeMenu}>Investment</Link></li>
+              <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
             </ul>
           </nav>
       </header>
