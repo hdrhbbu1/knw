@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import find from "lodash.find"
 import Helmet from 'react-helmet'
-import ScrollToTop from 'react-scroll-up'
+import Up from '../components/up'
 import Progress from '../components/progress'
 
 const PostTemplate = ({data}) => {
@@ -25,6 +25,16 @@ const PostTemplate = ({data}) => {
     ({ node: post }) => post.id === id
   );
 
+  const style = {
+    position: 'fixed',
+    bottom: 0,
+    right: 0,
+    cursor: 'pointer',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: 'linear',
+    transitionDelay: '0s'
+  }
+
   return(
     <div>
 
@@ -35,6 +45,8 @@ const PostTemplate = ({data}) => {
       <meta property="og:image:width" content="1800" />
       <meta property="og:image:height" content="1200" />
     </Helmet>
+
+    <Progress/>
 
     <div className="post">
       <div className="post-cover" id="test">
@@ -67,13 +79,7 @@ const PostTemplate = ({data}) => {
           <Img sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#f1f1f1"} />
       </Link>)}
     </div>
-
-
-
-    <ScrollToTop showUnder={160}>
-      <Progress/>
-    </ScrollToTop>
-
+    <Up />
   </div>
 
   )

@@ -163,5 +163,31 @@
 }
 
 
+//scroll To Top Button
 
-//Progerss Button
+.up-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  float: right;
+  width: auto;
+  display: inline-block;
+  @include bp(medium){
+    bottom: 2rem;
+    right: 2rem;
+  }
+  @supports (position: sticky) {
+    position: sticky;
+  }
+}
+
+.up-button__arrow {
+  font-size: 1.75em;
+  font-weight: 300;
+  background: white;
+  padding: .25em;
+  border: 1px solid $secondary;
+  &:hover {
+    background: $secondary;
+  }
+}
