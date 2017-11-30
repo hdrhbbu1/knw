@@ -45,6 +45,16 @@ nav a, .container a {
   }
 }
 
+.toggle__label {
+  transition: all .5s;
+}
+
+
+.toggle:hover {
+  .toggle__label {
+    transition: all .5s;
+  }
+}
 
 //React Transition group
 
