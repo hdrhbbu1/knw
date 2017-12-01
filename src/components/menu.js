@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
+import Headroom from 'react-headroom'
 
 const toggleMenu = () => {
   const wrapper = document.getElementById('wrapper');
@@ -15,13 +16,15 @@ const closeMenu = () => {
 const Menu = () => {
     return (
       <header>
-          <button className="toggle" onClick={toggleMenu}>
-            <span className="toggle__label">Menu</span>
-            <div className="toggle__icon">
-              <span></span>
-              <span></span>
-            </div>
-          </button>
+          <Headroom disableInlineStyles>
+            <button className="toggle" onClick={toggleMenu}>
+              <span className="toggle__label">Menu</span>
+              <div className="toggle__icon">
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </Headroom>
           <nav>
             <ul className="site-nav">
               <li><Link to="/" onClick={closeMenu}>Home</Link></li>

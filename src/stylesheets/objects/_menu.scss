@@ -77,28 +77,12 @@ nav {
 }
 
 .toggle {
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
   z-index: 999;
   padding: 0;
   margin: 0;
   background: white;
-  //border: 2px solid white;
-  @include bp(medium){
-    right: 2rem;
-    top: 2rem;
-  }
-  &:hover {
-      background: $secondary;
-      .toggle__label {
-        opacity: 1;
-        width: auto;
-        max-width: 70px;
-        padding: 0 0 0 1rem;
-      }
-
-  }
+  border-radius: 2px;
+  border: 1px solid transparent;
 }
 
 .toggle__label {
@@ -107,10 +91,10 @@ nav {
   text-transform: capitalize;
   line-height: 3.5rem;
   height: 100%;
-  padding: 0;
+  padding: 0 0 0 1rem;
   color: $base;
-  opacity: 0;
-  max-width: 0;
+  width: auto;
+  max-width: 70px;
   display: none;
   @include bp(medium){
     display: block;
@@ -139,18 +123,15 @@ nav {
 }
 
 
-.toggle--pinned {
-
-}
-
-
-
-
-@media (hover: none) {
-
-}
-
 .open--menu .toggle {
+  //box-shadow: none !important;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  border-color: transparent !important;
+  .toggle__label {
+    opacity: 0;
+    padding: 0;
+    max-width: 0;
+  }
   .toggle__icon {
     span:first-child {
       transform: rotate(45deg);
@@ -161,4 +142,51 @@ nav {
       bottom: 46%;
     }
   }
+}
+
+
+
+
+//Headroom Settings
+.headroom {
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+.headroom-wrapper {
+  float: right;
+}
+
+.headroom--unfixed {
+  position: absolute;
+  transform: translateY(0);
+  .toggle {
+
+  }
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+  top: 0;
+}
+
+.open--menu .headroom--unpinned, .open--menu .headroom--unfixed  {
+  position: fixed;
+  transform: translateY(0%);
+  top: 1rem;
+  .toggle {
+
+  }
+}
+
+
+
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  .toggle { border: 1px solid $secondary;}
 }

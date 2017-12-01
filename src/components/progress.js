@@ -32,7 +32,6 @@ class Progress extends React.Component {
       zIndex: 9999,
       marginBottom: '-4px',
       width: `${this.state.progress}%`
-
     };
 
     return (
@@ -48,7 +47,6 @@ export default Progress
 
 
 /*
-
 <svg width="30" height="30" viewBox="0 0 50 50" style={ svgStyle }>
   <circle cx="25" cy="25" r="20" strokeWidth="2" style={ meterStyle } />
   <circle cx="25" cy="25" r="20" strokeWidth="2" style={ valueStyle } />
