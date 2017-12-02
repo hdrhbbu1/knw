@@ -159,30 +159,27 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 1;
 }
 
 
 //Scroll Up Button
 .up-button {
-  z-index: 99999;
   cursor: pointer;
 }
 .up-button .headroom {
+  z-index: 999;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  transition: transform 200ms ease-in-out;
 }
 
 .up-button .headroom-wrapper {float: right;}
 
 .up-button .headroom--unfixed {
-  position: fixed;
   transform: translateY(100%);
-}
-
-.up-button .headroom--scrolled {
-  transition: transform 200ms ease-in-out;
 }
 
 .up-button .headroom--unpinned {
@@ -194,7 +191,6 @@
   position: fixed;
   transform: translateY(0%);
 }
-
 
 .up-button__text {
   font-size: 1em;
