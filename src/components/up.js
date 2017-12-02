@@ -1,14 +1,15 @@
 import React from 'react'
 import Headroom from 'react-headroom'
+window.__forceSmoothScrollPolyfill__ = true;
 require('smoothscroll-polyfill').polyfill();
-
-const windowGlobal = typeof window !== 'undefined' && window
-windowGlobal.__forceSmoothScrollPolyfill__ = true;
 
 const Up = () => {
 
   const scrollUp = () => {
-    windowGlobal.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    document.querySelector('.container').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }
 
   return (
