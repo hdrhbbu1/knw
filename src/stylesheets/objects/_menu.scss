@@ -40,11 +40,7 @@ nav {
   }
 }
 
-@media (hover: none) {
-  .site-nav a:hover {
-    color: $base;
-  }
-}
+@media (hover: none) {.site-nav a:hover {color: $base;}}
 
 .open--menu nav {
   transform: translate3d(0,0,0);
@@ -93,7 +89,6 @@ nav {
   height: 100%;
   padding: 0 0 0 1rem;
   color: $base;
-  text-transform: uppercase;
   max-width: 0;
   padding: 0;
   opacity: 0;
@@ -115,12 +110,8 @@ nav {
     width: 40%;
     height: 2px;
     left: 30%;
-    &:first-child {
-      top: 39%;
-    }
-    &:nth-child(2) {
-      bottom: 39%;
-    }
+    &:first-child {top: 41%;}
+    &:nth-child(2) {bottom: 41%;}
   }
 }
 
@@ -132,22 +123,12 @@ nav {
     max-width: 0;
   }
   .toggle__icon {
-    span:first-child {
-      transform: rotate(45deg);
-      top: 50%;
-    }
-    span:nth-child(2){
-      transform: rotate(-45deg);
-      bottom: 46%;
-    }
+    span:first-child {transform: rotate(45deg);top: 50%;}
+    span:nth-child(2){transform: rotate(-45deg);bottom: 46%;}
   }
 }
-
-
-
-
 //Headroom Settings
-.headroom {
+header .headroom {
   z-index: 999;
   top: 1rem;
   right: 1rem;
@@ -157,11 +138,9 @@ nav {
   }
 }
 
-.headroom-wrapper {
-  float: right;
-}
+header .headroom-wrapper {float: right;}
 
-.headroom--unfixed {
+header .headroom--unfixed {
   position: fixed;
   .toggle__label {
     max-width: 70px;
@@ -169,27 +148,7 @@ nav {
     opacity: 1;
   }
 }
-.headroom--scrolled {
-  transition: transform 200ms ease-in-out;
-}
-.headroom--unpinned {
-  position: fixed;
-  .toggle { border-color: $secondary;}
-}
 
-.open--menu .headroom--unpinned, .open--menu .headroom--unfixed  {
-  position: fixed;
-  transform: translateY(0%);
-  top: 1rem;
-  right: 1rem;
-  @include bp(medium){
-    top: 2rem;
-    right: 2rem;
-  }
-}
+header .headroom--unpinned {position: fixed;}
 
-.headroom--pinned {
-  position: fixed;
-  transform: translateY(0%);
-  .toggle { border-color: $secondary;}
-}
+header .headroom--pinned {position: fixed;}

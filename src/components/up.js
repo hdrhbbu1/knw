@@ -1,22 +1,19 @@
 import React from 'react'
-import ScrollToTop from 'react-scroll-up'
-
-const style = {
-  position: 'relative',
-  right: 0,
-  bottom: 0,
-  cursor: 'pointer',
-  transitionDuration: '0.2s',
-  transitionTimingFunction: 'linear',
-  transitionDelay: '0s'
-}
+import Headroom from 'react-headroom'
+window.__forceSmoothScrollPolyfill__ = true;
+require('smoothscroll-polyfill').polyfill();
 
 const Up = () => {
+
+  const scrollUp = () => {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
   return (
-    <div className="up-button">
-      <ScrollToTop className="test" showUnder={160} duration={500} style={style}>
-        <div className="up-button__arrow">&uarr;</div>
-      </ScrollToTop>
+    <div className="up-button" onClick={scrollUp}>
+      <Headroom disableInlineStyles pinStart={300}>
+        <div className="up-button__text">Back to Top</div>
+      </Headroom>
     </div>
   )
 }

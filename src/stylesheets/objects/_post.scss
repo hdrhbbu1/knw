@@ -163,31 +163,47 @@
 }
 
 
-//scroll To Top Button
-
+//Scroll Up Button
 .up-button {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  float: right;
-  width: auto;
-  display: inline-block;
-  @include bp(medium){
-    bottom: 2rem;
-    right: 2rem;
-  }
-  @supports (position: sticky) {
-    position: sticky;
-  }
+  z-index: 99999;
+  cursor: pointer;
+}
+.up-button .headroom {
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.up-button__arrow {
-  font-size: 1.75em;
-  font-weight: 300;
+.up-button .headroom-wrapper {float: right;}
+
+.up-button .headroom--unfixed {
+  position: fixed;
+  transform: translateY(100%);
+}
+
+.up-button .headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+
+.up-button .headroom--unpinned {
+  position: fixed;
+  transform: translateY(100%);
+}
+
+.up-button .headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+
+.up-button__text {
+  font-size: 1em;
+  font-weight: bold;
   background: white;
-  padding: .25em;
-  border: 1px solid $secondary;
-  &:hover {
-    background: $secondary;
-  }
+  border-top: 1px solid $secondary;
+  padding: 1em;
+  color: $base;
+  text-align: center;
+  position: relative;
+  z-index: 999;
 }
