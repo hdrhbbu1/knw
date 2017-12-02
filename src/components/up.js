@@ -1,6 +1,6 @@
 import React from 'react'
 import Headroom from 'react-headroom'
-window.__forceSmoothScrollPolyfill__ = true;
+//window.__forceSmoothScrollPolyfill__ = true;
 require('smoothscroll-polyfill').polyfill();
 
 const Up = () => {
