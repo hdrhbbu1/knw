@@ -1,9 +1,9 @@
 import React from 'react'
 import Headroom from 'react-headroom'
-const window = require("global/window")
-
-window.__forceSmoothScrollPolyfill__ = true;
-require('smoothscroll-polyfill').polyfill();
+if (typeof window !== `undefined`) {
+  require('smoothscroll-polyfill').polyfill();
+  window.__forceSmoothScrollPolyfill__ = true;
+}
 
 const Up = () => {
 
