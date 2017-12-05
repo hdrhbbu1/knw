@@ -1,0 +1,61 @@
+/* ---- *
+*  404  *
+* ----- */
+
+.intro--404 {
+  @include bp(medium){
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.intro--404__box {
+  max-width: $max;
+  margin: 0 auto;
+  padding: 4em 2em;
+  text-align: center;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    max-width: 600px;
+    display: inline-block;
+    padding: 4rem 3rem;
+    margin: 0 auto 1rem;
+    background: white;
+    border: 2px solid $secondary;
+    border-top: 25px solid $secondary;
+    border-radius: 2px;
+    position: relative;
+    @include bp(medium){
+      font-size: 3.75em;
+    }
+    span {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      position: absolute;
+      top: -20px;
+      z-index: 99;
+      &:nth-child(1) {
+        left: 5px;
+        background: #ed695e;
+      }
+      &:nth-child(2) {
+        left: 25px;
+        background: #f6bf4f;
+      }
+      &:nth-child(3) {
+        left: 45px;
+        background: #62c553;
+      }
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
