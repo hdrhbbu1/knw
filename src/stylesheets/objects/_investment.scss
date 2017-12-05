@@ -7,34 +7,23 @@
   margin: 0 auto;
   text-align: center;
   @include bp(medium){
-    margin: 0 auto 0;
+    margin: 0 auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 2em 1em 0;
+    padding: 2em 0 0;
     position: relative;
-  }
-  h2 {
-    font-weight: bold;
-    display: inline-block;
-    padding: 1rem 2rem 0 2rem;
-    text-align: center;
-    font-size: 3em;
-    margin: 0 auto;
-    position: relative;
-    top: -.8em;
-    @include bp(medium){
-      font-size: 3.75em;
-    }
+    z-index: 99;
   }
 }
 
 .intro--investment__image {
   max-width: $max;
   width: 100%;
+  margin: 0 auto;
   @include bp(medium){
     width: 66.666%;
-    margin: 0 auto;
+    margin: 0 auto -10em;
   }
 }
 
@@ -44,6 +33,24 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  @include bp(medium){
+    padding: 10em 0 0;
+  }
+  h2 {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    position: relative;
+    background: $secondary;
+    padding: 2rem 0 0;
+    @include bp(medium){
+      font-size: 3.75em;
+      margin: -10rem auto 0;
+      padding: 12rem 0 0;
+    }
+  }
 }
 
 //Tabs Header
@@ -56,9 +63,9 @@
   flex-flow: row;
   justify-content: center;
   z-index: 99;
-  margin: 2em auto;
+  margin: 2em auto 3em;
   @include bp(medium){
-    margin: 3em auto;
+    margin: 2em auto 4em;
   }
 }
 

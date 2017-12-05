@@ -32,13 +32,12 @@ const Investment = ({data}) => {
 
       <div className="intro--investment">
         <div className="intro--investment__image">
-          <Img sizes={page.cover.sizes} backgroundColor={"#f1f1f1"} />
+          <Img sizes={page.cover.sizes} backgroundColor={"#e4e4e4"} />
         </div>
-        <h2>Investment</h2>
       </div>
 
       <Tabs className="tabs" selectedTabClassName="tab--selected" selectedTabPanelClassName="tab-panel--selected">
-
+        <h2>Investment</h2>
         <div className="tabs-header">
           <TabList className="tab-list">
             {tabs.map(({ node: tab, index }) => (
