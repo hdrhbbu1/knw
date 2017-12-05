@@ -11,7 +11,7 @@ const Thanks = ({data}) => {
     <div>
 
       <Helmet>
-        <title>Message Received</title>
+        <title>Message Received!</title>
         <meta name="description" content="" />
       </Helmet>
 
@@ -31,7 +31,7 @@ const Thanks = ({data}) => {
 
 export const query = graphql`
   query ThanksQuery {
-    contentfulPage(slug: {eq: "contact"}) {
+    contentfulPage(slug: {eq: "thanks"}) {
       title
       slug
       id
