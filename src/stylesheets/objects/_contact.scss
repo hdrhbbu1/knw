@@ -2,40 +2,37 @@
 * Contact  *
 * ------- */
 
-.contact-background {
-  position: relative;
-  text-align: center;
-  @include bp(medium){
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-  }
-  h2 {
-    display: inline-block;
-    padding: 0 0 1em 0;
-    text-align: center;
-    position: relative;
-    margin: -1rem auto 0;
-    color: $base;
-    font-size: 3em;
-    font-weight: bold;
-    @include bp(medium){
-      font-size: 3.75em;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      z-index: -1;
-    }
-  }
+.contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-background__image {
-  object-fit: cover;
-  @include bp(medium){
+.intro--contact {
+  width: 100%;
+  height: 800px;
+  height: 75vh;
+  max-height: 1000px;
+  position: relative;
+  margin: 0 0 -10vh 0;
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    z-index: 2;
+    color: white;
+    @include bp(medium) {
+      font-size: 3.75em;
+    }
+  }
+  &:before {
+    content: '';
+    background: rgba(0,0,0,.2);
     position: absolute;
     top: 0;
     left: 0;
@@ -43,23 +40,74 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    z-index: -1;
-  }
-  div {
-    height: 100%;
+    z-index: 1;
   }
 }
 
-//General Form Styling
-.form {
-  margin: 2em 0;
+.intro--contact__image {
+  div {
+    height: 800px;
+    height: 75vh;
+    max-height: 1000px;
+  }
+}
+
+.contact-info {
+  background: white;
+  max-width: $max;
+  margin: 0 1em;
+  position: relative;
   z-index: 2;
   @include bp(medium){
-    max-width: 800px;
-    width: 90%;
-    width: calc(100% - 4em);
-    height: 100%;
-    min-height: calc(100vh - 4em);
+    margin: 0 2em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.contact-info__left {
+  width: 100%;
+  @include bp(medium){
+    flex: 0 1 66%;
+  }
+}
+
+.contact-info__right {
+  width: 100%;
+  @include bp(medium){
+    flex: 0 1 33%;
+  }
+}
+
+.social {
+  padding: 0 1em 1em;
+  @include bp(medium){
+    padding: 2em 0 0 0;
+  }
+  h3 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+  }
+  ul {
+    margin: 0 0 2em 0;
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+
+
+
+//General Form Styling
+.form {
+  margin: 0 0 2em 0;
+  z-index: 2;
+  @include bp(medium){
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -71,13 +119,12 @@
   position: relative;
   width: 100%;
   background: white;
-  border-radius: 2px;
   padding: 2em 1em 1em;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   @include bp(medium){
-    padding: 3em 2em 2em;
+    padding: 2em;
   }
 }
 

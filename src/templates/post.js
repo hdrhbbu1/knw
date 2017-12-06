@@ -49,7 +49,7 @@ const PostTemplate = ({data}) => {
     <Progress/>
 
     <div className="post">
-      <div className="post-cover" id="test">
+      <div className="post-cover">
         <Img sizes={cover.sizes} alt={cover.title} title={cover.title} backgroundColor={"#f1f1f1"} />
       </div>
       <div className="post-info">
