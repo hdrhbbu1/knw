@@ -19,6 +19,7 @@
     "gatsby-transformer-remark": "^1.7.23",
     "lodash.find": "^4.6.0",
     "moment": "^2.19.3",
+    "promise-polyfill": "^6.1.0",
     "react-addons-shallow-compare": "^15.6.2",
     "react-datepicker": "^0.61.0",
     "react-headroom": "^2.2.2",
