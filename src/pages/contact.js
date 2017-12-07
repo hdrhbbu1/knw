@@ -48,7 +48,6 @@ class Contact extends React.Component {
       })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
-
       event.preventDefault();
       this.setState({
         name: '',
@@ -63,7 +62,6 @@ class Contact extends React.Component {
         //optionalQuestions: false
       });
     };
-
 
     handleInputChange(event) {
       const target = event.target;
@@ -134,10 +132,10 @@ class Contact extends React.Component {
                   <option value="General Inquiry / Question">General Inquiry / Question</option>
                 </select>
                 <select className="form__source" name="source" value={this.state.source} onChange={this.handleInputChange} required>
-                  <option value="">How Did You Hear About Me?</option>
-                  <option value="Referral">Referral</option>
-                  <option value="Social Media">Social Media</option>
-                  <option value="Google Search">Google Search</option>
+                  <option value="">Why KNW Photography?</option>
+                  <option value="Referral">I Was Referred By Someone I Know</option>
+                  <option value="Social Media">I Found You On Social Media</option>
+                  <option value="Google Search">Google Search Result</option>
                   <option value="Other">Other</option>
                 </select>
                 <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
