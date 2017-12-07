@@ -3,6 +3,16 @@
 * ------- */
 
 //Genral Styling
+.slick-slider {
+  overflow: hidden;
+}
+
+.slick-list {
+  position: relative;
+  left: -1px;
+  right: -1px;
+}
+
 .slick-slide {
   cursor: move;
   cursor: grab;
