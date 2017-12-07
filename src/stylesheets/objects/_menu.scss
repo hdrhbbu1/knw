@@ -40,6 +40,20 @@ nav {
   }
 }
 
+.site-nav .icon {
+  fill: $base;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0 0 .25em;
+}
+
+.site-nav a:hover .icon {
+  fill: lighten($base,25%);
+}
+
+
+
 @media (hover: none) {.site-nav a:hover {color: $base;}}
 
 .open--menu nav {

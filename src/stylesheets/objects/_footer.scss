@@ -78,3 +78,20 @@
   color: white !important;
   text-decoration: none !important;
 }
+
+//Foooter Icons
+.footer .icon {
+  fill: lighten($base,25%);
+  display: inline-block;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin: 0 0 0 -.5rem;
+}
+
+.icon--facebook {
+
+}
+
+.icon--instagram {
+
+}

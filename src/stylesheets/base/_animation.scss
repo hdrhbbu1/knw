@@ -11,6 +11,10 @@ nav a, .container a {
   transition: color .3s;
 }
 
+a .icon {
+  transition: all .3s;
+}
+
 .container {
   transition: transform .5s, opacity .5s;
   transition-timing-function: cubic-bezier(.84,0,.22,1);

@@ -89,7 +89,7 @@
   h3 {
     font-size: 2em;
     font-weight: bold;
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
   }
   ul {
     margin: 0 0 2em 0;
@@ -100,7 +100,19 @@
   }
 }
 
+.contact .icon {
+  fill: $base;
+  display: inline-block;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin: 0 .25em 0 0;
+  position: relative;
+  top: .5em;
+}
 
+.contact a:hover .icon {
+  fill: lighten($base,25%);
+}
 
 
 //General Form Styling
