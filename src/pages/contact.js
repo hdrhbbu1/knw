@@ -6,10 +6,12 @@ import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import 'react-datepicker/dist/react-datepicker-cssmodules.css'
-//Polyfills
+
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
-if (!window.Promise) {window.Promise = Promise;}
+if (typeof window !== `undefined`) {
+  if (!window.Promise) {window.Promise = Promise;}
+}
 
 const encode = (data) => {
   return Object.keys(data)
