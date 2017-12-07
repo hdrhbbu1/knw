@@ -3,15 +3,19 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
+import 'react-datepicker/dist/react-datepicker-cssmodules.css'
+//Polyfills
+import 'whatwg-fetch'
+import Promise from 'promise-polyfill'
+if (!window.Promise) {window.Promise = Promise;}
 
 const encode = (data) => {
-   return Object.keys(data)
-       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-       .join("&");
- }
+  return Object.keys(data)
+   .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+   .join("&");
+}
 
 class Contact extends React.Component {
 
@@ -34,16 +38,28 @@ class Contact extends React.Component {
       this.handleResasonChange = this.handleResasonChange.bind(this);
     }
 
-    handleSubmit = e => {
+    handleSubmit = event => {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...this.state })
       })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
 
-      e.preventDefault();
+      event.preventDefault();
+      this.setState({
+        name: '',
+        email: '',
+        reason: '',
+        source: '',
+        eventDate: null,
+        location: '',
+        guests: '0',
+        budget: '0',
+        message:''
+        //optionalQuestions: false
+      });
     };
 
 
