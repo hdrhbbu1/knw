@@ -149,7 +149,7 @@ class Contact extends React.Component {
                   <option value="Other">Other</option>
                 </select>
                 <div className="form__optional" className={(this.state.optionalQuestions ? "form__optional--visible" : "form__optional")}>
-                  <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} placeholderText="Event Date"/></div>
+                  <div className="form__date"><DatePicker name="eventDate" selected={this.state.eventDate} onChange={this.handleDateChange} minDate={moment()} readOnly placeholderText="Event Date"/></div>
                   <input className="form__location" name="location" type="text" value={this.state.location} onChange={this.handleInputChange} placeholder="Location / Venue"/>
                   <div className="form__guests">
                     <label htmlFor="guests">Number Of Guests?</label> <span>{this.state.guests} Guests</span>
