@@ -12,10 +12,7 @@
    }
  }
 
-.form input:-webkit-autofill,
-.form input:-webkit-autofill:hover,
-.form input:-webkit-autofill:focus,
-.form input:-webkit-autofill  {
-   background-color: $secondary;
-  -webkit-text-fill-color: $base;
+.form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $secondary inset;
+    -webkit-text-fill-color: $base;
 }
