@@ -142,7 +142,7 @@ class Contact extends React.Component {
                   <option value="General Inquiry / Question">General Inquiry / Question</option>
                 </select>
                 <select className="form__source" name="source" value={this.state.source} onChange={this.handleInputChange} required>
-                  <option value="">Why KNW Photography?</option>
+                  <option value="">How Did You Hear About Me?</option>
                   <option value="Referral">I Was Referred By Someone I Know</option>
                   <option value="Social Media">I Found You On Social Media</option>
                   <option value="Google Search">Google Search Result</option>

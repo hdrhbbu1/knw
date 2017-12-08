@@ -11,3 +11,7 @@
      }
    }
  }
+
+ .form input:-webkit-autofill {
+  -webkit-text-fill-color: $base;
+}
