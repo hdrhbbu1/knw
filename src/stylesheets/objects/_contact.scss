@@ -301,3 +301,69 @@ select:invalid,select option[value=""] {
     flex: none;
   }
 }
+
+//Success Modal
+.open--modal .container {
+  &:after {
+    visibility: visible;
+    opacity: .8;
+    z-index: 1000;
+  }
+}
+
+.modal--contact {
+  background: white;
+  padding: 2.5em 2em;
+  min-width: 75%;
+  border-radius: 2px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  @include bp(medium){
+    min-width: inherit;
+    max-width: 400px;
+  }
+}
+
+.modal--contact p {
+  margin: 0 auto 2em auto;
+  max-width: 600px;
+}
+
+.modal--contact__okay {
+  font-size: 1em;
+  background: $base;
+  color: white;
+  border-radius: 2px;
+  padding: 1em 2em;
+  margin: 0 auto;
+}
+
+.modal--contact__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  span {
+    position: absolute;
+    display: block;
+    background: $base;
+    width: 40%;
+    height: 2px;
+    left: 30%;
+    &:first-child {transform: rotate(45deg);top: 50%;}
+    &:nth-child(2){transform: rotate(-45deg);bottom: 46%;}
+  }
+}
+
+.open--modal .modal--contact {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1001;
+}

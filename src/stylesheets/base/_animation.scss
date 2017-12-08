@@ -15,12 +15,12 @@ a .icon {
   transition: all .3s;
 }
 
-.container {
+.container, .modal--contact {
   transition: transform .5s, opacity .5s;
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
 
-.open--menu .container:after {
+.open--menu .container:after, .open--modal .container:after, .open--modal .modal--contact {
   transition: opacity .5s, visibility 0s linear 0s;
   transition-timing-function: cubic-bezier(.84,0,.22,1);
 }
@@ -52,7 +52,6 @@ a .icon {
 .toggle__label {
   transition: all .5s;
 }
-
 
 .toggle:hover {
   .toggle__label {

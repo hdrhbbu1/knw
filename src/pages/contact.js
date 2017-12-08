@@ -19,6 +19,16 @@ const encode = (data) => {
    .join("&");
 }
 
+const openModal = () => {
+  const wrapper = document.getElementById('wrapper');
+  wrapper.classList.add('open--modal');
+}
+
+const closeModal = () => {
+  const wrapper = document.getElementById('wrapper');
+  wrapper.classList.remove('open--modal');
+}
+
 class Contact extends React.Component {
 
     constructor (props) {
@@ -46,7 +56,7 @@ class Contact extends React.Component {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...this.state })
       })
-      .then(() => alert("Success!"))
+      .then(() => openModal())
       .catch(error => alert(error));
       event.preventDefault();
       this.setState({
@@ -166,6 +176,12 @@ class Contact extends React.Component {
               </ul>
             </div>
           </div>
+        </div>
+
+        <div className="modal--contact">
+          <button className="modal--contact__close" onClick={closeModal}><span/><span/></button>
+          <p>Thanks for reaching out. I will get back to you as soon as possible!</p>
+          <button className="modal--contact__okay" onClick={closeModal}>Okay</button>
         </div>
 
       </div>
