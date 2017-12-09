@@ -11,7 +11,7 @@ nav {
   height: 100%;
   width: 100%;
   transform: translate3d(100%, 0, 0);
-  z-index: 99;
+  z-index: 100;
   overflow-y: scroll;
   @include bp(medium){
     width: 50%;
@@ -74,10 +74,6 @@ nav {
 }
 
 .open--menu .container {
-  transform: translate3d(-100%,0,0);
-  @include bp(medium){
-    transform: translate3d(-50%,0,0);
-  }
   &:after {
     visibility: visible;
     opacity: .8;

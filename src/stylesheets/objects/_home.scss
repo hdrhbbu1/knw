@@ -85,7 +85,7 @@
   position: relative;
   @include bp(medium){
     width: 66%;
-    @supports (position: sticky) {
+    @supports (position: sticky) or (position: -webkit-sticky) {
       position: -webkit-sticky;
       position: sticky;
       top: 2.25em;
@@ -116,7 +116,7 @@
   }
   div {
     @include bp(medium){
-      @supports (position: sticky) {
+      @supports (position: sticky) or (position: -webkit-sticky) {
         height: 90vh;
       }
     }
@@ -151,7 +151,7 @@
       }
       &:nth-child(3),&:nth-child(4),&:nth-child(5) {
         display: none;
-        @supports (position: sticky) {
+        @supports (position: sticky) or (position: -webkit-sticky) {
           display: block;
         }
       }

@@ -37,11 +37,3 @@ class Progress extends React.Component {
 }
 
 export default Progress
-
-
-/*
-<svg width="30" height="30" viewBox="0 0 50 50" style={ svgStyle }>
-  <circle cx="25" cy="25" r="20" strokeWidth="2" style={ meterStyle } />
-  <circle cx="25" cy="25" r="20" strokeWidth="2" style={ valueStyle } />
-</svg>
-*/
