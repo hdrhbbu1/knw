@@ -3,8 +3,9 @@
 * ----- */
 
 .intro--404 {
+  min-height: calc(100vh - 351px);
   @include bp(medium){
-    min-height: 100vh;
+    min-height: calc(100vh - 233px);
     height: 100%;
     display: flex;
     flex-flow: column;

@@ -2,20 +2,14 @@
 * Contact  *
 * ------- */
 
-.contact {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .intro--contact {
   width: 100%;
-  height: 800px;
-  height: 75vh;
-  max-height: 1000px;
   position: relative;
   margin: 0 0 -10vh 0;
+  @supports (object-fit: cover) {
+    height: 75vh;
+    max-height: 1000px;
+  }
   h2 {
     position: absolute;
     top: 40%;
@@ -46,9 +40,10 @@
 
 .intro--contact__image {
   div {
-    height: 800px;
-    height: 75vh;
-    max-height: 1000px;
+    @supports (object-fit: cover) {
+      height: 75vh;
+      max-height: 1000px;
+    }
   }
 }
 
@@ -101,7 +96,6 @@
 }
 
 .contact .icon {
-  //background: green;
   fill: $base;
   display: inline-block;
   height: 1.75rem;
@@ -170,6 +164,7 @@ div[class*='form__optional']{
   margin: 0 0 1em 0;
   border-radius: 2px;
   width: 100%;
+  color: $base;
   @include bp(medium){
     flex: 0 0 49%;
   }
@@ -271,6 +266,7 @@ select:invalid,select option[value=""] {
   .react-datepicker-wrapper {width: 100%;}
   .react-datepicker__input-container {width: 100%;}
   input {
+    color: $base;
     cursor: pointer;
     width: 100%;
     background: $secondary url('../images/calendar.svg') no-repeat 97% 0 !important;
