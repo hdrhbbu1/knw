@@ -17,7 +17,7 @@ const Up = () => {
   return (
     <div className="up-button" onClick={scrollUp}>
       <Headroom disableInlineStyles pinStart={300}>
-        <div className="up-button__text">Back to Top</div>
+        <div className="up-button__text">Back To Top</div>
       </Headroom>
     </div>
   )
