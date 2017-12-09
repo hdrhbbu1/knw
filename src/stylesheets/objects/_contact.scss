@@ -101,6 +101,7 @@
 }
 
 .contact .icon {
+  //background: green;
   fill: $base;
   display: inline-block;
   height: 1.75rem;
@@ -113,6 +114,15 @@
 .contact a:hover .icon {
   fill: lighten($base,25%);
 }
+
+.contact .icon--facebook {
+  margin-left: -.5rem;
+  margin-right: -.1rem;
+}
+.contact .icon--instagram {
+  margin-left: -.25rem;
+}
+
 
 //General Form Styling
 .form {

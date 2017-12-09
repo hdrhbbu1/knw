@@ -85,12 +85,16 @@
   display: inline-block;
   height: 1.75rem;
   width: 1.75rem;
-  margin: 0 0 0 -.5rem;
+  margin: 0 0 0 -.25rem;
 }
 
-.icon--facebook {
-
+.footer .icon--facebook {
+  margin-right: -.5rem;
 }
+.footer .icon--instagram {
+  margin-right: -.25rem;
+}
+
 
 .icon--instagram {
 

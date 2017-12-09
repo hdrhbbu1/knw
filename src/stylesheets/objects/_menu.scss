@@ -139,6 +139,18 @@ nav {
     span:nth-child(2){transform: rotate(-45deg);bottom: 46%;}
   }
 }
+
+//Menu Social Icons
+
+.site-nav .icon--facebook {
+  margin-right: -.5rem;
+}
+.site-nav .icon--instagram {
+  margin-right: -.25rem;
+}
+
+
+
 //Headroom Settings
 header .headroom {
   z-index: 999;

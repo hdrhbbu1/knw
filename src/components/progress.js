@@ -24,13 +24,6 @@ class Progress extends React.Component {
   render() {
 
     const style = {
-      backgroundColor: '#3e3e3e',
-      height: '4px',
-      position: 'fixed',
-      //position: 'sticky',
-      top: 0,
-      zIndex: 9999,
-      //marginBottom: '-4px',
       width: `${this.state.progress}%`
     };
 

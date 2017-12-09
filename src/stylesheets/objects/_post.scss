@@ -203,3 +203,19 @@
   position: relative;
   z-index: 999;
 }
+
+//Progress Bar
+
+.progress-bar {
+  background: #3e3e3e;
+  height: 4px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  @supports (position: sticky) {
+    position: -webkit-sticky;
+    position: sticky;
+    position: sticky;
+    margin-bottom: -4px,
+  }  
+}
