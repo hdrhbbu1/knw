@@ -25,16 +25,6 @@ const PostTemplate = ({data}) => {
     ({ node: post }) => post.id === id
   );
 
-  const style = {
-    position: 'fixed',
-    bottom: 0,
-    right: 0,
-    cursor: 'pointer',
-    transitionDuration: '0.2s',
-    transitionTimingFunction: 'linear',
-    transitionDelay: '0s'
-  }
-
   return(
     <div>
 
