@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import find from "lodash.find"
 import Helmet from 'react-helmet'
 import Up from '../components/up'
-import Progress from '../components/progress'
 import BgImg from '../components/background'
 
 const PostTemplate = ({data}) => {
@@ -36,8 +35,6 @@ const PostTemplate = ({data}) => {
       <meta property="og:image:width" content="1800" />
       <meta property="og:image:height" content="1200" />
     </Helmet>
-
-    <Progress/>
 
     <div className="post">
       <div className="post-cover">
