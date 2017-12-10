@@ -11,6 +11,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
+    `gatsby-plugin-styled-components`,
+    {
+    resolve: `gatsby-plugin-nprogress`,
+    options: {
+      color: `black`,
+      showSpinner: true,
+      },
+    },
     {
     resolve: 'gatsby-source-contentful',
     options: {
