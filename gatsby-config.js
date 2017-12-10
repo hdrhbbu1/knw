@@ -15,7 +15,7 @@ module.exports = {
     {
     resolve: `gatsby-plugin-nprogress`,
     options: {
-      template: '<div class="spinner" role="spinner"><div class="spinner-icon"></div></div>',
+      color: `transparent`,
       showSpinner: true,
       },
     },
