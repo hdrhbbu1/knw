@@ -2,6 +2,13 @@
 * Contact  *
 * ------- */
 
+.contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro--contact {
   width: 100%;
   position: relative;
