@@ -8,12 +8,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: -1;
-  padding-bottom: 66.6%;
-  @supports (object-fit: cover) {
-    height: 75vh;
-    padding: 0;
-  }
+  div {max-height: 1000px;}
   &:before {
     content: '';
     background: rgba(0,0,0,.2);
@@ -25,19 +20,6 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-  }
-}
-
-.intro--home__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  div {
-    height: 100%;
   }
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import BgImg from '../components/background'
 import logo from '../images/logo.svg'
 import Helmet from 'react-helmet'
 
@@ -12,19 +13,14 @@ const page = data.contentfulPage;
   return (
     <div>
       <div className="intro intro--home sticky">
-        <h1>
-          <img className="logo" src={logo} />
-        </h1>
-        <div className="intro--home__image">
-          <Img sizes={page.cover.sizes} />
-        </div>
+        <h1><img className="logo" src={logo} /></h1>
+        <BgImg height={'75vh'} sizes={page.cover.sizes} alt={page.cover.title} title={page.cover.title} />
       </div>
 
     <div className="page">
+
       <div className="quote">
-        <blockquote>
-          Some sort of inspiring snippet of text should go here.
-        </blockquote>
+        <blockquote>Some sort of inspiring snippet of text should go here.</blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ipsum et purus rhoncus commodo non in diam. Nullam ullamcorper purus augue, tincidunt rhoncus velit imperdiet et. Cras imperdiet imperdiet ex, eget maximus nibh tincidunt id. Proin a dictum nisi, et venenatis est. Ut finibus turpis at arcu gravida, nec pulvinar tortor pretium.</p>
       </div>
 
@@ -48,7 +44,9 @@ const page = data.contentfulPage;
             </li>
           ))}
         </ul>
+
       </div>
+
     </div>
   </div>
   )

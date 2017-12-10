@@ -50,12 +50,7 @@
 .page-divider {
   margin: 4rem 0 2rem;
   width: 100%;
-  div {
-    @supports (object-fit: cover) {
-      max-height: 75vh;
-      object-fit: cover;
-    }
-  }
+  div {max-height: 1000px;}
 }
 
 //Bucket list
@@ -90,8 +85,10 @@
     padding: 0;
     width: 101%;
     div {
-      object-fit: cover;
       height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      font-family: 'object-fit: cover; object-position: 50% 50%;';
     }
   }
 }

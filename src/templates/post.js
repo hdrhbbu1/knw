@@ -5,6 +5,7 @@ import find from "lodash.find"
 import Helmet from 'react-helmet'
 import Up from '../components/up'
 import Progress from '../components/progress'
+import BgImg from '../components/background'
 
 const PostTemplate = ({data}) => {
 
@@ -40,7 +41,7 @@ const PostTemplate = ({data}) => {
 
     <div className="post">
       <div className="post-cover">
-        <Img sizes={cover.sizes} alt={cover.title} title={cover.title} backgroundColor={"#f1f1f1"} />
+        <BgImg height={'75vh'} sizes={cover.sizes} alt={cover.title} title={cover.title} backgroundColor={"#f1f1f1"} />
       </div>
       <div className="post-info">
         <div className="post-info__left">
@@ -66,7 +67,7 @@ const PostTemplate = ({data}) => {
       {postIndex.next && (
       <Link className="post-preview" to={postIndex.next.slug}>
         <h4 className="post-preview__title">Next</h4>
-          <Img sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#f1f1f1"} />
+        <BgImg height={'40vh'} sizes={postIndex.next.cover.sizes} alt={postIndex.next.cover.title} title={postIndex.next.cover.title} backgroundColor={"#ffffff"} />
       </Link>)}
     </div>
     <Up />

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import BgImg from '../components/background'
 import Slider from 'react-slick'
 
 const About = ({data}) => {
@@ -62,7 +63,7 @@ const About = ({data}) => {
       <div className="bio" dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
 
       <div className="page-divider">
-        <Img sizes={pageDivider.sizes} backgroundColor={"#f1f1f1"}/>
+        <BgImg height={'75vh'} sizes={pageDivider.sizes} backgroundColor={"#f1f1f1"}/>
       </div>
 
       <div className="grid grid--container">

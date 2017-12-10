@@ -11,15 +11,8 @@
 
 .post-cover {
   width: 100%;
-  div {
-    @supports (object-fit: cover) {
-      height: 800px;
-      height: 75vh;
-      max-height: 1000px;
-    }
-  }
-  margin-bottom: -200px;
   margin-bottom: -10vh;
+  div { max-height: 1000px;}
 }
 
 .post-images {
@@ -104,23 +97,16 @@
 }
 
 .post-preview {
-  display: none;
-  @supports (object-fit: cover) {
-    display: block;
-  }
   position: relative;
   width: 100%;
-  min-height: 200px;
-  height: 40vh;
   text-align: center;
   text-decoration: none!important;
   div {
-      min-height: 200px;
-      height: 40vh !important;
+    min-height: 200px;
     &:after {
       content: '';
       position: absolute;
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.4);
       height: 100%;
       width: 100%;
       top: 0;
@@ -139,7 +125,6 @@
 
 @media (hover: none) {
   .post-preview:hover {
-    background: $base;
     background: rgba(0,0,0,.5);
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import BgImg from '../components/background'
 import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
@@ -123,9 +124,7 @@ class Contact extends React.Component {
 
         <div className="intro--contact">
           <h2>Contact</h2>
-          <div className="intro--contact__image">
-            <Img sizes={page.cover.sizes} backgroundColor={"#f1f1f1"}/>
-          </div>
+          <BgImg height={'75vh'} sizes={page.cover.sizes} backgroundColor={"#f1f1f1"}/>
         </div>
 
         <div className="contact-info">
