@@ -19,11 +19,13 @@
 
 .intro--investment__image {
   max-width: $max;
+  div { max-height: 750px; }
   width: 100%;
   margin: 0 auto;
   @include bp(medium){
     width: 66.666%;
     margin: 0 auto -10em;
+    padding: 0 2em;
   }
 }
 

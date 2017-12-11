@@ -12,7 +12,7 @@
 .post-cover {
   width: 100%;
   margin-bottom: -10vh;
-  div { max-height: 1000px;}
+  div { max-height: 750px; }
 }
 
 .post-images {
@@ -103,6 +103,7 @@
   text-decoration: none!important;
   div {
     min-height: 200px;
+    max-height: 375px;
     &:after {
       content: '';
       position: absolute;
