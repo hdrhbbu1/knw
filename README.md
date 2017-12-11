@@ -1,6 +1,6 @@
 
 # README
-[KNW Photography](www.knw.io) - Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer.
+[KNW Photography](https://www.knw.io) - Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer.
 
 ## Development
 For local development a `.env` file in the root directory is required. It should contain the  following properties and their corresponding values found in Contentful.
