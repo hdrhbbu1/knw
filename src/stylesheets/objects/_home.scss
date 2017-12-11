@@ -4,8 +4,6 @@
 
 .intro--home {
   position: relative;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   width: 100%;
   div { max-height: 750px; }
@@ -20,6 +18,12 @@
     height: 100%;
     width: 100%;
     z-index: 1;
+  }
+  @include bp(medium){
+    @supports (position: sticky) or (position: -webkit-sticky) {
+      position: -webkit-sticky;
+      position: sticky;
+    }
   }
 }
 

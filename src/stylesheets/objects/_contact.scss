@@ -59,24 +59,6 @@
   z-index: 2;
   @include bp(medium){
     margin: 0 2em;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-
-.contact-info__left {
-  width: 100%;
-  @include bp(medium){
-    flex: 0 1 66%;
-  }
-}
-
-.contact-info__right {
-  width: 100%;
-  @include bp(medium){
-    flex: 0 1 33%;
   }
 }
 
@@ -121,17 +103,10 @@
   margin-left: -.25rem;
 }
 
-
 //General Form Styling
 .form {
   margin: 0 0 2em 0;
   z-index: 2;
-  @include bp(medium){
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .form .form__container {
@@ -139,9 +114,6 @@
   width: 100%;
   background: white;
   padding: 2em 1em 1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   @include bp(medium){
     padding: 2em;
   }
@@ -253,7 +225,7 @@ div[class*='form__optional']{
   cursor: pointer;
 }
 
-select,select option {
+select, select option {
   color: $base;
 }
 

@@ -128,10 +128,10 @@ class Contact extends React.Component {
           <BgImg height={'75vh'} sizes={page.cover.sizes} backgroundColor={"#f1f1f1"}/>
         </div>
 
-        <div className="contact-info">
-          <div className="contact-info__left">
-            <form className="form" name="contact" onSubmit={this.handleSubmit} data-netlify="true"  data-netlify-honeypot="bot">
-              <div className="form__container">
+        <div className="contact-info grid">
+          <div className="cell--two-thirds">
+            <form className="form grid grid--center" name="contact" onSubmit={this.handleSubmit} data-netlify="true"  data-netlify-honeypot="bot">
+              <div className="form__container grid">
                 <input type="hidden" name="form-name" value="contact" />
                 <input className="form__name" name="name" type="text" placeholder="Full Name" value={this.state.name} onChange={this.handleInputChange} required/>
                 <input className="form__email" name="email" type="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required/>
@@ -167,7 +167,7 @@ class Contact extends React.Component {
             </form>
           </div>
 
-          <div className="contact-info__right">
+          <div className="cell--third">
             <div className="social">
               <h3 className="social__title">Follow Along</h3>
               <ul className="social__links">
