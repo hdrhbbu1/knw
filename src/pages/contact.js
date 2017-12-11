@@ -118,9 +118,9 @@ class Contact extends React.Component {
       <div className="contact">
 
         <Helmet>
-          <title>Contact</title>
+          <title>Contact - KNW Photography</title>
           <meta name="description" content="Get in touch with KNW Photography to book your photography session" />
-          <meta property="og:title" content="Contact"/>
+          <meta property="og:title" content="Contact - KNW Photography"/>
           <meta property="og:image" content={page.cover.sizes.src} />
           <meta property="og:image:width" content="1800" />
           <meta property="og:image:height" content="1200" />

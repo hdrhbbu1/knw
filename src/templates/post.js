@@ -29,9 +29,9 @@ const PostTemplate = ({data}) => {
     <div>
 
     <Helmet>
-      <title>{title}</title>
+      <title>{title} - KNW Photography</title>
       <meta name="description" content={title} />
-      <meta property="og:title" content={title}/>
+      <meta property="og:title" content={title + " - KNW Photography"}/>
       <meta property="og:image" content={cover.sizes.src} />
       <meta property="og:image:width" content="1800" />
       <meta property="og:image:height" content="1200" />

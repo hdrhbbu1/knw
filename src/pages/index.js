@@ -14,9 +14,9 @@ const page = data.contentfulPage;
     <div>
 
       <Helmet>
-        <title>KNW Photography | SF Bay Area Wedding Photographer</title>
+        <title>KNW Photography - SF Bay Area Wedding Photographer</title>
         <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area" />
-        <meta property="og:title" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area"/>
+        <meta property="og:title" content="KNW Photography - SF Bay Area Wedding Photographer"/>
         <meta property="og:image" content={page.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />

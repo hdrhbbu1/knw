@@ -35,9 +35,9 @@ const About = ({data}) => {
   return(
     <div>
       <Helmet>
-        <title>About</title>
+        <title>About - KNW Photography</title>
         <meta name="description" content="Learn about San Francisco Bay Area photographer Kirsten Noelle Wiemer" />
-        <meta property="og:title" content={title}/>
+        <meta property="og:title" content="About - KNW Photography"/>
         <meta property="og:image" content={coverImages[0].sizes.src} />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="1000" />

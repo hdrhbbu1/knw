@@ -11,9 +11,9 @@ const posts = data.allContentfulGallery.edges;
     <div>
 
       <Helmet>
-        <title>Lifestyle Galleries</title>
+        <title>Lifestyle Galleries - KNW Photography</title>
         <meta name="description" content="View lifestyle galleries by KNW Photography" />
-        <meta property="og:title" content="Lifestyle Galleries"/>
+        <meta property="og:title" content="Lifestyle Galleries - KNW Photography"/>
         <meta property="og:image" content={posts[0].node.cover.sizes.src} />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="1200" />
