@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 
 const Lifestyle = ({data}) => {
+
 const posts = data.allContentfulGallery.edges;
 
   return(
@@ -11,7 +12,12 @@ const posts = data.allContentfulGallery.edges;
 
       <Helmet>
         <title>Lifestyle Galleries</title>
-        <meta name="description" content="" />
+        <meta name="description" content="View lifestyle galleries by KNW Photography" />
+        <meta property="og:title" content="Lifestyle Galleries"/>
+        <meta property="og:image" content={posts[0].node.cover.sizes.src} />
+        <meta property="og:image:width" content="1800" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:url" content="https://www.knw.io/lifestyle" />
       </Helmet>
 
       <div className="category-navigation">

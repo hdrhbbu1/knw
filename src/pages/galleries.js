@@ -12,7 +12,12 @@ const posts = data.allContentfulGallery.edges;
 
       <Helmet>
         <title>All Galleries</title>
-        <meta name="description" content="" />
+        <meta name="description" content="View all galleries by KNW Photography" />
+        <meta property="og:title" content="All Galleries"/>
+        <meta property="og:image" content={posts[0].node.cover.sizes.src} />
+        <meta property="og:image:width" content="1800" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:url" content="https://www.knw.io/galleries" />
       </Helmet>
 
       <div className="category-navigation">

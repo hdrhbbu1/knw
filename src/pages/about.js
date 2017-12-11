@@ -36,11 +36,12 @@ const About = ({data}) => {
     <div>
       <Helmet>
         <title>About</title>
-        <meta name="description" content="All about Kirsten Wiemer" />
+        <meta name="description" content="Learn about San Francisco Bay Area photographer Kirsten Noelle Wiemer" />
         <meta property="og:title" content={title}/>
         <meta property="og:image" content={coverImages[0].sizes.src} />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="1000" />
+        <meta property="og:url" content="https://www.knw.io/about" />
       </Helmet>
 
       <ul className="grid grid--about">

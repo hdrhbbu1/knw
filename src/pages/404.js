@@ -12,7 +12,7 @@ const NotFoundPage = ({data}) => {
 
       <Helmet>
         <title>404</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Page not found" />
       </Helmet>
 
       <div className="intro--404">

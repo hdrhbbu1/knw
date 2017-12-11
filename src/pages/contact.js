@@ -119,7 +119,12 @@ class Contact extends React.Component {
 
         <Helmet>
           <title>Contact</title>
-          <meta name="description" content="" />
+          <meta name="description" content="Get in touch with KNW Photography to book your photography session" />
+          <meta property="og:title" content="Contact"/>
+          <meta property="og:image" content={page.cover.sizes.src} />
+          <meta property="og:image:width" content="1800" />
+          <meta property="og:image:height" content="1200" />
+          <meta property="og:url" content="https://www.knw.io/contact" />
         </Helmet>
 
         <div className="intro--contact">
