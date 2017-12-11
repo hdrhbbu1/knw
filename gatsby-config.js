@@ -3,8 +3,8 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: 'KNW Photography',
-    description: 'KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area.',
-    url: 'http://www.knw.netlify.com'
+    description: 'Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer',
+    url: 'https://www.knw.io'
   },
   plugins: [
     `gatsby-plugin-react-next`,

@@ -1,6 +1,6 @@
 {
   "name": "knw",
-  "description": "Static version of knw.io built with Gatsby",
+  "description": "Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer",
   "version": "1.0.0",
   "repository": "https://github.com/ryanwiemer/knw-static",
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "^1.5.10",
     "gatsby-transformer-remark": "^1.7.24",
     "lodash.find": "^4.6.0",
-    "moment": "^2.19.3",
+    "moment": "^2.19.4",
     "object-fit-images": "^3.2.3",
     "promise-polyfill": "^6.1.0",
     "react-addons-shallow-compare": "^15.6.2",

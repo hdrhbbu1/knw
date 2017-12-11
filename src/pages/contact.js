@@ -7,12 +7,9 @@ import Helmet from 'react-helmet'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import 'react-datepicker/dist/react-datepicker-cssmodules.css'
-
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
-if (typeof window !== `undefined`) {
-  if (!window.Promise) {window.Promise = Promise;}
-}
+if (typeof window !== `undefined`) {if (!window.Promise) {window.Promise = Promise;}}
 
 const encode = (data) => {
   return Object.keys(data)
@@ -58,7 +55,7 @@ class Contact extends React.Component {
         body: encode({ "form-name": "contact", ...this.state })
       })
       .then(() => openModal())
-      .catch(error => alert(error));
+      .catch(error => alert("An error has occurred while trying to send your message. Please use the social media links as an alternate contact method. (ERROR INFORMATION: " + error + ")" ));
       event.preventDefault();
       this.setState({
         name: '',
@@ -70,7 +67,6 @@ class Contact extends React.Component {
         guests: '0',
         budget: '0',
         message:''
-        //optionalQuestions: false
       });
     };
 

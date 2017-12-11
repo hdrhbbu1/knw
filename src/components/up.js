@@ -2,11 +2,7 @@ import React from 'react'
 import Headroom from 'react-headroom'
 import ScrollProgress from 'scrollprogress'
 import styled from 'styled-components'
-
-if (typeof window !== `undefined`) {
-  require('smoothscroll-polyfill').polyfill();
-  window.__forceSmoothScrollPolyfill__ = true;
-}
+if (typeof window !== `undefined`) {require('smoothscroll-polyfill').polyfill(); window.__forceSmoothScrollPolyfill__ = true;}
 
 const scrollUp = () => {
   document.querySelector('.container').scrollIntoView({
@@ -55,7 +51,6 @@ class Up extends React.Component {
       </div>
     );
   }
-
 
 }
 

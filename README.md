@@ -8,7 +8,6 @@ For local development a `.env` file in the root directory is required. It should
 ```
 CONTENTFUL_SPACE_ID=
 CONTENTFUL_DELIVERY_API_TOKEN=
-CONTENTFUL_PREVIEW_API_TOKEN=
 ```
 
 ## Tools & Frameworks Used

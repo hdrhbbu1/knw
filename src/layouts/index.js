@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children, location }) => (
       <link rel="icon" href={favicon} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area." />
+      <meta name="description" content="KNW Photography helps clients capture special moments in lifestyle and wedding photography in the San Francisco Bay Area" />
       <meta property="og:title" content="KNW Photography - SF Bay Area Wedding Photographer" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
