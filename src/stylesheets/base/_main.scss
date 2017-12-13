@@ -4,16 +4,15 @@
 
 .container {
 	height: 100%;
-	min-height: 100vh;
+	//min-height: 100vh;
 }
 
 * {
   min-height: 0;
   min-width: 0;
 	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
 }
-
-#wrapper {}
 
 body {
 	text-rendering: optimizeLegibility;
@@ -22,7 +21,15 @@ body {
   font-smoothing: antialiased;
 	font-size: 100%;
 	font-weight: 400;
-  font-family: $sans, sans-serif;
+  font-family: $sans;
 	font-weight: normal;
 	color: $base;
 }
+
+//Remove blur effect on progress bar
+#nprogress .peg {
+  display: none !important;
+}
+
+
+//#wrapper {}

@@ -23,21 +23,25 @@
   @include bp(medium){
     padding: 0 2em;
   }
-  li {
+  .gatsby-image-outer-wrapper {
     margin: 0 0 1em 0;
+  }
+  li {
     clear: right;
   }
   .left {
-    float: left;
-    width: 50%;
-    border-right: .5em solid white;
-    border-bottom: 1em solid white;
+    @include bp(medium){
+      float: left;
+      width: 50%;
+      border-right: .5em solid white;
+    }
   }
   .right {
-    width: 50%;
-    border-left: .5em solid white;
-    border-bottom: 1em solid white;
-    float: right;
+    @include bp(medium){
+      float: right;
+      width: 50%;
+      border-left: .5em solid white;
+    }
   }
 }
 
@@ -148,7 +152,6 @@
   z-index: 1;
 }
 
-
 //Scroll Up Button
 .up-button {
   cursor: pointer;
@@ -160,6 +163,7 @@
   left: 0;
   right: 0;
   transition: transform 200ms ease-in-out;
+  transform: translateY(0);
 }
 
 .up-button .headroom-wrapper {float: right;}
@@ -175,7 +179,7 @@
 
 .up-button .headroom--pinned {
   position: fixed;
-  transform: translateY(0%);
+  transform: translateY(0);
 }
 
 .up-button__text {
