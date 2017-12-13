@@ -26,9 +26,12 @@ body {
 	color: $base;
 }
 
-//Remove blur effect on progress bar
+//Progress Bar
 #nprogress .peg {
-  display: none !important;
+  display: none !important; //Removes glow effect
+}
+#nprogress .bar {
+  height: 4px !important; //Increases the height of the bar itself
 }
 
 
