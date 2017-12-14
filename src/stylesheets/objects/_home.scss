@@ -44,10 +44,13 @@
 
 .quote {
   margin: 0;
-  padding: 6em 2em;
+  padding: 4em 2em 6em;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  @include bp(medium){
+    padding: 6em 2em;
+  }
 }
 
 .quote blockquote {
@@ -115,7 +118,9 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 1em;
+  margin-bottom: 2em;
   @include bp(medium){
+    margin-bottom: 0;
     padding: 1em 2em 4em 0;
     flex-flow: row;
   }
