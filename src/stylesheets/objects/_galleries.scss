@@ -82,10 +82,10 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  padding: 2em 1em 0 1em;
+  padding: 2em 1em 1px 1em;
   margin: 0 auto;
   @include bp(medium){
-    padding: 2em 2em 0 2em;
+    padding: 2em 2em 1px 2em;
   }
   h2 {
     text-transform: capitalize;
