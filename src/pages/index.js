@@ -8,7 +8,7 @@ import Helmet from 'react-helmet'
 const IndexPage = ({data}) => {
 
 const posts = data.allContentfulGallery.edges;
-const page = data.contentfulPage;
+const page = data.contentfulHome;
 
   return (
     <div>
@@ -29,10 +29,7 @@ const page = data.contentfulPage;
 
     <div className="page">
 
-      <div className="quote">
-        <blockquote>Some sort of inspiring snippet of text should go here.</blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ipsum et purus rhoncus commodo non in diam. Nullam ullamcorper purus augue, tincidunt rhoncus velit imperdiet et. Cras imperdiet imperdiet ex, eget maximus nibh tincidunt id. Proin a dictum nisi, et venenatis est. Ut finibus turpis at arcu gravida, nec pulvinar tortor pretium.</p>
-      </div>
+      <div className="quote" dangerouslySetInnerHTML={{ __html: page.quote.childMarkdownRemark.html }} />
 
       <div className="featured">
 
@@ -80,7 +77,7 @@ export const query = graphql`
         }
       }
     }
-    contentfulPage(slug: {eq: "home"}) {
+    contentfulHome {
       title
       slug
       id
@@ -88,6 +85,11 @@ export const query = graphql`
         title
         sizes(maxWidth: 1800) {
           ...GatsbyContentfulSizes_noBase64
+        }
+      }
+      quote {
+        childMarkdownRemark {
+          html
         }
       }
     }
