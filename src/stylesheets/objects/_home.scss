@@ -24,6 +24,9 @@
       position: -webkit-sticky;
       position: sticky;
     }
+    @supports (hover: none) {
+      position: relative;
+    }
   }
 }
 
