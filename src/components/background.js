@@ -8,7 +8,10 @@ const BgImg = styled(Img)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: ${props => props.height || 'auto'};
+  height: auto;
+  @media (min-width: 40em) {
+    height: ${props => props.height || 'auto'};
+  }
   & > img {
     object-fit: ${props => props.fit || 'cover'} !important;
     object-position: ${props => props.position || '50% 50%'} !important;

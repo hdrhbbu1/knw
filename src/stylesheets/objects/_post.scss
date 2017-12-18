@@ -11,7 +11,10 @@
 
 .post-cover {
   width: 100%;
-  margin-bottom: -10vh;
+  margin: 0 0 -50px 0;
+  @include bp(medium) {
+    margin: 0 0 -10vh 0;
+  }
   div { max-height: 750px; }
 }
 
