@@ -6,7 +6,7 @@
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "gatsby": "^1.9.138",
+    "gatsby": "^1.9.140",
     "gatsby-cli": "^1.1.27",
     "gatsby-image": "^1.0.30",
     "gatsby-link": "^1.6.32",
@@ -24,7 +24,7 @@
     "object-fit-images": "^3.2.3",
     "promise-polyfill": "^6.1.0",
     "react-addons-shallow-compare": "^15.6.2",
-    "react-datepicker": "^0.63.0",
+    "react-datepicker": "^0.64.0",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.16.0",
