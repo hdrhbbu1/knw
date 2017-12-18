@@ -1,11 +1,6 @@
 require('dotenv').config();
 
 module.exports = {
-  siteMetadata: {
-    title: 'KNW Photography',
-    description: 'Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer',
-    url: 'https://www.knw.io'
-  },
   plugins: [
     `gatsby-plugin-react-next`,
     'gatsby-plugin-react-helmet',

@@ -37,7 +37,7 @@
   "keywords": [
     "knw"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
