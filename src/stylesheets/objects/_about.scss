@@ -55,9 +55,7 @@
 
 //Bucket list
 .bucket-list {
-  height: 50vw;
-  min-height: 400px;
-  max-height: 500px;
+  height: 500px;
   background: $secondary;
   padding: 2em;
   margin: 0 0 1em 0;
@@ -79,9 +77,7 @@
 .slider--about {
     margin: 0 0 2em 0;
   .slick-slide {
-    height: 50vw;
-    min-height: 400px;
-    max-height: 500px;
+    height: 500px;
     padding: 0;
     width: 101%;
     div {
