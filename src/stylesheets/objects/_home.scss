@@ -24,7 +24,7 @@
       position: -webkit-sticky;
       position: sticky;
     }
-    @supports (hover: none) {
+    @media (hover: none) {
       position: relative;
     }
   }
