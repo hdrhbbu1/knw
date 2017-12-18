@@ -32,8 +32,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10em;
+  width: 8em;
   z-index: 99;
+  @include bp(medium){
+    width: 10em;
+  }
 }
 
 .page {
