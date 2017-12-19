@@ -6,7 +6,7 @@
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "gatsby": "^1.9.140",
+    "gatsby": "^1.9.142",
     "gatsby-cli": "^1.1.27",
     "gatsby-image": "^1.0.30",
     "gatsby-link": "^1.6.32",
@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.25",
     "lodash.find": "^4.6.0",
-    "moment": "^2.20.0",
+    "moment": "^2.20.1",
     "object-fit-images": "^3.2.3",
     "promise-polyfill": "^6.1.0",
     "react-addons-shallow-compare": "^15.6.2",
