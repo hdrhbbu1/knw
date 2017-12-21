@@ -19,8 +19,11 @@
     width: 100%;
     z-index: 1;
   }
-  @include bp(medium){
-    position: fixed;
+  @supports (position: sticky) or (position: -webkit-sticky) {
+    @include bp(medium){
+      position: -webkit-sticky;
+      position: sticky;
+    }
   }
 }
 
@@ -37,17 +40,7 @@
 }
 
 .page {
-  @include bp(medium){
-    &:before {
-      content: '';
-      display: block;
-      z-index: -1;
-      width: 0;
-      height: 75vh;
-      max-height: 750px;
-      background: transparent;
-    }
-  }
+
 }
 
 .quote {
