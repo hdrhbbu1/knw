@@ -20,13 +20,7 @@
     z-index: 1;
   }
   @include bp(medium){
-    @supports (position: sticky) or (position: -webkit-sticky) {
-      position: -webkit-sticky;
-      position: sticky;
-    }
-    @media (hover: none) {
-      position: relative;
-    }
+    position: fixed;
   }
 }
 
@@ -43,17 +37,27 @@
 }
 
 .page {
-  position: relative;
   background: white;
-  z-index: 3;
+  @include bp(medium){
+    &:before {
+      content: '';
+      display: block;
+      z-index: -2;
+      width: 0;
+      height: 75vh;
+      max-height: 750px;
+      background: transparent;
+    }
+  }
 }
 
 .quote {
-  margin: 0;
   padding: 4em 2em 6em;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  background: white;
+  position: relative;
   @include bp(medium){
     padding: 6em 2em;
   }
@@ -126,6 +130,8 @@
   align-items: flex-start;
   padding: 1em;
   margin-bottom: 2em;
+  background: white;
+  position: relative;
   @include bp(medium){
     margin-bottom: 0;
     padding: 1em 2em 4em 0;

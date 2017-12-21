@@ -52,6 +52,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  width: calc(100% - 2em);
   max-width: 1000px;
   padding: 2em;
   margin: 0 1em;
@@ -60,6 +61,7 @@
   @include bp(medium){
     padding: 3em 2em;
     margin: 0 2em;
+    width: calc(100% - 4em);
   }
 }
 
