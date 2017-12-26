@@ -118,8 +118,8 @@ nav {
     width: 40%;
     height: 2px;
     left: 30%;
-    &:first-child {top: 41%;}
-    &:nth-child(2) {bottom: 41%;}
+    &:first-child {top: 22px;}
+    &:nth-child(2) {bottom: 22px;}
   }
 }
 
@@ -131,8 +131,8 @@ nav {
     max-width: 0;
   }
   .toggle__icon {
-    span:first-child {transform: rotate(45deg);top: 50%;}
-    span:nth-child(2){transform: rotate(-45deg);bottom: 46%;}
+    span:first-child {transform: rotate(45deg);top: 29px}
+    span:nth-child(2){transform: rotate(-45deg);bottom: 25px;}
   }
 }
 
