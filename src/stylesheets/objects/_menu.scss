@@ -95,7 +95,7 @@ nav {
   text-transform: capitalize;
   line-height: 3.5rem;
   height: 100%;
-  padding: 0 0 0 1rem;
+  //padding: 0 0 0 1rem;
   color: $base;
   max-width: 0;
   padding: 0;
@@ -137,7 +137,6 @@ nav {
 }
 
 //Menu Social Icons
-
 .site-nav .icon--facebook {
   margin-right: -.5rem;
 }
@@ -145,10 +144,9 @@ nav {
   margin-right: -.25rem;
 }
 
-
-
 //Headroom Settings
 header .headroom {
+  position: fixed;
   z-index: 999;
   top: 1rem;
   right: 1rem;
@@ -161,7 +159,6 @@ header .headroom {
 header .headroom-wrapper {float: right;}
 
 header .headroom--unfixed {
-  position: fixed;
   .toggle__label {
     max-width: 70px;
     padding: 0 0 0 1rem;
