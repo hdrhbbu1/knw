@@ -95,7 +95,6 @@ nav {
   text-transform: capitalize;
   line-height: 3.5rem;
   height: 100%;
-  //padding: 0 0 0 1rem;
   color: $base;
   max-width: 0;
   padding: 0;
@@ -118,8 +117,8 @@ nav {
     width: 40%;
     height: 2px;
     left: 30%;
-    &:first-child {top: 22px;}
-    &:nth-child(2) {bottom: 22px;}
+    &:first-child {top: 23px;}
+    &:nth-child(2) {bottom: 23px;}
   }
 }
 
