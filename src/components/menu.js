@@ -15,15 +15,13 @@ const closeMenu = () => {
 const Menu = () => {
     return (
       <header>
-          <Headroom disableInlineStyles>
-            <button className="toggle" onClick={toggleMenu}>
-              <span className="toggle__label">Menu</span>
-              <div className="toggle__icon">
-                <span></span>
-                <span></span>
-              </div>
-            </button>
-          </Headroom>
+          <button className="toggle" onClick={toggleMenu}>
+            <span className="toggle__label">Menu</span>
+            <div className="toggle__icon">
+              <span></span>
+              <span></span>
+            </div>
+          </button>
           <nav>
             <ul className="site-nav">
               <li><Link to="/" onClick={closeMenu}>Home</Link></li>
