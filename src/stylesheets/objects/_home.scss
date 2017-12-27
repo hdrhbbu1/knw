@@ -39,7 +39,7 @@
 .page {
   z-index: 2;
   @include bp(medium){
-      position: relative;
+    position: relative;
     &:before {
       content: '';
       display: block;

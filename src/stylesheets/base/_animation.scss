@@ -42,7 +42,7 @@ a .icon {
   transition: all 0.3s;
 }
 
-.toggle, .up-button__arrow {
+.toggle__icon, .up-button__arrow {
   transition: all .3s;
   span {
     transition: all .3s;
@@ -50,11 +50,5 @@ a .icon {
 }
 
 .toggle__label {
-  transition: all .5s;
-}
-
-.toggle:hover {
-  .toggle__label {
-    transition: all .5s;
-  }
+  transition: all .4s;
 }
