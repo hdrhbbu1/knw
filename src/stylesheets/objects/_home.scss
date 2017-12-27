@@ -152,7 +152,7 @@
       &:last-child {
         margin-bottom: 0;
       }
-      &:nth-child(3),&:nth-child(4),&:nth-child(5) {
+      &:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7) {
         display: none;
         @supports (position: sticky) or (position: -webkit-sticky) {
           display: block;

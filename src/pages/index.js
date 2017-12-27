@@ -61,7 +61,7 @@ const page = data.contentfulHome;
 
 export const query = graphql`
   query HomeQuery {
-    allContentfulGallery(limit: 6, sort: { fields: [date], order: DESC }) {
+    allContentfulGallery(limit: 8, sort: { fields: [date], order: DESC }) {
       edges {
         node {
           title
