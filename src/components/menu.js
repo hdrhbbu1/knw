@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
-import Headroom from 'react-headroom'
 
 const toggleMenu = () => {
   const wrapper = document.getElementById('wrapper');
