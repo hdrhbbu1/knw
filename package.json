@@ -24,7 +24,7 @@
     "object-fit-images": "^3.2.3",
     "promise-polyfill": "^7.0.0",
     "react-addons-shallow-compare": "^15.6.2",
-    "react-datepicker": "^0.64.0",
+    "react-datepicker": "^1.0.0",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.16.0",
