@@ -8,6 +8,12 @@ module.exports = {
     'gatsby-transformer-remark',
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-46446221-1',
+      },
+    },
+    {
     resolve: `gatsby-plugin-nprogress`,
     options: {
       color: `#3e3e3e`,
