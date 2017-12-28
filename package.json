@@ -2,7 +2,7 @@
   "name": "knw",
   "description": "Digital portfolio for San Francisco Bay Area photographer Kirsten Wiemer",
   "version": "1.0.0",
-  "repository": "https://github.com/ryanwiemer/knw-static",
+  "repository": "https://github.com/ryanwiemer/knw",
   "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
