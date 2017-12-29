@@ -3,15 +3,13 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 
-const NotFoundPage = ({data}) => {
-
-  const page = data.contentfulPage;
+const NotFoundPage = () => {
 
   return(
     <div>
 
       <Helmet>
-        <title>404</title>
+        <title>404 - KNW Photography</title>
         <meta name="description" content="Page not found" />
       </Helmet>
 
@@ -25,21 +23,5 @@ const NotFoundPage = ({data}) => {
     </div>
   )
 }
-
-export const query = graphql`
-  query ErrorQuery {
-    contentfulPage(slug: {eq: "contact"}) {
-      title
-      slug
-      id
-      cover {
-        title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_noBase64
-        }
-      }
-    }
-  }
-`
 
 export default NotFoundPage
